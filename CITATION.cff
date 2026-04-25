@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this code or artifact bundle, please cite the associated arXiv paper once available."
+title: "When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer"
+authors:
+  - family-names: "Verma"
+    given-names: "Lucky"
+year: 2026
+repository-code: "https://github.com/lucky-verma/dyt-composition-study"
+
