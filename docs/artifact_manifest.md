@@ -2,7 +2,7 @@
 
 ## Source Code
 
-- `code/model.py`: GPT-2-family model with DyT, RMSNorm, HardTanh, DiffAttn V1/V2, and gated-attention toggles.
+- `code/model.py`: GPT-2-family model with DyT, RMSNorm, HardTanh, DiffAttn V1, the V2-inspired sigmoid-lambda ablation, and gated-attention toggles.
 - `code/model_llama.py`: Llama-style architecture checks.
 - `code/train.py`: training loop and metadata writer.
 - `code/vit_experiment.py`, `code/vit_alpha_sweep.py`: vision checks.
@@ -31,4 +31,3 @@
 - `results/full/lambada_eval/`: LAMBADA result JSONs.
 - `results/full/downstream_v5/`: downstream evaluation summaries.
 - `results/full/manifests/`: paper-source, citation, coverage, significance, and predictor-validation manifests.
-

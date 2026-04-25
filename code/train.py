@@ -70,7 +70,7 @@ convert_to_dyt_alpha = 0.5  # alpha_init for converted DyT layers
 use_rmsnorm = False    # RMSNorm: modern LLM baseline
 dyt_alpha_init = 2.0  # DyT alpha initialization (paper default=0.5, we use 2.0)
 use_diff_attn = False  # DiffAttn: differential attention mechanism
-diff_attn_v2 = False   # DiffAttn V2: sigmoid-bounded lambda variant
+diff_attn_v2 = False   # legacy flag: V2-inspired sigmoid-lambda ablation
 # === R5 Llama ablation toggles (2026-04-19) — only effective when arch='llama' ===
 ablate_rope = False    # R5: skip RoPE rotation (isolate positional encoding role)
 ablate_swiglu = False  # R5: FFN becomes non-gated GELU (GPT-2 style) not SwiGLU

@@ -35,11 +35,15 @@ The key file is `model.py`, which implements a unified GPT with toggle flags:
 | `--use_dyt=True` | Dynamic Tanh (replaces LayerNorm) | Zhu et al., CVPR 2025 |
 | `--use_rmsnorm=True` | RMSNorm (modern baseline) | Llama, Mistral |
 | `--use_diff_attn=True` | Differential Attention | Ye et al., ICLR 2025 |
-| `--diff_attn_v2=True` | Sigmoid-bounded DiffAttn lambda | DiffAttn V2 control |
+| `--diff_attn_v2=True` | V2-inspired sigmoid-lambda ablation | This paper; legacy flag name |
 | `--use_hardtanh=True` | Hard clipping control for activation bounding | This paper |
 | `--dyt_alpha_init=X` | DyT alpha initialization | Default: 2.0 |
 
 Flags are independent and composable. Any combination can be enabled.
+
+The `diff_attn_v2` flag name is retained for historical run reproducibility. It
+tests sigmoid-bounding of V1's lambda terms inside the V1-style DiffAttn
+architecture; it is not a faithful implementation of Microsoft DIFF V2.
 
 ## Quick Start
 

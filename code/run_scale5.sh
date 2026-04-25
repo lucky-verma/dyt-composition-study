@@ -3,7 +3,7 @@
 #
 # Runs:
 #   vanilla, DyT, DiffAttn V1 on {1M, 118M} x 3 seeds
-#   DiffAttn V2 on {1M, 118M} x 3 seeds
+#   V2-inspired sigmoid-lambda ablation on {1M, 118M} x 3 seeds
 #
 # Hardware note: this configuration is intended for 80GB+ GPUs. Each run uses
 # micro-batch 1 with gradient accumulation 64 to keep eff_batch=64.

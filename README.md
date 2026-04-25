@@ -27,7 +27,7 @@ The artifact supports:
 
 - 5 GPT-2-family model scales from 64M to 3.78B parameters;
 - 1M and 118M token regimes, with intermediate-data experiments where used in the paper;
-- DyT, LayerNorm, RMSNorm, HardTanh, DiffAttn V1/V2, and gated-attention controls;
+- DyT, LayerNorm, RMSNorm, HardTanh, DiffAttn V1, the V2-inspired sigmoid-lambda ablation, and gated-attention controls;
 - activation saturation measurements;
 - statistical tests and calibration-heuristic validation;
 - LAMBADA, BLIMP, OpenWebText, Llama-style, and ViT checks.

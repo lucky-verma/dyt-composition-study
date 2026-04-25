@@ -6,7 +6,7 @@ Modifications implemented:
   - DyT (Dynamic Tanh): replaces LayerNorm with tanh(alpha*x)*weight+bias
   - HardTanh: hard clipping control for activation bounding
   - DiffAttn (Differential Attention): dual-softmax attention that cancels noise
-  - DiffAttn V2: sigmoid-bounded lambda variant
+  - Sigmoid-lambda ablation: legacy flag diff_attn_v2, not full DIFF V2
   - GatedAttn: learnable per-head scalar gate on attention output
 
 References:
@@ -198,8 +198,8 @@ class DifferentialAttention(nn.Module):
         attn1 = F.softmax(attn1, dim=-1)
         attn2 = F.softmax(attn2, dim=-1)
 
-        # Compute lambda. V2 bounds the two learned lambda components with
-        # sigmoid, avoiding the exponential overflow mode observed at Scale 5.
+        # Compute lambda. The legacy diff_attn_v2 flag isolates sigmoid-bounding
+        # of V1's learned lambda terms. It is not a full DIFF V2 implementation.
         if self.v2:
             lambda_val = (torch.sigmoid(torch.sum(self.lambda_q1 * self.lambda_k1))
                          - torch.sigmoid(torch.sum(self.lambda_q2 * self.lambda_k2))
@@ -319,7 +319,7 @@ class GPTConfig:
     use_rmsnorm: bool = False       # RMSNorm: modern LLM baseline (Llama-style)
     dyt_alpha_init: float = 2.0     # DyT alpha initialization value
     use_diff_attn: bool = False     # DiffAttn: differential attention
-    diff_attn_v2: bool = False      # DiffAttn V2: sigmoid-bounded lambda
+    diff_attn_v2: bool = False      # legacy flag: V2-inspired sigmoid-lambda ablation
     use_gated_attn: bool = False    # GatedAttn: learnable per-head gate
 
 
@@ -353,7 +353,7 @@ class GPT(nn.Module):
         if config.use_dyt: mods.append("DyT")
         if config.use_hardtanh: mods.append("HardTanh")
         if config.use_rmsnorm: mods.append("RMSNorm")
-        if config.use_diff_attn: mods.append("DiffAttnV2" if config.diff_attn_v2 else "DiffAttn")
+        if config.use_diff_attn: mods.append("DiffAttnSigmoidLambda" if config.diff_attn_v2 else "DiffAttn")
         if config.use_gated_attn: mods.append("GatedAttn")
         mod_str = " + ".join(mods) if mods else "Vanilla"
         print(f"[TransformerStudy] Config: {mod_str}")
