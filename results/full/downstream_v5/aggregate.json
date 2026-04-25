@@ -1,0 +1,200 @@
+{
+  "runset_3seed/wikitext_vanilla_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 8.30844783782959
+  },
+  "runset_3seed/wikitext_vanilla_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 5.75153923034668
+  },
+  "runset_3seed/wikitext_vanilla_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 5.62999153137207
+  },
+  "runset_3seed/wikitext_dyt_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 5.7794029712677
+  },
+  "runset_3seed/wikitext_dyt_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 5.695547819137573
+  },
+  "runset_3seed/wikitext_dyt_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 5.918865203857422
+  },
+  "scale2/wikitext_vanilla_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 7.164123773574829
+  },
+  "scale2/wikitext_vanilla_s42": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 6.571885824203491
+  },
+  "scale2/wikitext_vanilla_s7": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 6.664294481277466
+  },
+  "scale2/wikitext_dyt_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 6.700437307357788
+  },
+  "scale2/wikitext_dyt_s42": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 6.775203227996826
+  },
+  "scale2/wikitext_dyt_s7": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 6.809086084365845
+  },
+  "scale3/wikitext_vanilla_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 14.046142339706421
+  },
+  "scale3/wikitext_vanilla_s42": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 13.356507062911987
+  },
+  "scale3/wikitext_vanilla_s7": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 13.674997329711914
+  },
+  "scale3/wikitext_dyt_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 13.7772376537323
+  },
+  "scale3/wikitext_dyt_s42": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 14.017817974090576
+  },
+  "scale3/wikitext_dyt_s7": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "hellaswag_acc": 0.27,
+    "hellaswag_n": 300,
+    "winogrande_acc": 0.5,
+    "winogrande_n": 300,
+    "elapsed_s": 13.841216564178467
+  }
+}

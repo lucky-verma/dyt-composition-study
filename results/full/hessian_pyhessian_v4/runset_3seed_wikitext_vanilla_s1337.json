@@ -1,0 +1,20 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_vanilla_s1337",
+  "cfg": "vanilla",
+  "seed": 1337,
+  "tokens": "118m",
+  "top5_eigenvalues": [
+    44.52644729614258,
+    21.834392547607422,
+    17.061485290527344,
+    15.967333793640137,
+    14.001141548156738
+  ],
+  "top1_eigenvalue": 44.52644729614258,
+  "trace_hutchinson_mean": 8529.36181640625,
+  "trace_hutchinson_std": 170.8400440085074,
+  "trace_per_Mparam": 133.73238765397858,
+  "n_params_M": 63.779328,
+  "elapsed_s": 33.268052101135254
+}

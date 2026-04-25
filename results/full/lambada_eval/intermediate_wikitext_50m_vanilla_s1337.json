@@ -1,0 +1,8 @@
+{
+  "folder": "intermediate",
+  "name": "wikitext_50m_vanilla_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.048,
+  "per_token_perplexity": 570.6241455078125,
+  "n_params": 36864
+}

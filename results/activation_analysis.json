@@ -1,0 +1,41 @@
+{
+  "_description": "Activation saturation analysis: fraction of pre-tanh activations |alpha*x| exceeding thresholds. Measured on 50 random batches of 512 tokens from training data.",
+  "_key_finding": "Saturation is regime-dependent: 1M tokens -> ~49% saturated at |ax|>2, 118M tokens -> ~21% saturated. Higher saturation = stronger implicit regularization.",
+
+  "85M_1M_dyt": {
+    "saturation": {"1.0": 0.5874, "1.5": 0.5332, "2.0": 0.4858, "2.5": 0.4415, "3.0": 0.3991},
+    "mean_alpha": 2.4,
+    "n_dyt_layers": 25,
+    "_regime": "overfitting (1M tokens)"
+  },
+  "85M_118M_dyt": {
+    "saturation": {"1.0": 0.3923, "1.5": 0.2912, "2.0": 0.2130, "2.5": 0.1538, "3.0": 0.1098},
+    "mean_alpha": 2.0,
+    "n_dyt_layers": 25,
+    "_regime": "underfitting (118M tokens)"
+  },
+  "124M_1M_dyt": {
+    "saturation": {"1.0": 0.5669, "1.5": 0.5087, "2.0": 0.4556, "2.5": 0.4065, "3.0": 0.3601},
+    "mean_alpha": 2.3,
+    "n_dyt_layers": 25,
+    "_regime": "overfitting (1M tokens)"
+  },
+  "124M_118M_dyt": {
+    "saturation": {"1.0": 0.3443, "1.5": 0.2533, "2.0": 0.1848, "2.5": 0.1337, "3.0": 0.0962},
+    "mean_alpha": 1.8,
+    "n_dyt_layers": 25,
+    "_regime": "underfitting (118M tokens)"
+  },
+  "354M_1M_dyt": {
+    "saturation": {"1.0": 0.6029, "1.5": 0.5378, "2.0": 0.4833, "2.5": 0.4345, "3.0": 0.3897},
+    "mean_alpha": 1.8,
+    "n_dyt_layers": 49,
+    "_regime": "overfitting (1M tokens)"
+  },
+  "354M_118M_dyt": {
+    "saturation": {"1.0": 0.4753, "1.5": 0.3864, "2.0": 0.3165, "2.5": 0.2599, "3.0": 0.2133},
+    "mean_alpha": 1.5,
+    "n_dyt_layers": 49,
+    "_regime": "underfitting (118M tokens)"
+  }
+}

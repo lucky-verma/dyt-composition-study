@@ -1,0 +1,65 @@
+{
+  "_description": "Scaling study: 4 model sizes (64M, 124M, 354M, 1.3B), 3 seeds per condition, 5K steps. Val loss at step 5000.",
+  "_hardware": "H100 NVL 96GB",
+
+  "scale1_64M": {
+    "_model": {"n_layer": 12, "n_head": 8, "n_embd": 512, "params_M": 63.52},
+    "_training": {"batch_size": 64, "grad_accum": 1, "lr": 3e-4},
+    "wikitext_1m": {
+      "vanilla": {"seeds": {"1337": 9.3397, "42": 9.4316, "7": 9.3803}, "mean": 9.3839},
+      "dyt":     {"seeds": {"1337": 6.7841, "42": 7.0431, "7": 6.6283}, "mean": 6.8185},
+      "diffattn":{"seeds": {"1337": 9.6263, "42": 9.4142, "7": 9.4297}, "mean": 9.4901}
+    },
+    "wikitext": {
+      "vanilla": {"seeds": {"1337": 3.6398, "42": 3.6315, "7": 3.6215}, "mean": 3.6309},
+      "dyt":     {"seeds": {"1337": 4.2895, "42": 4.3025, "7": 4.3464}, "mean": 4.3128},
+      "diffattn":{"seeds": {"1337": 3.3429, "42": 3.3643, "7": 3.3684}, "mean": 3.3585}
+    }
+  },
+
+  "scale2_124M": {
+    "_model": {"n_layer": 12, "n_head": 12, "n_embd": 768, "params_M": 124},
+    "_training": {"batch_size": 32, "grad_accum": 2, "lr": 3e-4},
+    "wikitext_1m": {
+      "vanilla": {"seeds": {"1337": 9.2711, "42": 9.1223, "7": 9.1099}, "mean": 9.1678},
+      "dyt":     {"seeds": {"1337": 8.3548, "42": 8.1694, "7": 8.3472}, "mean": 8.2905},
+      "diffattn":{"seeds": {"1337": 9.2063, "42": 9.3103, "7": 9.4452}, "mean": 9.3206}
+    },
+    "wikitext": {
+      "vanilla": {"seeds": {"1337": 3.4750, "42": 3.5081, "7": 3.5121}, "mean": 3.4984},
+      "dyt":     {"seeds": {"1337": 3.9396, "42": 3.9657, "7": 3.9297}, "mean": 3.9450},
+      "diffattn":{"seeds": {"1337": 3.0800, "42": 3.0732, "7": 3.0520}, "mean": 3.0684}
+    }
+  },
+
+  "scale3_354M": {
+    "_model": {"n_layer": 24, "n_head": 16, "n_embd": 1024, "params_M": 354},
+    "_training": {"batch_size": 16, "grad_accum": 4, "lr": 3e-4},
+    "wikitext_1m": {
+      "vanilla": {"seeds": {"1337": 8.6924, "42": 8.6669, "7": 8.5999}, "mean": 8.6531},
+      "dyt":     {"seeds": {"1337": 9.0159, "42": 9.0934, "7": 8.9647}, "mean": 8.9913},
+      "diffattn":{"seeds": {"1337": 8.8040, "42": 8.9241, "7": 8.8965}, "mean": 8.8749}
+    },
+    "wikitext": {
+      "vanilla": {"seeds": {"1337": 3.3800, "42": 3.3383, "7": 3.3458}, "mean": 3.3547},
+      "dyt":     {"seeds": {"1337": 3.8249, "42": 3.8076, "7": 3.7756}, "mean": 3.8027},
+      "diffattn":{"seeds": {"1337": 2.4059, "42": 2.4110, "7": 2.4412}, "mean": 2.4194}
+    }
+  },
+
+  "scale4_1300M": {
+    "_model": {"n_layer": 24, "n_head": 32, "n_embd": 2048, "params_M": 1311},
+    "_training": {"batch_size": 4, "grad_accum": 16, "lr": 1e-4},
+    "_note": "DiffAttn has 3 seeds; vanilla and DyT have 2-3 seeds",
+    "wikitext_1m": {
+      "vanilla": {"seeds": {"1337": 7.6581, "42": 7.6267, "7": 7.7943}, "mean": 7.6930},
+      "dyt":     {"seeds": {"1337": 7.7510, "42": 7.8667, "7": 7.9375}, "mean": 7.8517},
+      "diffattn":{"seeds": {"1337": 7.9719, "42": 7.9136, "7": 7.7529}, "mean": 7.8795}
+    },
+    "wikitext": {
+      "vanilla": {"seeds": {"1337": 3.3549, "42": 3.3348, "7": 3.3540}, "mean": 3.3479},
+      "dyt":     {"seeds": {"1337": 3.7066, "42": 3.6843, "7": 3.7006}, "mean": 3.6972},
+      "diffattn":{"seeds": {"1337": 2.3127, "42": 2.4194, "7": 2.3716}, "mean": 2.3679}
+    }
+  }
+}

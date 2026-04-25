@@ -1,0 +1,8 @@
+{
+  "folder": "scale5",
+  "name": "wikitext_diffattn_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 59908.8671875,
+  "n_params": 589824
+}

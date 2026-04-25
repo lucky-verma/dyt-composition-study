@@ -1,0 +1,23 @@
+{
+  "git_sha": "unknown",
+  "timestamp": "2026-04-21T03:45:02Z",
+  "iter_num": 5000,
+  "best_val_loss": 3.6822621822357178,
+  "batch_size": 64,
+  "gradient_accumulation_steps": 1,
+  "eff_batch": 64,
+  "canonical_eff64": true,
+  "dataset": "wikitext",
+  "seed": 1337,
+  "use_dyt": false,
+  "use_diff_attn": false,
+  "diff_attn_v2": false,
+  "n_layer": 12,
+  "n_head": 8,
+  "n_embd": 512,
+  "max_iters": 5000,
+  "block_size": 512,
+  "learning_rate": 0.0003,
+  "dtype": "bfloat16",
+  "compile": true
+}

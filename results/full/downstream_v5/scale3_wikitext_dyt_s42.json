@@ -1,0 +1,11 @@
+{
+  "sub": "scale3",
+  "name": "wikitext_dyt_s42",
+  "cfg": "dyt",
+  "seed": 42,
+  "hellaswag_acc": 0.27,
+  "hellaswag_n": 300,
+  "winogrande_acc": 0.5,
+  "winogrande_n": 300,
+  "elapsed_s": 14.017817974090576
+}

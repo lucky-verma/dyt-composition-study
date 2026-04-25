@@ -1,0 +1,11 @@
+{
+  "sub": "scale2",
+  "name": "wikitext_dyt_s1337",
+  "cfg": "dyt",
+  "seed": 1337,
+  "hellaswag_acc": 0.27,
+  "hellaswag_n": 300,
+  "winogrande_acc": 0.5,
+  "winogrande_n": 300,
+  "elapsed_s": 6.700437307357788
+}

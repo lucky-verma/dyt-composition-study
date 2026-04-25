@@ -1,0 +1,8 @@
+{
+  "folder": "reviewer_owt_ga1",
+  "name": "openwebtext_118m_vanilla_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.068,
+  "per_token_perplexity": 213.31137084960938,
+  "n_params": 36864
+}

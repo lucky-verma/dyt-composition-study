@@ -1,0 +1,14 @@
+{
+  "sub": "scale2",
+  "name": "wikitext_dyt_s7",
+  "cfg": "dyt",
+  "seed": 7,
+  "tokens": "118m",
+  "lip_eps0.01": 198.76499568240868,
+  "lip_eps0.01_std": 0.4574065056528808,
+  "lip_eps0.1": 187.94944944477243,
+  "lip_eps0.1_std": 1.0247110614913508,
+  "logit_variance": 7.22838830947876,
+  "n_params_M": 123.980569,
+  "elapsed_s": 2.3684401512145996
+}

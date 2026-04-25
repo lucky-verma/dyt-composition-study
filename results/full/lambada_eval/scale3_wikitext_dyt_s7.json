@@ -1,0 +1,8 @@
+{
+  "folder": "scale3",
+  "name": "wikitext_dyt_s7",
+  "n_eval": 500,
+  "last_token_accuracy": 0.02,
+  "per_token_perplexity": 593.0106811523438,
+  "n_params": 147456
+}

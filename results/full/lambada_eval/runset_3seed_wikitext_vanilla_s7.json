@@ -1,0 +1,8 @@
+{
+  "folder": "runset_3seed",
+  "name": "wikitext_vanilla_s7",
+  "n_eval": 500,
+  "last_token_accuracy": 0.048,
+  "per_token_perplexity": 424.87298583984375,
+  "n_params": 36864
+}

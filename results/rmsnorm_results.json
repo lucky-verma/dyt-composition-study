@@ -1,0 +1,39 @@
+{
+  "_description": "RMSNorm baseline comparison: RMSNorm vs LayerNorm vs DyT at 64M scale, 2 seeds. Shows DyT's advantage is not just over legacy LayerNorm.",
+  "_model": {"n_layer": 12, "n_head": 8, "n_embd": 512, "block_size": 512, "params_M": 63.52},
+  "_training": {"batch_size": 64, "lr": 3e-4, "max_iters": 5000},
+
+  "wikitext_1m": {
+    "_regime": "overfitting",
+    "rmsnorm": {
+      "seeds": {"1337": 9.2852, "42": 9.3495},
+      "mean": 9.3174
+    },
+    "vanilla_layernorm": {
+      "seeds": {"1337": 9.3397, "42": 9.4316},
+      "mean": 9.3857
+    },
+    "dyt": {
+      "seeds": {"1337": 6.7841, "42": 7.0431},
+      "mean": 6.9136
+    },
+    "_interpretation": "RMSNorm ~ LayerNorm in overfitting regime. DyT substantially better than both."
+  },
+
+  "wikitext": {
+    "_regime": "underfitting",
+    "rmsnorm": {
+      "seeds": {"1337": 3.6374, "42": 3.6316},
+      "mean": 3.6345
+    },
+    "vanilla_layernorm": {
+      "seeds": {"1337": 3.6398, "42": 3.6315},
+      "mean": 3.6357
+    },
+    "dyt": {
+      "seeds": {"1337": 4.2895, "42": 4.3025},
+      "mean": 4.2960
+    },
+    "_interpretation": "RMSNorm ~ LayerNorm in underfitting regime. DyT worse than both (as expected: regularization hurts when underfitting)."
+  }
+}

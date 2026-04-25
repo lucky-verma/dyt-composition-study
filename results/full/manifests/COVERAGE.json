@@ -1,0 +1,1930 @@
+{
+  "paper_dir": "<PAPER_DIR>",
+  "paper_sources": "<PAPER_DIR>/docs/paper_sources.json",
+  "verify_json": null,
+  "fast_extract": "<PAPER_DIR>/data/fast_extract.json",
+  "n_tables": 30,
+  "n_cells": 143,
+  "summary": {
+    "verified": 86,
+    "mismatch": 0,
+    "pending": 0,
+    "superseded": 6,
+    "missing": 0,
+    "unknown": 51
+  },
+  "cells": [
+    {
+      "table": "tab:phase",
+      "cell": "1M/vanilla",
+      "folders": [
+        "runset_3seed/wikitext_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.384\u00b1.04",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (9.38387); reported spread 0.04 differs from sample std 0.0460831"
+      ]
+    },
+    {
+      "table": "tab:phase",
+      "cell": "1M/dyt",
+      "folders": [
+        "runset_3seed/wikitext_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "6.819\u00b1.17",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (6.81849); reported spread 0.17 differs from sample std 0.20955"
+      ]
+    },
+    {
+      "table": "tab:phase",
+      "cell": "1M/diffattn",
+      "folders": [
+        "runset_3seed/wikitext_1m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.490\u00b1.10",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (9.49007); reported spread 0.1 differs from sample std 0.118262"
+      ]
+    },
+    {
+      "table": "tab:phase",
+      "cell": "10M/vanilla",
+      "folders": [
+        "intermediate/wikitext_10m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.260\u00b1.01",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "10M/dyt",
+      "folders": [
+        "intermediate/wikitext_10m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.510\u00b1.01",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "10M/diffattn",
+      "folders": [
+        "intermediate/wikitext_10m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.706\u00b1.03",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "50M/vanilla",
+      "folders": [
+        "intermediate/wikitext_50m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.666\u00b1.01",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "50M/dyt",
+      "folders": [
+        "intermediate/wikitext_50m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.386\u00b1.02",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "50M/diffattn",
+      "folders": [
+        "intermediate/wikitext_50m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.380\u00b1.01",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:phase",
+      "cell": "118M/vanilla",
+      "folders": [
+        "runset_3seed/wikitext_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.631\u00b1.01",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean/std match (3 runs)"
+      ]
+    },
+    {
+      "table": "tab:phase",
+      "cell": "118M/dyt",
+      "folders": [
+        "runset_3seed/wikitext_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.313\u00b1.02",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (4.31282); reported spread 0.02 differs from sample std 0.0298144"
+      ]
+    },
+    {
+      "table": "tab:phase",
+      "cell": "118M/diffattn",
+      "folders": [
+        "runset_3seed/wikitext_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.359\u00b1.01",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean/std match (3 runs)"
+      ]
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "64M/1M",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "-27.3%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "64M/10M",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "+5.9%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "64M/118M",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "+18.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "124M/1M",
+      "folders": [
+        "scale2/wikitext_1m_{vanilla,dyt}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "-9.6%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "124M/10M",
+      "folders": [
+        "scale2_10m_ga2/{vanilla,dyt}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "-12.3%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "124M/118M",
+      "folders": [
+        "scale2/wikitext_{vanilla,dyt}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+12.8%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "354M/1M",
+      "folders": [
+        "scale3/wikitext_1m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+4.3%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "354M/10M",
+      "folders": [
+        "phase_fill/scale3_10m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "-24.1%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "354M/118M",
+      "folders": [
+        "scale3/wikitext_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+13.4%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "1.3B/1M",
+      "folders": [
+        "scale4/wikitext_1m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+2.1%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "1.3B/10M",
+      "folders": [
+        "phase_fill/scale4_10m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "-1.8%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "1.3B/118M",
+      "folders": [
+        "scale4/wikitext_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+10.4%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "3.78B/1M",
+      "folders": [
+        "scale5/wikitext_1m_{vanilla,dyt}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+1.7%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scaling",
+      "cell": "3.78B/118M",
+      "folders": [
+        "scale5/wikitext_{vanilla,dyt}_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "+27.9%",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "1M/vanilla",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "10.757\u00b1.04",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "1M/dyt",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "7.348\u00b1.11",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "1M/diffattn",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_1m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "10.822\u00b1.10",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "118M/vanilla",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_118m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.250\u00b1.01",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "118M/dyt",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_118m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.872\u00b1.03",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:owt",
+      "cell": "118M/diffattn",
+      "folders": [
+        "reviewer_owt_ga1/openwebtext_118m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.939\u00b1.03",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:hardtanh",
+      "cell": "vanilla_row",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:hardtanh",
+      "cell": "dyt_row",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:hardtanh",
+      "cell": "hardtanh/1M",
+      "folders": [
+        "hardtanh_ga1/wikitext_1m_hardtanh_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "6.246\u00b1.05",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:hardtanh",
+      "cell": "hardtanh/10M",
+      "folders": [
+        "hardtanh_ga1/wikitext_10m_hardtanh_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.660\u00b1.02",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:hardtanh",
+      "cell": "hardtanh/118M",
+      "folders": [
+        "hardtanh_ga1/wikitext_118m_hardtanh_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.562\u00b1.05",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:composition",
+      "cell": "vanilla",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "3.631",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:composition",
+      "cell": "dyt",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "4.313",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:composition",
+      "cell": "diffattn",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "3.359",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:composition",
+      "cell": "dyt_diffattn",
+      "folders": [
+        "composition/wikitext_dyt_diffattn_s1337"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "4.095",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract has 1 run values; value check skipped"
+      ]
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "vanilla_5K",
+      "folders": [
+        "runset_3seed/wikitext_vanilla_s1337"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "3.640",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract has 1 run values; value check skipped"
+      ]
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "vanilla_10K",
+      "folders": [
+        "convergence_ga1/vanilla_118m_10k_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.388\u00b1.007",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "diffattn_5K",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "3.343",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "diffattn_10K",
+      "folders": [
+        "convergence_ga1/diffattn_118m_10k_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "2.926\u00b1.02",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "dyt_5K",
+      "folders": [
+        "runset_3seed/wikitext_dyt_s1337"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "4.290",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract has 1 run values; value check skipped"
+      ]
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "dyt_10K",
+      "folders": [
+        "convergence_ga1/dyt_118m_10k_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.748\u00b1.015",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "dyt_diffattn_5K",
+      "folders": [
+        "composition/wikitext_dyt_diffattn_s1337"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "4.095",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract has 1 run values; value check skipped"
+      ]
+    },
+    {
+      "table": "tab:convergence_main",
+      "cell": "dyt_diffattn_10K",
+      "folders": [
+        "convergence_10k/dyt_diffattn_10k"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "3.370",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/1M/vanilla",
+      "folders": [
+        "llama/scale1_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.355\u00b1.007",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (9.35468); reported spread 0.007 differs from sample std 0.00804021"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/1M/dyt",
+      "folders": [
+        "llama/scale1_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "6.954\u00b1.54",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (6.95381); reported spread 0.54 differs from sample std 0.652938"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/1M/diffattn",
+      "folders": [
+        "llama/scale1_1m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.440\u00b1.05",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (9.44007); reported spread 0.05 differs from sample std 0.0661544"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/118M/vanilla",
+      "folders": [
+        "llama/scale1_118m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.537\u00b1.003",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (3.53717); reported spread 0.003 differs from sample std 0.00419048"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/118M/dyt",
+      "folders": [
+        "llama/scale1_118m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "5.626\u00b11.3",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (5.62553); reported spread 1.3 differs from sample std 1.58128"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "64M/118M/diffattn",
+      "folders": [
+        "llama/scale1_118m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.266\u00b1.01",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean/std match (3 runs)"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "124M/1M/vanilla",
+      "folders": [
+        "llama/scale2_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.134\u00b1.03",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean/std match (3 runs)"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "124M/1M/dyt",
+      "folders": [
+        "llama/scale2_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "8.483\u00b1.07",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean matches (8.48343); reported spread 0.07 differs from sample std 0.0834018"
+      ]
+    },
+    {
+      "table": "tab:llama",
+      "cell": "124M/1M/diffattn",
+      "folders": [
+        "llama/scale2_1m_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.221\u00b1.033",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "fast_extract mean/std match (3 runs)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s2_vanilla_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=5.419, pct_power_law=81.6%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s2_dyt_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=3.773, pct_power_law=93.9%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s2_vanilla_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=4.267, pct_power_law=89.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s2_dyt_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=3.254, pct_power_law=93.9%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s3_vanilla_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=5.060, pct_power_law=92.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s3_dyt_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=4.301, pct_power_law=91.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s3_vanilla_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=4.143, pct_power_law=90.7%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s3_dyt_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=3.710, pct_power_law=92.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s5_vanilla_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=6.015, pct_power_law=57.4%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s5_dyt_1m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=6.049, pct_power_law=55.8%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s5_vanilla_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=5.443, pct_power_law=63.6%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:weightwatcher",
+      "cell": "s5_dyt_118m",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "alpha_mean=4.043, pct_power_law=92.2%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:saturation_full",
+      "cell": "s1_1m_dyt_3seed",
+      "folders": [
+        "runset_3seed/wikitext_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "0.493\u00b10.011 (49.3%)",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:saturation_full",
+      "cell": "s1_118m_dyt_3seed",
+      "folders": [
+        "runset_3seed/wikitext_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "0.234\u00b10.020 (23.4%)",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:vit",
+      "cell": "vit_layernorm_cifar10_val_acc",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "72.4%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:vit",
+      "cell": "vit_dyt_alpha05_cifar10_val_acc",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": "81.2%",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:r5_llama_ablation",
+      "cell": "ablate_rope",
+      "folders": [
+        "r5_llama_ablation/llama_118M_dyt_ablate_rope_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "6.787\u00b11.14",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:r5_llama_ablation",
+      "cell": "ablate_gqa",
+      "folders": [
+        "r5_llama_ablation/llama_118M_dyt_ablate_gqa_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "6.565\u00b11.53",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:r5_llama_ablation",
+      "cell": "ablate_swiglu",
+      "folders": [
+        "r5_llama_ablation/llama_118M_dyt_ablate_swiglu_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.476\u00b1.007",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:iso_param_diffattn",
+      "cell": "isopar_diffattn_118M",
+      "folders": [
+        "iso_param_diffattn/wikitext_isopar_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.556\u00b1.013",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:dropout",
+      "cell": "p0.1",
+      "folders": [
+        "adaptive_dropout/wikitext_118m_p10_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.676\u00b1.002",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:dropout",
+      "cell": "p0.3",
+      "folders": [
+        "dropout_r6_ga1/wikitext_1m_p03_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.975\u00b1.002",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:dropout",
+      "cell": "p0.5",
+      "folders": [
+        "dropout_r6_ga1/wikitext_1m_p05_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.295\u00b1.007",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:composition_5k_3seed",
+      "cell": "dyt_diffattn_5k_3seed",
+      "folders": [
+        "composition/wikitext_dyt_diffattn_s1337",
+        "composition_5k_3seed/comp5k_dyt_diffattn_{s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "4.246\u00b1.135",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:convergence_10k_3seed",
+      "cell": "dyt_diffattn_10k_3seed",
+      "folders": [
+        "convergence_10k/dyt_diffattn_10k",
+        "composition_10k_ga1/dyt_diffattn_118m_10k_{s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.384\u00b1.022",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:diff_attn_v2_scale3_control",
+      "cell": "diffattn_v2_scale3_control_1m_3seed",
+      "folders": [
+        "diff_attn_v2_scale5/scale5_1m_diffattn_v2_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.140\u00b10.085",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:diff_attn_v2_scale3_control SUPERSEDED: SUPERSEDED by folder-rename tracking \u2014 content is valid Scale 3 data (n_layer=24/n_head=16/n_embd=10"
+      ]
+    },
+    {
+      "table": "tab:diff_attn_v2_scale3_control",
+      "cell": "diffattn_v2_scale3_control_118m_3seed",
+      "folders": [
+        "diff_attn_v2_scale5/scale5_118m_diffattn_v2_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "2.391\u00b10.036",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:diff_attn_v2_scale3_control SUPERSEDED: SUPERSEDED by folder-rename tracking \u2014 content is valid Scale 3 data (n_layer=24/n_head=16/n_embd=10"
+      ]
+    },
+    {
+      "table": "tab:diff_attn_v2_scale5_TRUE",
+      "cell": "v1_1m_3seed",
+      "folders": [
+        "diff_attn_v1v2_scale5/scale5_1m_diffattn_v1_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "10.58\u00b11.77",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:diff_attn_v2_scale5_TRUE",
+      "cell": "v1_118m_3seed",
+      "folders": [
+        "diff_attn_v1v2_scale5/scale5_118m_diffattn_v1_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "10.54\u00b11.45",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:diff_attn_v2_scale5_TRUE",
+      "cell": "v2_1m_3seed",
+      "folders": [
+        "diff_attn_v1v2_scale5/scale5_1m_diffattn_v2_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "9.82\u00b11.00",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:diff_attn_v2_scale5_TRUE",
+      "cell": "v2_118m_3seed",
+      "folders": [
+        "diff_attn_v1v2_scale5/scale5_118m_diffattn_v2_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "12.72\u00b14.13",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:iso_param_10m_3seed",
+      "cell": "isopar_diffattn_10m_3seed",
+      "folders": [
+        "iso_param_datascales/wikitext_10m_isopar_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.740\u00b10.022",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:iso_param_10m_3seed",
+      "cell": "isopar_diffattn_1m_3seed",
+      "folders": [
+        "iso_param_datascales/wikitext_1m_isopar_diffattn_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "8.927\u00b10.071",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale1_vanilla",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale1_dyt",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale2_vanilla",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale2_dyt",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale3_vanilla",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "scale3_dyt",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "dyt_vs_vanilla_fro_ratio",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:effective_rank_and_norm",
+      "cell": "dyt_vs_vanilla_rank_ratio",
+      "folders": [],
+      "seeds": null,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:scale25_heldout",
+      "cell": "scale25_1m_vanilla_3seed",
+      "folders": [
+        "scale25_heldout/scale25_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "8.844\u00b10.017",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:scale25_heldout SUPERSEDED: SUPERSEDED_BY_tab:scale25_true_162m as of internal timestamp. Per AUDIT.md CRIT-03: the runs under"
+      ]
+    },
+    {
+      "table": "tab:scale25_heldout",
+      "cell": "scale25_1m_dyt_2seed",
+      "folders": [
+        "scale25_heldout/scale25_1m_dyt_{s42,s7}"
+      ],
+      "seeds": 2,
+      "eff": 64,
+      "value": "8.944\u00b10.015",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:scale25_heldout SUPERSEDED: SUPERSEDED_BY_tab:scale25_true_162m as of internal timestamp. Per AUDIT.md CRIT-03: the runs under"
+      ]
+    },
+    {
+      "table": "tab:scale25_heldout",
+      "cell": "scale25_118m_vanilla_1seed_s1337_full_s42_s7_partial",
+      "folders": [
+        "scale25_heldout/scale25_118m_vanilla_{s1337_full,s42_iter4500,s7_iter4000}"
+      ],
+      "seeds": 1,
+      "eff": 64,
+      "value": "3.375 (s1337 full)",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:scale25_heldout SUPERSEDED: SUPERSEDED_BY_tab:scale25_true_162m as of internal timestamp. Per AUDIT.md CRIT-03: the runs under"
+      ]
+    },
+    {
+      "table": "tab:scale25_heldout",
+      "cell": "scale25_118m_dyt_3seed_pending_s7",
+      "folders": [
+        "scale25_heldout/scale25_118m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.77\u00b10.01 (provisional, s7 running at iter ~2100)",
+      "status": "superseded",
+      "status_symbol": "\ud83d\udce6",
+      "notes": [
+        "table tab:scale25_heldout SUPERSEDED: SUPERSEDED_BY_tab:scale25_true_162m as of internal timestamp. Per AUDIT.md CRIT-03: the runs under"
+      ]
+    },
+    {
+      "table": "tab:scale25_true_162m",
+      "cell": "scale25_1m_vanilla_3seed",
+      "folders": [
+        "scale25_true_162m/scale25_1m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "8.922\u00b10.057",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scale25_true_162m",
+      "cell": "scale25_1m_dyt_3seed",
+      "folders": [
+        "scale25_true_162m/scale25_1m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "8.888\u00b10.066",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scale25_true_162m",
+      "cell": "scale25_118m_vanilla_3seed",
+      "folders": [
+        "scale25_true_162m/scale25_118m_vanilla_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.428\u00b10.032",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:scale25_true_162m",
+      "cell": "scale25_118m_dyt_3seed",
+      "folders": [
+        "scale25_true_162m/scale25_118m_dyt_{s1337,s42,s7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "value": "3.834\u00b10.025",
+      "status": "unknown",
+      "status_symbol": "\u2753",
+      "notes": []
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S1_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "425.98\u00b12.17",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S1_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "167.22\u00b11.60",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S1_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "357.40\u00b11.21",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S1_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "197.90\u00b13.54",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S2_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "626.50\u00b14.08",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S2_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "294.03\u00b11.71",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S2_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "519.15\u00b13.56",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S2_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "296.08\u00b19.53",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S3_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "801.05\u00b12.74",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S3_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "369.91\u00b11.69",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S3_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "678.89\u00b14.72",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:activation_eff_rank",
+      "cell": "S3_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": 64,
+      "value": "361.98\u00b15.10",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S1_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "757.54\u00b117.6",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S1_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "788.41\u00b166.1",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S1_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "253.41\u00b15.7",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S1_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "240.28\u00b11.2",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S2_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "549.74\u00b115.4",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S2_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "689.08\u00b112.3",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S2_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "215.49\u00b14.0",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S2_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "194.80\u00b14.6",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S3_1M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "381.02\u00b111.6",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S3_1M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "417.64\u00b10.5",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S3_118M_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "174.49\u00b12.7",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lipschitz_full",
+      "cell": "S3_118M_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": "167.51\u00b14.0",
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S1_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S1_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S1_diffattn",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S2_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S2_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S2_diffattn",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S3_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S3_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S3_diffattn",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S5_vanilla",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S5_dyt",
+      "folders": [],
+      "seeds": 3,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    },
+    {
+      "table": "tab:lambada_118m",
+      "cell": "S5_diffattn",
+      "folders": [],
+      "seeds": 1,
+      "eff": null,
+      "value": null,
+      "status": "verified",
+      "status_symbol": "\u2705",
+      "notes": [
+        "derived (no folders)"
+      ]
+    }
+  ],
+  "generated": "internal timestamp"
+}

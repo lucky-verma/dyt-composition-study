@@ -1,0 +1,590 @@
+{
+  "runset_3seed/wikitext_vanilla_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      44.52644729614258,
+      21.834392547607422,
+      17.061485290527344,
+      15.967333793640137,
+      14.001141548156738
+    ],
+    "top1_eigenvalue": 44.52644729614258,
+    "trace_hutchinson_mean": 8529.36181640625,
+    "trace_hutchinson_std": 170.8400440085074,
+    "trace_per_Mparam": 133.73238765397858,
+    "n_params_M": 63.779328,
+    "elapsed_s": 33.268052101135254
+  },
+  "runset_3seed/wikitext_vanilla_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      18.167179107666016,
+      16.81698226928711,
+      16.013534545898438,
+      14.396973609924316,
+      13.471607208251953
+    ],
+    "top1_eigenvalue": 18.167179107666016,
+    "trace_hutchinson_mean": 7983.123674665178,
+    "trace_hutchinson_std": 235.86372101886258,
+    "trace_per_Mparam": 125.1678862885664,
+    "n_params_M": 63.779328,
+    "elapsed_s": 33.641446352005005
+  },
+  "runset_3seed/wikitext_vanilla_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      39.04743576049805,
+      15.6687593460083,
+      16.139781951904297,
+      14.699180603027344,
+      14.464137077331543
+    ],
+    "top1_eigenvalue": 39.04743576049805,
+    "trace_hutchinson_mean": 8293.451220703126,
+    "trace_hutchinson_std": 184.08048561945012,
+    "trace_per_Mparam": 130.0335309381611,
+    "n_params_M": 63.779328,
+    "elapsed_s": 39.4333074092865
+  },
+  "runset_3seed/wikitext_dyt_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      38.89595031738281,
+      26.380281448364258,
+      22.67072296142578,
+      19.770235061645508,
+      15.382800102233887
+    ],
+    "top1_eigenvalue": 38.89595031738281,
+    "trace_hutchinson_mean": 5579.3577067057295,
+    "trace_hutchinson_std": 206.46106834391196,
+    "trace_per_Mparam": 87.47905778701971,
+    "n_params_M": 63.779353,
+    "elapsed_s": 29.438114404678345
+  },
+  "runset_3seed/wikitext_dyt_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      19.702009201049805,
+      20.005130767822266,
+      18.049009323120117,
+      17.521900177001953,
+      16.800182342529297
+    ],
+    "top1_eigenvalue": 19.702009201049805,
+    "trace_hutchinson_mean": 5107.865583147322,
+    "trace_hutchinson_std": 219.47901685179573,
+    "trace_per_Mparam": 80.08650672808363,
+    "n_params_M": 63.779353,
+    "elapsed_s": 38.06736350059509
+  },
+  "runset_3seed/wikitext_dyt_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      19.531980514526367,
+      16.20332908630371,
+      15.919123649597168,
+      13.716988563537598,
+      14.053409576416016
+    ],
+    "top1_eigenvalue": 19.531980514526367,
+    "trace_hutchinson_mean": 5176.2397867838545,
+    "trace_hutchinson_std": 159.57690390754087,
+    "trace_per_Mparam": 81.15854964511563,
+    "n_params_M": 63.779353,
+    "elapsed_s": 34.34198307991028
+  },
+  "scale2/wikitext_vanilla_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      24.34638214111328,
+      16.984304428100586,
+      14.230277061462402,
+      13.374490737915039,
+      12.362125396728516
+    ],
+    "top1_eigenvalue": 24.34638214111328,
+    "trace_hutchinson_mean": 7932.176025390625,
+    "trace_hutchinson_std": 212.62409313004025,
+    "trace_per_Mparam": 63.97920003795616,
+    "n_params_M": 123.980544,
+    "elapsed_s": 47.34596538543701
+  },
+  "scale2/wikitext_vanilla_s42": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      23.056350708007812,
+      18.191194534301758,
+      17.72783660888672,
+      13.851985931396484,
+      11.618159294128418
+    ],
+    "top1_eigenvalue": 23.056350708007812,
+    "trace_hutchinson_mean": 7468.827941894531,
+    "trace_hutchinson_std": 198.00761077675483,
+    "trace_per_Mparam": 60.241935556392875,
+    "n_params_M": 123.980544,
+    "elapsed_s": 54.33322882652283
+  },
+  "scale2/wikitext_vanilla_s7": {
+    "sub": "scale2",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      15.588827133178711,
+      15.464471817016602,
+      14.710283279418945,
+      12.296395301818848,
+      11.100890159606934
+    ],
+    "top1_eigenvalue": 15.588827133178711,
+    "trace_hutchinson_mean": 7670.934500558035,
+    "trace_hutchinson_std": 144.00080243556653,
+    "trace_per_Mparam": 61.87208293389998,
+    "n_params_M": 123.980544,
+    "elapsed_s": 65.44054579734802
+  },
+  "scale2/wikitext_dyt_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      27.824909210205078,
+      -25.436901092529297,
+      21.860122680664062,
+      17.380552291870117,
+      17.780731201171875
+    ],
+    "top1_eigenvalue": 27.824909210205078,
+    "trace_hutchinson_mean": 5260.996651785715,
+    "trace_hutchinson_std": 169.45222063558595,
+    "trace_per_Mparam": 42.43404183590829,
+    "n_params_M": 123.980569,
+    "elapsed_s": 67.84846925735474
+  },
+  "scale2/wikitext_dyt_s42": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      16.182044982910156,
+      13.07958698272705,
+      12.324766159057617,
+      11.382715225219727,
+      11.440680503845215
+    ],
+    "top1_eigenvalue": 16.182044982910156,
+    "trace_hutchinson_mean": 5002.7825927734375,
+    "trace_hutchinson_std": 96.50377498379218,
+    "trace_per_Mparam": 40.351344030155545,
+    "n_params_M": 123.980569,
+    "elapsed_s": 57.75947451591492
+  },
+  "scale2/wikitext_dyt_s7": {
+    "sub": "scale2",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "118m",
+    "top5_eigenvalues": [
+      45.60879898071289,
+      16.327545166015625,
+      13.917710304260254,
+      14.046029090881348,
+      12.366066932678223
+    ],
+    "top1_eigenvalue": 45.60879898071289,
+    "trace_hutchinson_mean": 5065.2259765625,
+    "trace_hutchinson_std": 194.06074438534247,
+    "trace_per_Mparam": 40.85499862936183,
+    "n_params_M": 123.980569,
+    "elapsed_s": 52.48031783103943
+  },
+  "scale3/wikitext_vanilla_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 1.49 GiB is free. Including non-PyTorch memory, this process has 91.58 GiB memory in use. Of the allocated memory 87.52 GiB is allocated by PyTorch, and 3.34 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 12.658424615859985
+  },
+  "scale3/wikitext_vanilla_s42": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 1.42 GiB is free. Including non-PyTorch memory, this process has 91.66 GiB memory in use. Of the allocated memory 87.52 GiB is allocated by PyTorch, and 3.42 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 12.685953855514526
+  },
+  "scale3/wikitext_vanilla_s7": {
+    "sub": "scale3",
+    "name": "wikitext_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 1.18 GiB is free. Including non-PyTorch memory, this process has 91.89 GiB memory in use. Of the allocated memory 88.84 GiB is allocated by PyTorch, and 2.33 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 22.103193283081055
+  },
+  "scale3/wikitext_dyt_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 772.56 MiB is free. Including non-PyTorch memory, this process has 92.32 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 829.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 6.19822359085083
+  },
+  "scale3/wikitext_dyt_s42": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 872.56 MiB is free. Including non-PyTorch memory, this process has 92.22 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 728.74 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 6.354730606079102
+  },
+  "scale3/wikitext_dyt_s7": {
+    "sub": "scale3",
+    "name": "wikitext_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "118m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 668.56 MiB is free. Including non-PyTorch memory, this process has 92.42 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 934.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 6.491718292236328
+  },
+  "runset_3seed/wikitext_1m_vanilla_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      177.67222595214844,
+      168.32618713378906,
+      121.42747497558594,
+      111.66976928710938,
+      103.13463592529297
+    ],
+    "top1_eigenvalue": 177.67222595214844,
+    "trace_hutchinson_mean": -17611.18994140625,
+    "trace_hutchinson_std": 5217.50927734375,
+    "trace_per_Mparam": -276.1269284838851,
+    "n_params_M": 63.779328,
+    "elapsed_s": 41.2122917175293
+  },
+  "runset_3seed/wikitext_1m_vanilla_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      133.1174774169922,
+      118.47500610351562,
+      110.97528839111328,
+      108.67276000976562,
+      102.81131744384766
+    ],
+    "top1_eigenvalue": 133.1174774169922,
+    "trace_hutchinson_mean": -27639.3271484375,
+    "trace_hutchinson_std": 4089.8349609375,
+    "trace_per_Mparam": -433.3587075178575,
+    "n_params_M": 63.779328,
+    "elapsed_s": 36.40268111228943
+  },
+  "runset_3seed/wikitext_1m_vanilla_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      237.57736206054688,
+      131.7372283935547,
+      121.3245620727539,
+      108.2046890258789,
+      106.1427993774414
+    ],
+    "top1_eigenvalue": 237.57736206054688,
+    "trace_hutchinson_mean": -26058.05078125,
+    "trace_hutchinson_std": 1532.796875,
+    "trace_per_Mparam": -408.56577826047334,
+    "n_params_M": 63.779328,
+    "elapsed_s": 37.37884593009949
+  },
+  "runset_3seed/wikitext_1m_dyt_s1337": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      127.14641571044922,
+      116.3680648803711,
+      -93.18702697753906,
+      104.53206634521484,
+      97.21741485595703
+    ],
+    "top1_eigenvalue": 127.14641571044922,
+    "trace_hutchinson_mean": 5494.690561930339,
+    "trace_hutchinson_std": 1135.7390601296963,
+    "trace_per_Mparam": 86.1515569455579,
+    "n_params_M": 63.779353,
+    "elapsed_s": 50.57640814781189
+  },
+  "runset_3seed/wikitext_1m_dyt_s42": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      -191.2324981689453,
+      171.38563537597656,
+      137.63998413085938,
+      118.46736145019531,
+      108.28268432617188
+    ],
+    "top1_eigenvalue": -191.2324981689453,
+    "trace_hutchinson_mean": 4730.214708600725,
+    "trace_hutchinson_std": 1846.9469176688272,
+    "trace_per_Mparam": 74.16529779787395,
+    "n_params_M": 63.779353,
+    "elapsed_s": 49.04965543746948
+  },
+  "runset_3seed/wikitext_1m_dyt_s7": {
+    "sub": "runset_3seed",
+    "name": "wikitext_1m_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      152.51715087890625,
+      104.0513916015625,
+      96.60680389404297,
+      92.27686309814453,
+      90.46219635009766
+    ],
+    "top1_eigenvalue": 152.51715087890625,
+    "trace_hutchinson_mean": 5185.497395833333,
+    "trace_hutchinson_std": 1278.789125880653,
+    "trace_per_Mparam": 81.30370020895842,
+    "n_params_M": 63.779353,
+    "elapsed_s": 34.6399462223053
+  },
+  "scale2/wikitext_1m_vanilla_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_1m_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      412.8475036621094,
+      127.80812072753906,
+      105.738525390625,
+      107.73947143554688,
+      -15.767030715942383
+    ],
+    "top1_eigenvalue": 412.8475036621094,
+    "trace_hutchinson_mean": -19083.0869140625,
+    "trace_hutchinson_std": 1769.5869140625,
+    "trace_per_Mparam": -153.92001275669915,
+    "n_params_M": 123.980544,
+    "elapsed_s": 80.4887375831604
+  },
+  "scale2/wikitext_1m_vanilla_s42": {
+    "sub": "scale2",
+    "name": "wikitext_1m_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      86.697265625,
+      61.5216064453125,
+      67.17217254638672,
+      67.83621215820312,
+      25.474117279052734
+    ],
+    "top1_eigenvalue": 86.697265625,
+    "trace_hutchinson_mean": -19969.8408203125,
+    "trace_hutchinson_std": 1042.4208984375,
+    "trace_per_Mparam": -161.07237616502553,
+    "n_params_M": 123.980544,
+    "elapsed_s": 79.62105655670166
+  },
+  "scale2/wikitext_1m_vanilla_s7": {
+    "sub": "scale2",
+    "name": "wikitext_1m_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      185.49363708496094,
+      81.62825775146484,
+      70.92475891113281,
+      70.37909698486328,
+      68.24758911132812
+    ],
+    "top1_eigenvalue": 185.49363708496094,
+    "trace_hutchinson_mean": -15514.4228515625,
+    "trace_hutchinson_std": 2120.9345703125,
+    "trace_per_Mparam": -125.13594755288781,
+    "n_params_M": 123.980544,
+    "elapsed_s": 73.53241658210754
+  },
+  "scale2/wikitext_1m_dyt_s1337": {
+    "sub": "scale2",
+    "name": "wikitext_1m_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      -201.6531524658203,
+      -175.49095153808594,
+      162.001220703125,
+      87.71659088134766,
+      118.65492248535156
+    ],
+    "top1_eigenvalue": -201.6531524658203,
+    "trace_hutchinson_mean": 6808.553792317708,
+    "trace_hutchinson_std": 3373.62007609192,
+    "trace_per_Mparam": 54.91629734589868,
+    "n_params_M": 123.980569,
+    "elapsed_s": 97.06745219230652
+  },
+  "scale2/wikitext_1m_dyt_s42": {
+    "sub": "scale2",
+    "name": "wikitext_1m_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      126.90341186523438,
+      119.64060974121094,
+      -55.35393142700195,
+      110.14375305175781,
+      5.428436756134033
+    ],
+    "top1_eigenvalue": 126.90341186523438,
+    "trace_hutchinson_mean": 7679.4813011169435,
+    "trace_hutchinson_std": 3132.2201607715415,
+    "trace_per_Mparam": 61.94100707117212,
+    "n_params_M": 123.980569,
+    "elapsed_s": 115.45542073249817
+  },
+  "scale2/wikitext_1m_dyt_s7": {
+    "sub": "scale2",
+    "name": "wikitext_1m_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "1m",
+    "top5_eigenvalues": [
+      -290.113037109375,
+      155.0848846435547,
+      139.3274688720703,
+      -119.5738754272461,
+      110.18014526367188
+    ],
+    "top1_eigenvalue": -290.113037109375,
+    "trace_hutchinson_mean": 8272.361669921875,
+    "trace_hutchinson_std": 2685.5213437472025,
+    "trace_per_Mparam": 66.7230497217824,
+    "n_params_M": 123.980569,
+    "elapsed_s": 59.83872628211975
+  },
+  "scale3/wikitext_1m_vanilla_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_1m_vanilla_s1337",
+    "cfg": "vanilla",
+    "seed": 1337,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 1.53 GiB is free. Including non-PyTorch memory, this process has 91.55 GiB memory in use. Of the allocated memory 87.52 GiB is allocated by PyTorch, and 3.31 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 9.880895614624023
+  },
+  "scale3/wikitext_1m_vanilla_s42": {
+    "sub": "scale3",
+    "name": "wikitext_1m_vanilla_s42",
+    "cfg": "vanilla",
+    "seed": 42,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 942.56 MiB is free. Including non-PyTorch memory, this process has 92.16 GiB memory in use. Of the allocated memory 87.52 GiB is allocated by PyTorch, and 3.91 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 13.430505990982056
+  },
+  "scale3/wikitext_1m_vanilla_s7": {
+    "sub": "scale3",
+    "name": "wikitext_1m_vanilla_s7",
+    "cfg": "vanilla",
+    "seed": 7,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 554.56 MiB is free. Including non-PyTorch memory, this process has 92.54 GiB memory in use. Of the allocated memory 88.84 GiB is allocated by PyTorch, and 2.97 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 20.88865900039673
+  },
+  "scale3/wikitext_1m_dyt_s1337": {
+    "sub": "scale3",
+    "name": "wikitext_1m_dyt_s1337",
+    "cfg": "dyt",
+    "seed": 1337,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 126.56 MiB is free. Including non-PyTorch memory, this process has 92.95 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 1.44 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 6.1849260330200195
+  },
+  "scale3/wikitext_1m_dyt_s42": {
+    "sub": "scale3",
+    "name": "wikitext_1m_dyt_s42",
+    "cfg": "dyt",
+    "seed": 42,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 520.56 MiB is free. Including non-PyTorch memory, this process has 92.57 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 1.06 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 5.909905910491943
+  },
+  "scale3/wikitext_1m_dyt_s7": {
+    "sub": "scale3",
+    "name": "wikitext_1m_dyt_s7",
+    "cfg": "dyt",
+    "seed": 7,
+    "tokens": "1m",
+    "error": "pyhessian: OutOfMemoryError: CUDA out of memory. Tried to allocate 1.54 GiB. GPU 0 has a total capacity of 93.09 GiB of which 776.56 MiB is free. Including non-PyTorch memory, this process has 92.32 GiB memory in use. Of the allocated memory 90.79 GiB is allocated by PyTorch, and 826.24 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+    "elapsed_s": 6.107895851135254
+  }
+}

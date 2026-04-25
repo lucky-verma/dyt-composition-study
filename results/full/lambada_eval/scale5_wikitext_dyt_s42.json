@@ -1,0 +1,8 @@
+{
+  "folder": "scale5",
+  "name": "wikitext_dyt_s42",
+  "n_eval": 500,
+  "last_token_accuracy": 0.004,
+  "per_token_perplexity": 7124.27001953125,
+  "n_params": 589824
+}

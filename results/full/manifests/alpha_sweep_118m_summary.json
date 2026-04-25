@@ -1,0 +1,68 @@
+{
+  "description": "DyT alpha initialization sweep at 64M parameters, 118M Wikitext-103 tokens, 5K steps, eff_batch=64. Completed on compute environment in Apr 2026.",
+  "baseline": {
+    "config": "vanilla_layernorm",
+    "val_loss_mean": 3.631,
+    "val_loss_std": 0.008,
+    "delta_vs_vanilla_percent": 0.0,
+    "source": "tab:phase canonical 64M/118M vanilla"
+  },
+  "canonical_dyt_reference": {
+    "alpha_init": 2.0,
+    "val_loss_mean": 4.313,
+    "val_loss_std": 0.024,
+    "delta_vs_vanilla_percent": 18.8,
+    "source": "tab:phase canonical 64M/118M DyT"
+  },
+  "alpha_sweep": [
+    {
+      "alpha_init": 0.5,
+      "seed_values": {
+        "1337": 5.133974075317383,
+        "42": 5.123071670532227,
+        "7": 5.205899238586426
+      },
+      "val_loss_mean": 5.154314994812012,
+      "val_loss_std": 0.04500462489409818,
+      "delta_vs_vanilla_percent": 41.95304309589678,
+      "remote_folders": [
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a05_s1337",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a05_s42",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a05_s7"
+      ]
+    },
+    {
+      "alpha_init": 1.0,
+      "seed_values": {
+        "1337": 4.736944198608398,
+        "42": 4.822934150695801,
+        "7": 4.7534871101379395
+      },
+      "val_loss_mean": 4.771121819814046,
+      "val_loss_std": 0.04562680357003839,
+      "delta_vs_vanilla_percent": 31.39966455009766,
+      "remote_folders": [
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a10_s1337",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a10_s42",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a10_s7"
+      ]
+    },
+    {
+      "alpha_init": 3.0,
+      "seed_values": {
+        "1337": 4.2006402015686035,
+        "42": 4.192511081695557,
+        "7": 4.193594932556152
+      },
+      "val_loss_mean": 4.1955820719401045,
+      "val_loss_std": 0.004413863350402993,
+      "delta_vs_vanilla_percent": 15.548941667312155,
+      "remote_folders": [
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a30_s1337",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a30_s42",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a30_s7"
+      ]
+    }
+  ],
+  "paper_claim": "Increasing alpha weakens activation bounding and monotonically reduces DyT's data-rich penalty, but the best tested alpha still trails LayerNorm at 64M/118M."
+}

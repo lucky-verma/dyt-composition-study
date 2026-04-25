@@ -1,0 +1,55 @@
+{
+  "_description": "ViT experiments: DyT vs LayerNorm on CIFAR-10/100 with ViT-Small (4.8M params). 100 epochs, AdamW.",
+  "_model": {"dim": 256, "depth": 6, "heads": 4, "params_M": 4.77},
+
+  "cifar10_ln_s1337": {
+    "final_train_acc": 87.78, "final_val_acc": 70.02,
+    "final_train_loss": 0.3487, "final_val_loss": 0.9743,
+    "params_M": 4.771
+  },
+  "cifar10_dyt_s1337": {
+    "final_train_acc": 29.48, "final_val_acc": 30.11,
+    "final_train_loss": 1.8703, "final_val_loss": 1.8519,
+    "params_M": 4.771,
+    "_note": "DyT with alpha=2.0 catastrophically fails on ViT. Nearly random accuracy."
+  },
+  "cifar10_ln_s42": {
+    "final_train_acc": 94.72, "final_val_acc": 70.37,
+    "final_train_loss": 0.1565, "final_val_loss": 1.1609,
+    "params_M": 4.771
+  },
+  "cifar10_dyt_s42": {
+    "final_train_acc": 35.33, "final_val_acc": 36.45,
+    "final_train_loss": 1.6936, "final_val_loss": 1.6632,
+    "params_M": 4.771
+  },
+  "cifar100_ln_s1337": {
+    "final_train_acc": 99.16, "final_val_acc": 45.70,
+    "final_train_loss": 0.0944, "final_val_loss": 2.5757,
+    "params_M": 4.794
+  },
+  "cifar100_dyt_s1337": {
+    "final_train_acc": 6.68, "final_val_acc": 6.88,
+    "final_train_loss": 4.1154, "final_val_loss": 4.113,
+    "params_M": 4.794,
+    "_note": "DyT with alpha=2.0 completely fails on CIFAR-100 ViT."
+  },
+  "cifar100_ln_s42": {
+    "final_train_acc": 98.93, "final_val_acc": 45.86,
+    "final_train_loss": 0.1116, "final_val_loss": 2.5253,
+    "params_M": 4.794
+  },
+  "cifar100_dyt_s42": {
+    "final_train_acc": 7.95, "final_val_acc": 8.32,
+    "final_train_loss": 4.0324, "final_val_loss": 4.0125,
+    "params_M": 4.794
+  },
+
+  "_summary": {
+    "cifar10_ln_mean_val_acc": 70.20,
+    "cifar10_dyt_mean_val_acc": 33.28,
+    "cifar100_ln_mean_val_acc": 45.78,
+    "cifar100_dyt_mean_val_acc": 7.60,
+    "_interpretation": "DyT with alpha=2.0 is catastrophic for ViT. Alpha sweep (vit_alpha_sweep) shows alpha=0.5 recovers and exceeds LayerNorm."
+  }
+}

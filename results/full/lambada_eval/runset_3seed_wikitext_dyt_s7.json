@@ -1,0 +1,8 @@
+{
+  "folder": "runset_3seed",
+  "name": "wikitext_dyt_s7",
+  "n_eval": 500,
+  "last_token_accuracy": 0.002,
+  "per_token_perplexity": 7461.00341796875,
+  "n_params": 36864
+}

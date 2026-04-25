@@ -1,0 +1,21 @@
+{
+  "sub": "scale3",
+  "name": "wikitext_vanilla_s1337",
+  "cfg": "vanilla",
+  "seed": 1337,
+  "tokens": "118m",
+  "batch": 4,
+  "top5_eigenvalues": [
+    27.677425384521484,
+    21.384723663330078,
+    18.173490524291992,
+    16.953649520874023,
+    15.54220962524414
+  ],
+  "top1_eigenvalue": 27.677425384521484,
+  "trace_hutchinson_mean": 6631.535200639205,
+  "trace_hutchinson_std": 316.6885492505656,
+  "trace_per_Mparam": 18.729147960605314,
+  "n_params_M": 354.075648,
+  "elapsed_s": 52.90557861328125
+}

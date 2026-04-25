@@ -1,0 +1,978 @@
+{
+  "composition_1m_ga1/diffattn_s1337": {
+    "folder": "composition_1m_ga1",
+    "name": "diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 4942758.0,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/diffattn_s42": {
+    "folder": "composition_1m_ga1",
+    "name": "diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 5136142.0,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/diffattn_s7": {
+    "folder": "composition_1m_ga1",
+    "name": "diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 4931528.5,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_diffattn_s1337": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 599551.9375,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_diffattn_s42": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 4158236.25,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_diffattn_s7": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 9438022.0,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_s1337": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 373348.28125,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_s42": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 431832.84375,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/dyt_s7": {
+    "folder": "composition_1m_ga1",
+    "name": "dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 536668.1875,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/vanilla_s1337": {
+    "folder": "composition_1m_ga1",
+    "name": "vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3779461.25,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/vanilla_s42": {
+    "folder": "composition_1m_ga1",
+    "name": "vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 6386444.5,
+    "n_params": 36864
+  },
+  "composition_1m_ga1/vanilla_s7": {
+    "folder": "composition_1m_ga1",
+    "name": "vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 6059101.5,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_diffattn_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 11516405.0,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_diffattn_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 5696843.5,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_diffattn_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 8953961.0,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_dyt_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 422457.0625,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_dyt_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 311630.46875,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_dyt_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 299626.9375,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_vanilla_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 5514749.5,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_vanilla_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 7049726.5,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_1m_vanilla_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_1m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 5731387.0,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_diffattn_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.01,
+    "per_token_perplexity": 1906.0980224609375,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_diffattn_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.014,
+    "per_token_perplexity": 8338.2314453125,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_diffattn_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 157188.703125,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_dyt_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 4309.90185546875,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_dyt_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 6217.69873046875,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_dyt_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 7461.00341796875,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_vanilla_s1337": {
+    "folder": "runset_3seed",
+    "name": "wikitext_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.046,
+    "per_token_perplexity": 401.1818542480469,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_vanilla_s42": {
+    "folder": "runset_3seed",
+    "name": "wikitext_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.036,
+    "per_token_perplexity": 547.5186767578125,
+    "n_params": 36864
+  },
+  "runset_3seed/wikitext_vanilla_s7": {
+    "folder": "runset_3seed",
+    "name": "wikitext_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.048,
+    "per_token_perplexity": 424.87298583984375,
+    "n_params": 36864
+  },
+  "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s1337": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_118m_diffattn_v2_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 56965017600.0,
+    "n_params": 147456
+  },
+  "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s42": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_118m_diffattn_v2_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 525260259328.0,
+    "n_params": 147456
+  },
+  "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s7": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_118m_diffattn_v2_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3949154816.0,
+    "n_params": 147456
+  },
+  "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s1337": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_1m_diffattn_v2_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 1496505.375,
+    "n_params": 147456
+  },
+  "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s42": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_1m_diffattn_v2_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3188504.0,
+    "n_params": 147456
+  },
+  "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s7": {
+    "folder": "diff_attn_v2_scale5",
+    "name": "scale5_1m_diffattn_v2_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 1849028.625,
+    "n_params": 147456
+  },
+  "intermediate/wikitext_10m_diffattn_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 37473.890625,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_diffattn_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 3625653.75,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_diffattn_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 94624.9921875,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_dyt_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 20733.509765625,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_dyt_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 21726.00390625,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_dyt_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 17065.822265625,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_vanilla_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.01,
+    "per_token_perplexity": 7174.1435546875,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_vanilla_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.014,
+    "per_token_perplexity": 6884.7412109375,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_10m_vanilla_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_10m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.006,
+    "per_token_perplexity": 8178.03173828125,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_diffattn_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 9308.6875,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_diffattn_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3458791.75,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_diffattn_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 208756.203125,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_dyt_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.004,
+    "per_token_perplexity": 9364.533203125,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_dyt_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.004,
+    "per_token_perplexity": 9637.5830078125,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_dyt_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 10533.5478515625,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_vanilla_s1337": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.048,
+    "per_token_perplexity": 570.6241455078125,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_vanilla_s42": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.042,
+    "per_token_perplexity": 533.6266479492188,
+    "n_params": 36864
+  },
+  "intermediate/wikitext_50m_vanilla_s7": {
+    "folder": "intermediate",
+    "name": "wikitext_50m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.046,
+    "per_token_perplexity": 564.2338256835938,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_diffattn_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 8710.435546875,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_diffattn_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 16782.392578125,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_diffattn_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 27517.490234375,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_dyt_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.006,
+    "per_token_perplexity": 1979.0015869140625,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_dyt_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 3365.388916015625,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_dyt_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.008,
+    "per_token_perplexity": 2201.764404296875,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_vanilla_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.068,
+    "per_token_perplexity": 213.31137084960938,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_vanilla_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.082,
+    "per_token_perplexity": 207.67367553710938,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_118m_vanilla_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_118m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.074,
+    "per_token_perplexity": 227.25389099121094,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_diffattn_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 4178637.5,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_diffattn_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2896302.25,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_diffattn_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2439819.5,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_dyt_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 397347.1875,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_dyt_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 236498.53125,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_dyt_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 238447.3125,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_vanilla_s1337": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 1710913.75,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_vanilla_s42": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3840542.75,
+    "n_params": 36864
+  },
+  "reviewer_owt_ga1/openwebtext_1m_vanilla_s7": {
+    "folder": "reviewer_owt_ga1",
+    "name": "openwebtext_1m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2472554.25,
+    "n_params": 36864
+  },
+  "scale2/wikitext_1m_diffattn_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_1m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 4023100.25,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_diffattn_s42": {
+    "folder": "scale2",
+    "name": "wikitext_1m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3982157.5,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_diffattn_s7": {
+    "folder": "scale2",
+    "name": "wikitext_1m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 6086582.5,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_dyt_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_1m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 5188761.5,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_dyt_s42": {
+    "folder": "scale2",
+    "name": "wikitext_1m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3828989.75,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_dyt_s7": {
+    "folder": "scale2",
+    "name": "wikitext_1m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 4404342.0,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_vanilla_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_1m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 6887851.5,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_vanilla_s42": {
+    "folder": "scale2",
+    "name": "wikitext_1m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 4526284.0,
+    "n_params": 55296
+  },
+  "scale2/wikitext_1m_vanilla_s7": {
+    "folder": "scale2",
+    "name": "wikitext_1m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 3461893.75,
+    "n_params": 55296
+  },
+  "scale2/wikitext_diffattn_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 9841564.0,
+    "n_params": 55296
+  },
+  "scale2/wikitext_diffattn_s42": {
+    "folder": "scale2",
+    "name": "wikitext_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 9808.978515625,
+    "n_params": 55296
+  },
+  "scale2/wikitext_diffattn_s7": {
+    "folder": "scale2",
+    "name": "wikitext_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 707234.875,
+    "n_params": 55296
+  },
+  "scale2/wikitext_dyt_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.014,
+    "per_token_perplexity": 1046.81494140625,
+    "n_params": 55296
+  },
+  "scale2/wikitext_dyt_s42": {
+    "folder": "scale2",
+    "name": "wikitext_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.008,
+    "per_token_perplexity": 933.8527221679688,
+    "n_params": 55296
+  },
+  "scale2/wikitext_dyt_s7": {
+    "folder": "scale2",
+    "name": "wikitext_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.016,
+    "per_token_perplexity": 858.6325073242188,
+    "n_params": 55296
+  },
+  "scale2/wikitext_vanilla_s1337": {
+    "folder": "scale2",
+    "name": "wikitext_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.05,
+    "per_token_perplexity": 524.31396484375,
+    "n_params": 55296
+  },
+  "scale2/wikitext_vanilla_s42": {
+    "folder": "scale2",
+    "name": "wikitext_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.056,
+    "per_token_perplexity": 428.8859558105469,
+    "n_params": 55296
+  },
+  "scale2/wikitext_vanilla_s7": {
+    "folder": "scale2",
+    "name": "wikitext_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.046,
+    "per_token_perplexity": 455.8838806152344,
+    "n_params": 55296
+  },
+  "scale3/wikitext_1m_diffattn_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_1m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2560623.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_diffattn_s42": {
+    "folder": "scale3",
+    "name": "wikitext_1m_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2589816.25,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_diffattn_s7": {
+    "folder": "scale3",
+    "name": "wikitext_1m_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2314076.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_dyt_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_1m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 20372620.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_dyt_s42": {
+    "folder": "scale3",
+    "name": "wikitext_1m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 21659670.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_dyt_s7": {
+    "folder": "scale3",
+    "name": "wikitext_1m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 12889375.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_vanilla_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_1m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2591466.5,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_vanilla_s42": {
+    "folder": "scale3",
+    "name": "wikitext_1m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 2183580.5,
+    "n_params": 147456
+  },
+  "scale3/wikitext_1m_vanilla_s7": {
+    "folder": "scale3",
+    "name": "wikitext_1m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 1855009.125,
+    "n_params": 147456
+  },
+  "scale3/wikitext_diffattn_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 6482777088.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_diffattn_s42": {
+    "folder": "scale3",
+    "name": "wikitext_diffattn_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 6155484672.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_diffattn_s7": {
+    "folder": "scale3",
+    "name": "wikitext_diffattn_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 79165366272.0,
+    "n_params": 147456
+  },
+  "scale3/wikitext_dyt_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.012,
+    "per_token_perplexity": 816.624755859375,
+    "n_params": 147456
+  },
+  "scale3/wikitext_dyt_s42": {
+    "folder": "scale3",
+    "name": "wikitext_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.016,
+    "per_token_perplexity": 965.331298828125,
+    "n_params": 147456
+  },
+  "scale3/wikitext_dyt_s7": {
+    "folder": "scale3",
+    "name": "wikitext_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.02,
+    "per_token_perplexity": 593.0106811523438,
+    "n_params": 147456
+  },
+  "scale3/wikitext_vanilla_s1337": {
+    "folder": "scale3",
+    "name": "wikitext_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.062,
+    "per_token_perplexity": 355.0791320800781,
+    "n_params": 147456
+  },
+  "scale3/wikitext_vanilla_s42": {
+    "folder": "scale3",
+    "name": "wikitext_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.036,
+    "per_token_perplexity": 377.2782287597656,
+    "n_params": 147456
+  },
+  "scale3/wikitext_vanilla_s7": {
+    "folder": "scale3",
+    "name": "wikitext_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.048,
+    "per_token_perplexity": 383.65228271484375,
+    "n_params": 147456
+  },
+  "scale5/wikitext_1m_diffattn_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_1m_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 283053.5625,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_dyt_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_1m_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 1102842.625,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_dyt_s42": {
+    "folder": "scale5",
+    "name": "wikitext_1m_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 915655.125,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_dyt_s7": {
+    "folder": "scale5",
+    "name": "wikitext_1m_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 786828.5,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_vanilla_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_1m_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 399093.0,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_vanilla_s42": {
+    "folder": "scale5",
+    "name": "wikitext_1m_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 302459.6875,
+    "n_params": 589824
+  },
+  "scale5/wikitext_1m_vanilla_s7": {
+    "folder": "scale5",
+    "name": "wikitext_1m_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 300273.40625,
+    "n_params": 589824
+  },
+  "scale5/wikitext_diffattn_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_diffattn_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.0,
+    "per_token_perplexity": 59908.8671875,
+    "n_params": 589824
+  },
+  "scale5/wikitext_dyt_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_dyt_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 7825.06201171875,
+    "n_params": 589824
+  },
+  "scale5/wikitext_dyt_s42": {
+    "folder": "scale5",
+    "name": "wikitext_dyt_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.004,
+    "per_token_perplexity": 7124.27001953125,
+    "n_params": 589824
+  },
+  "scale5/wikitext_dyt_s7": {
+    "folder": "scale5",
+    "name": "wikitext_dyt_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.002,
+    "per_token_perplexity": 7856.78955078125,
+    "n_params": 589824
+  },
+  "scale5/wikitext_vanilla_s1337": {
+    "folder": "scale5",
+    "name": "wikitext_vanilla_s1337",
+    "n_eval": 500,
+    "last_token_accuracy": 0.026,
+    "per_token_perplexity": 548.7824096679688,
+    "n_params": 589824
+  },
+  "scale5/wikitext_vanilla_s42": {
+    "folder": "scale5",
+    "name": "wikitext_vanilla_s42",
+    "n_eval": 500,
+    "last_token_accuracy": 0.034,
+    "per_token_perplexity": 438.0230712890625,
+    "n_params": 589824
+  },
+  "scale5/wikitext_vanilla_s7": {
+    "folder": "scale5",
+    "name": "wikitext_vanilla_s7",
+    "n_eval": 500,
+    "last_token_accuracy": 0.036,
+    "per_token_perplexity": 482.1871643066406,
+    "n_params": 589824
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "_description": "DyT alpha_init sweep: 64M GPT on WikiText-103 1M tokens (overfitting regime), 5K steps. Tests sensitivity to alpha initialization.",
+  "_model": {"n_layer": 12, "n_head": 8, "n_embd": 512, "block_size": 512, "params_M": 63.52},
+
+  "vanilla": {
+    "seeds": {"1337": 9.2160, "42": 9.4223},
+    "mean": 9.3192
+  },
+  "dyt_alpha_0.5": {
+    "seeds": {"1337": 6.2281, "42": 6.1459},
+    "mean": 6.1870,
+    "_note": "DyT paper default. Slowest convergence but best generalization in overfitting regime."
+  },
+  "dyt_alpha_1.0": {
+    "seeds": {"1337": 6.1736, "42": 6.1027},
+    "mean": 6.1382,
+    "_note": "Best overall val loss in overfitting regime."
+  },
+  "dyt_alpha_2.0": {
+    "seeds": {"1337": 6.7868, "42": 6.7664},
+    "mean": 6.7766,
+    "_note": "Our GPT default. Faster convergence, slightly worse final val."
+  },
+  "dyt_alpha_3.0": {
+    "seeds": {"1337": 7.3272, "42": 7.4907},
+    "mean": 7.4090,
+    "_note": "Too aggressive. Train loss drops fast but val loss diverges."
+  }
+}

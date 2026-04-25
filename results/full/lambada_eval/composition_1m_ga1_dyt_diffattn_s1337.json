@@ -1,0 +1,8 @@
+{
+  "folder": "composition_1m_ga1",
+  "name": "dyt_diffattn_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 599551.9375,
+  "n_params": 36864
+}

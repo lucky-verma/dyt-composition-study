@@ -1,0 +1,8 @@
+{
+  "folder": "scale2",
+  "name": "wikitext_vanilla_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.05,
+  "per_token_perplexity": 524.31396484375,
+  "n_params": 55296
+}

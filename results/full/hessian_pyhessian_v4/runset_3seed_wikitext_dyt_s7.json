@@ -1,0 +1,20 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_dyt_s7",
+  "cfg": "dyt",
+  "seed": 7,
+  "tokens": "118m",
+  "top5_eigenvalues": [
+    19.531980514526367,
+    16.20332908630371,
+    15.919123649597168,
+    13.716988563537598,
+    14.053409576416016
+  ],
+  "top1_eigenvalue": 19.531980514526367,
+  "trace_hutchinson_mean": 5176.2397867838545,
+  "trace_hutchinson_std": 159.57690390754087,
+  "trace_per_Mparam": 81.15854964511563,
+  "n_params_M": 63.779353,
+  "elapsed_s": 34.34198307991028
+}

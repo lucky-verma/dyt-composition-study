@@ -1,0 +1,58 @@
+{
+  "_description": "Train/val gap analysis at 64M scale. Gap = val_loss - train_loss at step 5000. Large positive gap = overfitting. Near-zero gap = healthy training.",
+  "_key_finding": "DyT reduces train/val gap by 50% in overfitting regime (1M tokens) by slowing memorization. In underfitting regime (118M tokens), all methods have near-zero gap.",
+
+  "overfitting_1M": {
+    "vanilla": {
+      "seeds": {
+        "1337": {"train": 0.1169, "val": 9.3397, "gap": 9.2228},
+        "42":   {"train": 0.1145, "val": 9.4316, "gap": 9.3171},
+        "7":    {"train": 0.1129, "val": 9.3803, "gap": 9.2674}
+      },
+      "mean_gap": 9.2691
+    },
+    "dyt": {
+      "seeds": {
+        "1337": {"train": 2.4711, "val": 6.7841, "gap": 4.3130},
+        "42":   {"train": 2.2356, "val": 7.0431, "gap": 4.8075},
+        "7":    {"train": 2.6913, "val": 6.6283, "gap": 3.9370}
+      },
+      "mean_gap": 4.3525
+    },
+    "diffattn": {
+      "seeds": {
+        "1337": {"train": 0.0794, "val": 9.6263, "gap": 9.5469},
+        "42":   {"train": 0.0829, "val": 9.4142, "gap": 9.3313},
+        "7":    {"train": 0.0831, "val": 9.4297, "gap": 9.3466}
+      },
+      "mean_gap": 9.4083
+    }
+  },
+
+  "underfitting_118M": {
+    "vanilla": {
+      "seeds": {
+        "1337": {"train": 3.6055, "val": 3.6398, "gap": 0.0343},
+        "42":   {"train": 3.6111, "val": 3.6315, "gap": 0.0204},
+        "7":    {"train": 3.6219, "val": 3.6215, "gap": -0.0004}
+      },
+      "mean_gap": 0.0181
+    },
+    "dyt": {
+      "seeds": {
+        "1337": {"train": 4.2873, "val": 4.2895, "gap": 0.0022},
+        "42":   {"train": 4.3137, "val": 4.3025, "gap": -0.0112},
+        "7":    {"train": 4.3905, "val": 4.3464, "gap": -0.0441}
+      },
+      "mean_gap": -0.0177
+    },
+    "diffattn": {
+      "seeds": {
+        "1337": {"train": 3.3610, "val": 3.3429, "gap": -0.0181},
+        "42":   {"train": 3.3602, "val": 3.3643, "gap": 0.0041},
+        "7":    {"train": 3.3724, "val": 3.3684, "gap": -0.0040}
+      },
+      "mean_gap": -0.0060
+    }
+  }
+}

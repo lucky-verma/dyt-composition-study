@@ -1,0 +1,14 @@
+{
+  "sub": "scale3",
+  "name": "wikitext_1m_vanilla_s1337",
+  "cfg": "vanilla",
+  "seed": 1337,
+  "tokens": "1m",
+  "lip_eps0.01": 382.4118377511777,
+  "lip_eps0.01_std": 3.855949222604344,
+  "lip_eps0.1": 221.12288123421504,
+  "lip_eps0.1_std": 1.3314013982621307,
+  "logit_variance": 8.720294952392578,
+  "n_params_M": 354.075648,
+  "elapsed_s": 6.372951507568359
+}

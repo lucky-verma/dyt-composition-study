@@ -1,0 +1,31 @@
+Arch     Scale    Tokens   Config        Sat@2.0      ±   Mean α      ±   N
+---------------------------------------------------------------------------
+gpt2     scale1   10m      dyt            0.4135 0.0750    2.228  0.147   3
+gpt2     scale1   118m     dyt            0.2343 0.0165    2.108  0.015   3
+gpt2     scale1   118m     dyt_diffattn_10k   0.1498 0.0103    1.905  0.010   2
+gpt2     scale1   118m     dyt_diffattn_5k   0.2691 0.0228    2.133  0.001   2
+gpt2     scale1   1m       dyt            0.4931 0.0089    2.359  0.007   3
+gpt2     scale1   1m       dyt_a0.5       0.3591 0.0291    0.592  0.020   2
+gpt2     scale1   1m       dyt_a1.0       0.4147 0.0052    1.200  0.027   2
+gpt2     scale1   1m       dyt_a2.0       0.4673 0.0001    2.328  0.005   2
+gpt2     scale1   1m       dyt_a3.0       0.5032 0.0067    3.319  0.028   2
+gpt2     scale1   50m      dyt            0.2368 0.0105    2.107  0.007   3
+gpt2     scale2   10m      dyt            0.2925 0.0142    1.773  0.022   3
+gpt2     scale2   118m     dyt            0.1931 0.0154    1.848  0.001   3
+gpt2     scale2   1m       dyt            0.4662 0.0073    2.304  0.016   3
+gpt2     scale3   10m      dyt            0.3688 0.0021    1.589  0.001   3
+gpt2     scale3   118m     dyt            0.3271 0.0074    1.495  0.011   3
+gpt2     scale3   1m       dyt            0.4902 0.0046    1.807  0.012   3
+gpt2     scale4   10m      dyt            0.9258 0.0006    1.538  0.004   3
+gpt2     scale4   118m     dyt            0.2376 0.0042    1.876  0.002   3
+gpt2     scale4   1m       dyt            0.3934 0.0025    1.969  0.000   3
+gpt2     scale4   50m      dyt            0.2383 0.0011    1.891  0.002   3
+gpt2     scale5   118m     dyt            0.8027 0.0021    1.773  0.001   3
+gpt2     scale5   1m       dyt            0.5095 0.0056    1.774  0.000   3
+llama    scale1   118m     dyt            0.4529 0.1883    2.095  0.069   3
+llama    scale1   118m     dyt_ablate_gqa   0.6094 0.2433    2.047  0.067   3
+llama    scale1   118m     dyt_ablate_rope   0.5592 0.0695    2.008  0.011   3
+llama    scale1   118m     dyt_ablate_swiglu   0.2565 0.0024    2.174  0.005   3
+llama    scale1   1m       dyt            0.5355 0.0405    2.184  0.131   3
+llama    scale2   118m     dyt            0.3554 0.2980    2.054  0.043   3
+llama    scale2   1m       dyt            0.4523 0.0115    2.288  0.018   3

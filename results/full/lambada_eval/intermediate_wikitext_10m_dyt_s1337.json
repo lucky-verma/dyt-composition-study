@@ -1,0 +1,8 @@
+{
+  "folder": "intermediate",
+  "name": "wikitext_10m_dyt_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 20733.509765625,
+  "n_params": 36864
+}

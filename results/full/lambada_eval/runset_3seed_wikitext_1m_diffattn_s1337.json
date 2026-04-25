@@ -1,0 +1,8 @@
+{
+  "folder": "runset_3seed",
+  "name": "wikitext_1m_diffattn_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.002,
+  "per_token_perplexity": 11516405.0,
+  "n_params": 36864
+}

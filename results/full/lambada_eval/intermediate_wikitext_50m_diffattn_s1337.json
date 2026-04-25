@@ -1,0 +1,8 @@
+{
+  "folder": "intermediate",
+  "name": "wikitext_50m_diffattn_s1337",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 9308.6875,
+  "n_params": 36864
+}

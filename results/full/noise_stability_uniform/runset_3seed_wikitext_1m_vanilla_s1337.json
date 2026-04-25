@@ -1,0 +1,14 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_1m_vanilla_s1337",
+  "cfg": "vanilla",
+  "seed": 1337,
+  "tokens": "1m",
+  "lip_eps0.01": 780.7626759604476,
+  "lip_eps0.01_std": 1.7110099754825343,
+  "lip_eps0.1": 325.2540239664845,
+  "lip_eps0.1_std": 0.4222203133787106,
+  "logit_variance": 6.382565021514893,
+  "n_params_M": 63.779328,
+  "elapsed_s": 1.2060673236846924
+}

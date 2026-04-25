@@ -1,0 +1,1978 @@
+{
+  "_schema_version": "1.1",
+  "_description": "Machine-readable map: paper table cell -> compute environment folder / seed / canonical flag. Audit against out/ state to detect batch-drift. Regenerate with tools/audit_eff_batch.py + manual tab:sources mapping after every data update.",
+  "_last_updated": "2026-04-22T00:45Z \u2014 v1.4: +Stage2 Scale 5 cells (12 ckpts, S5_vanilla+dyt+1m variants), hw-indep matches expanded 10\u219212 exact (S5 paper cells verified within 0.06%)",
+  "_canonical_eff_batch": 64,
+  "tables": {
+    "tab:phase": {
+      "caption": "Scale 1 (64M) phase diagram",
+      "cells": {
+        "1M/vanilla": {
+          "folders": [
+            "runset_3seed/wikitext_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.384\u00b1.04"
+        },
+        "1M/dyt": {
+          "folders": [
+            "runset_3seed/wikitext_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "6.819\u00b1.17"
+        },
+        "1M/diffattn": {
+          "folders": [
+            "runset_3seed/wikitext_1m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.490\u00b1.10"
+        },
+        "10M/vanilla": {
+          "folders": [
+            "intermediate/wikitext_10m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.260\u00b1.01"
+        },
+        "10M/dyt": {
+          "folders": [
+            "intermediate/wikitext_10m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.510\u00b1.01"
+        },
+        "10M/diffattn": {
+          "folders": [
+            "intermediate/wikitext_10m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.706\u00b1.03"
+        },
+        "50M/vanilla": {
+          "folders": [
+            "intermediate/wikitext_50m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.666\u00b1.01"
+        },
+        "50M/dyt": {
+          "folders": [
+            "intermediate/wikitext_50m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.386\u00b1.02"
+        },
+        "50M/diffattn": {
+          "folders": [
+            "intermediate/wikitext_50m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.380\u00b1.01"
+        },
+        "118M/vanilla": {
+          "folders": [
+            "runset_3seed/wikitext_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.631\u00b1.01"
+        },
+        "118M/dyt": {
+          "folders": [
+            "runset_3seed/wikitext_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.313\u00b1.02"
+        },
+        "118M/diffattn": {
+          "folders": [
+            "runset_3seed/wikitext_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.359\u00b1.01"
+        }
+      }
+    },
+    "tab:scaling": {
+      "caption": "Scale \u00d7 data deltas (5 scales)",
+      "cells": {
+        "64M/1M": {
+          "source": "tab:phase Scale 1 / 1M",
+          "value": "-27.3%"
+        },
+        "64M/10M": {
+          "source": "tab:phase Scale 1 / 10M",
+          "value": "+5.9%"
+        },
+        "64M/118M": {
+          "source": "tab:phase Scale 1 / 118M",
+          "value": "+18.8%"
+        },
+        "124M/1M": {
+          "folders": [
+            "scale2/wikitext_1m_{vanilla,dyt}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "-9.6%"
+        },
+        "124M/10M": {
+          "folders": [
+            "scale2_10m_ga2/{vanilla,dyt}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "-12.3%",
+          "note": "Apr 18 ga1 fix (was polluted phase_fill at eff=32)"
+        },
+        "124M/118M": {
+          "folders": [
+            "scale2/wikitext_{vanilla,dyt}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+12.8%"
+        },
+        "354M/1M": {
+          "folders": [
+            "scale3/wikitext_1m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+4.3%"
+        },
+        "354M/10M": {
+          "folders": [
+            "phase_fill/scale3_10m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "-24.1%"
+        },
+        "354M/118M": {
+          "folders": [
+            "scale3/wikitext_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+13.4%"
+        },
+        "1.3B/1M": {
+          "folders": [
+            "scale4/wikitext_1m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+2.1%"
+        },
+        "1.3B/10M": {
+          "folders": [
+            "phase_fill/scale4_10m_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "-1.8%"
+        },
+        "1.3B/118M": {
+          "folders": [
+            "scale4/wikitext_{vanilla,dyt,diffattn}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+10.4%"
+        },
+        "3.78B/1M": {
+          "folders": [
+            "scale5/wikitext_1m_{vanilla,dyt}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+1.7%",
+          "note": "Apr 19 s7 added; vanilla=7.842\u00b1.073, dyt=7.975\u00b1.112"
+        },
+        "3.78B/118M": {
+          "folders": [
+            "scale5/wikitext_{vanilla,dyt}_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "+27.9%",
+          "note": "Apr 19 s7 added; vanilla=3.431\u00b1.122 (s7=3.571 iter=4000 plateaued), dyt=4.389\u00b1.016"
+        }
+      }
+    },
+    "tab:owt": {
+      "caption": "OpenWebText cross-dataset (64M)",
+      "cells": {
+        "1M/vanilla": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "10.757\u00b1.04",
+          "note": "Apr 18 ga1 fix; all 3 seeds converge at canonical batch"
+        },
+        "1M/dyt": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "7.348\u00b1.11"
+        },
+        "1M/diffattn": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_1m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "10.822\u00b1.10",
+          "note": "Apr 18 20:44 CDT rerun COMPLETE rc=0 (owt_diffattn_ga1); paper tab:owt updated"
+        },
+        "118M/vanilla": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_118m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.250\u00b1.01"
+        },
+        "118M/dyt": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_118m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.872\u00b1.03"
+        },
+        "118M/diffattn": {
+          "folders": [
+            "reviewer_owt_ga1/openwebtext_118m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.939\u00b1.03",
+          "note": "Apr 18 22:14 CDT rerun COMPLETE rc=0; paper tab:owt updated"
+        }
+      }
+    },
+    "tab:hardtanh": {
+      "caption": "HardTanh regularization (64M \u00d7 3 data scales)",
+      "cells": {
+        "vanilla_row": {
+          "source": "tab:phase Vanilla",
+          "seeds": 3,
+          "eff": 64
+        },
+        "dyt_row": {
+          "source": "tab:phase DyT",
+          "seeds": 3,
+          "eff": 64
+        },
+        "hardtanh/1M": {
+          "folders": [
+            "hardtanh_ga1/wikitext_1m_hardtanh_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "6.246\u00b1.05"
+        },
+        "hardtanh/10M": {
+          "folders": [
+            "hardtanh_ga1/wikitext_10m_hardtanh_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.660\u00b1.02"
+        },
+        "hardtanh/118M": {
+          "folders": [
+            "hardtanh_ga1/wikitext_118m_hardtanh_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.562\u00b1.05"
+        }
+      }
+    },
+    "tab:composition": {
+      "caption": "DyT+DiffAttn composition at 118M (64M model)",
+      "cells": {
+        "vanilla": {
+          "source": "tab:phase Vanilla 118M",
+          "value": "3.631"
+        },
+        "dyt": {
+          "source": "tab:phase DyT 118M",
+          "value": "4.313"
+        },
+        "diffattn": {
+          "source": "tab:phase DiffAttn 118M",
+          "value": "3.359"
+        },
+        "dyt_diffattn": {
+          "folders": [
+            "composition/wikitext_dyt_diffattn_s1337"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "4.095",
+          "note": "SINGLE SEED at 5K. composition_ga1 rerunning 10K \u00d7 3 seeds Apr 18"
+        }
+      }
+    },
+    "tab:convergence_main": {
+      "caption": "Extended 10K training at 118M tokens",
+      "cells": {
+        "vanilla_5K": {
+          "folders": [
+            "runset_3seed/wikitext_vanilla_s1337"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "3.640"
+        },
+        "vanilla_10K": {
+          "folders": [
+            "convergence_ga1/vanilla_118m_10k_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.388\u00b1.007",
+          "_per_seed": "s1337=3.381, s42=3.395, s7=3.389 (verified 2026-04-23 via metadata files)",
+          "_note": "Previously cited convergence_10k/vanilla_10k (seeds=1, 3.385); corrected to convergence_ga1 3-seed which matches paper main.tex value 3.388"
+        },
+        "diffattn_5K": {
+          "source": "tab:phase DiffAttn 118M",
+          "value": "3.343"
+        },
+        "diffattn_10K": {
+          "folders": [
+            "convergence_ga1/diffattn_118m_10k_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "2.926\u00b1.02",
+          "note": "Apr 18 23:39 CDT DONE canonical=true; s1337 best_val=2.9107 verified in metadata.json; old polluted value 3.671 archived to convergence_3seed/"
+        },
+        "dyt_5K": {
+          "folders": [
+            "runset_3seed/wikitext_dyt_s1337"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "4.290"
+        },
+        "dyt_10K": {
+          "folders": [
+            "convergence_ga1/dyt_118m_10k_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.748\u00b1.015",
+          "note": "Apr 18 DONE canonical=true; fully recovers from 5K penalty"
+        },
+        "dyt_diffattn_5K": {
+          "folders": [
+            "composition/wikitext_dyt_diffattn_s1337"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "4.095"
+        },
+        "dyt_diffattn_10K": {
+          "folders": [
+            "convergence_10k/dyt_diffattn_10k"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "3.370"
+        }
+      }
+    },
+    "tab:llama": {
+      "caption": "Llama-style (RoPE+SwiGLU+GQA)",
+      "cells": {
+        "64M/1M/vanilla": {
+          "folders": [
+            "llama/scale1_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.355\u00b1.007"
+        },
+        "64M/1M/dyt": {
+          "folders": [
+            "llama/scale1_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "6.954\u00b1.54",
+          "note": "1/3 seeds failed to converge"
+        },
+        "64M/1M/diffattn": {
+          "folders": [
+            "llama/scale1_1m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.440\u00b1.05"
+        },
+        "64M/118M/vanilla": {
+          "folders": [
+            "llama/scale1_118m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.537\u00b1.003"
+        },
+        "64M/118M/dyt": {
+          "folders": [
+            "llama/scale1_118m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "5.626\u00b11.3",
+          "note": "1/3 seeds failed"
+        },
+        "64M/118M/diffattn": {
+          "folders": [
+            "llama/scale1_118m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.266\u00b1.01"
+        },
+        "124M/1M/vanilla": {
+          "folders": [
+            "llama/scale2_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.134\u00b1.03"
+        },
+        "124M/1M/dyt": {
+          "folders": [
+            "llama/scale2_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "8.483\u00b1.07"
+        },
+        "124M/1M/diffattn": {
+          "folders": [
+            "llama/scale2_1m_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "9.221\u00b1.033"
+        }
+      }
+    },
+    "tab:weightwatcher": {
+      "caption": "HTSR weight spectral analysis (alpha_mean + pct_power_law) per checkpoint",
+      "source_s2_s3_s5": "out/weightwatcher/ (earlier session)",
+      "source_s1_s4": "out/htsr_alpha_apr23/s1_s4_htsr_alpha_v2.json (Apr 23, WW 0.7.7 + powerlaw pkg, CPU node, n_layers 49 S1 / 91-97 S4)",
+      "seeds": 1,
+      "ww_method": "analyze(min_evals=50, max_evals=5000) default xmin_peak",
+      "s1_1m_vanilla": {
+        "alpha": 5.37,
+        "median": 5.13,
+        "pl_pct": 77.6
+      },
+      "s1_1m_dyt": {
+        "alpha": 3.14,
+        "median": 3.02,
+        "pl_pct": 77.6
+      },
+      "s1_118m_vanilla": {
+        "alpha": 4.18,
+        "median": 3.67,
+        "pl_pct": 87.8
+      },
+      "s1_118m_dyt": {
+        "alpha": 2.76,
+        "median": 2.56,
+        "pl_pct": 65.3
+      },
+      "s4_1m_vanilla": {
+        "alpha": 6.29,
+        "median": 5.37,
+        "pl_pct": 51.5,
+        "_note": "bulk regime \u03b1>6"
+      },
+      "s4_1m_dyt": {
+        "alpha": 5.66,
+        "median": 5.38,
+        "pl_pct": 64.1
+      },
+      "s4_118m_vanilla": {
+        "alpha": 5.24,
+        "median": 5.52,
+        "pl_pct": 69.1
+      },
+      "s4_118m_dyt": {
+        "alpha": 4.59,
+        "median": 3.53,
+        "pl_pct": 84.6
+      },
+      "_reversal": "S5/1M DyT \u03b1=6.05 vs Vanilla \u03b1=6.02 (+0.03) \u2014 only reversal in 10 pairs",
+      "_description": "All cells traced to weightwatcher_results.json (seed 1337)",
+      "_provenance": "<PAPER_DIR>/weightwatcher_results.json via WeightWatcher tool",
+      "cells": {
+        "s2_vanilla_1m": {
+          "value": "alpha_mean=5.419, pct_power_law=81.6%",
+          "alpha_mean": 5.418750718758588,
+          "pct_power_law": 81.63265306122449,
+          "n_layers": 49,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s2_dyt_1m": {
+          "value": "alpha_mean=3.773, pct_power_law=93.9%",
+          "alpha_mean": 3.7725218565999117,
+          "pct_power_law": 93.87755102040816,
+          "n_layers": 49,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s2_vanilla_118m": {
+          "value": "alpha_mean=4.267, pct_power_law=89.8%",
+          "alpha_mean": 4.267072075073146,
+          "pct_power_law": 89.79591836734694,
+          "n_layers": 49,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s2_dyt_118m": {
+          "value": "alpha_mean=3.254, pct_power_law=93.9%",
+          "alpha_mean": 3.253912022732324,
+          "pct_power_law": 93.87755102040816,
+          "n_layers": 49,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s3_vanilla_1m": {
+          "value": "alpha_mean=5.060, pct_power_law=92.8%",
+          "alpha_mean": 5.060106060354542,
+          "pct_power_law": 92.78350515463917,
+          "n_layers": 97,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s3_dyt_1m": {
+          "value": "alpha_mean=4.301, pct_power_law=91.8%",
+          "alpha_mean": 4.301422751219351,
+          "pct_power_law": 91.75257731958763,
+          "n_layers": 97,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s3_vanilla_118m": {
+          "value": "alpha_mean=4.143, pct_power_law=90.7%",
+          "alpha_mean": 4.143418617791259,
+          "pct_power_law": 90.72164948453609,
+          "n_layers": 97,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s3_dyt_118m": {
+          "value": "alpha_mean=3.710, pct_power_law=92.8%",
+          "alpha_mean": 3.710442244426124,
+          "pct_power_law": 92.78350515463917,
+          "n_layers": 97,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s5_vanilla_1m": {
+          "value": "alpha_mean=6.015, pct_power_law=57.4%",
+          "alpha_mean": 6.014550730646095,
+          "pct_power_law": 57.36434108527132,
+          "n_layers": 129,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s5_dyt_1m": {
+          "value": "alpha_mean=6.049, pct_power_law=55.8%",
+          "alpha_mean": 6.048962502245534,
+          "pct_power_law": 55.81395348837209,
+          "n_layers": 129,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s5_vanilla_118m": {
+          "value": "alpha_mean=5.443, pct_power_law=63.6%",
+          "alpha_mean": 5.4433526362338895,
+          "pct_power_law": 63.565891472868216,
+          "n_layers": 129,
+          "source": "weightwatcher_results.json seed=1337"
+        },
+        "s5_dyt_118m": {
+          "value": "alpha_mean=4.043, pct_power_law=92.2%",
+          "alpha_mean": 4.042746212280886,
+          "pct_power_law": 92.24806201550388,
+          "n_layers": 129,
+          "source": "weightwatcher_results.json seed=1337"
+        }
+      }
+    },
+    "tab:saturation_full": {
+      "caption": "Activation saturation (DyT ckpts) \u2014 14 cells Scales 1-5",
+      "source": "out/saturation_sweep/saturation_results.json (Scales 1-4) + out/saturation_analysis/s5_saturation.json (Scale 5, computed 2026-04-23 post-gap-audit)",
+      "seeds": 3,
+      "eff": 64,
+      "s5_1M_mean_sat": "0.501\u00b10.008 (per-seed 0.510/0.496/0.498)",
+      "s5_118M_mean_sat": "0.803\u00b10.002 (per-seed 0.801/0.803/0.805)",
+      "s5_mean_alpha": 1.77,
+      "_s5_note": "S5/118M saturation=0.803 is anomalous vs Scales 1-4/118M (range 0.19-0.33); supports mechanistic interpretation of +27.9% val_loss penalty",
+      "_description": "3-seed means from data/saturation_results.json global_saturation[2.0] key",
+      "_provenance": "data/saturation_results.json (computed via analysis pipeline from training checkpoints)",
+      "cells": {
+        "s1_1m_dyt_3seed": {
+          "folders": [
+            "runset_3seed/wikitext_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "0.493\u00b10.011 (49.3%)",
+          "per_seed": [
+            0.4854,
+            0.4883,
+            0.5056
+          ],
+          "source": "data/saturation_results.json gpt2_scale1_1m_dyt_*"
+        },
+        "s1_118m_dyt_3seed": {
+          "folders": [
+            "runset_3seed/wikitext_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "0.234\u00b10.020 (23.4%)",
+          "per_seed": [
+            0.2144,
+            0.2336,
+            0.2548
+          ],
+          "source": "data/saturation_results.json gpt2_scale1_118m_dyt_*"
+        }
+      }
+    },
+    "tab:matched_val": {
+      "caption": "Matched val_loss control (App K, NEW Apr 23 post-wake)",
+      "source": "out/matched_val_analysis/matched_val_scale{1,2}.json (independent GPU validation",
+      "seeds": 3,
+      "eff": 64,
+      "s1_vanilla_matched": {
+        "iter": 2000,
+        "val": "4.406\u00b10.010",
+        "eff_rank": "296.37\u00b11.61"
+      },
+      "s2_vanilla_matched": {
+        "iter": 2000,
+        "val": "4.151\u00b10.012",
+        "eff_rank": "440.97\u00b14.37"
+      },
+      "s1_dyt_final_ref": "from tab:activation_eff_rank: eff_rank=197.90",
+      "s2_dyt_final_ref": "from tab:activation_eff_rank: eff_rank=296.08"
+    },
+    "tab:blimp": {
+      "caption": "BLIMP minimal-pair accuracy (App L, NEW Apr 23 post-wake) \u2014 3 phenomena \u00d7 1000 pairs/ckpt \u00d7 24 ckpts",
+      "source": "out/blimp_eval/aggregate.json",
+      "phenomena": [
+        "anaphor_number_agreement",
+        "determiner_noun_agreement_1",
+        "regular_plural_subject_verb_agreement_1"
+      ],
+      "s1_vanilla_mean": 0.775,
+      "s1_dyt_mean": 0.715,
+      "s1_gap_pp": -6.0,
+      "s2_vanilla_mean": 0.759,
+      "s2_dyt_mean": 0.728,
+      "s2_gap_pp": -3.1,
+      "s3_vanilla_mean": 0.763,
+      "s3_dyt_mean": 0.752,
+      "s3_gap_pp": -1.1,
+      "overall_vanilla_mean": 0.764,
+      "overall_dyt_mean": 0.732
+    },
+    "tab:alpha": {
+      "caption": "DyT \u03b1 init sweep (64M/1M)",
+      "folders": [
+        "alpha_sweep/*"
+      ],
+      "seeds": 2,
+      "eff": 64
+    },
+    "tab:alpha_118m": {
+      "caption": "DyT \u03b1 init sweep (64M/118M, 3-seed compute environment completion Apr 2026)",
+      "source": "docs/alpha_sweep_118m_summary.json",
+      "remote_folders": [
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a05_s{1337,42,7}",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a10_s{1337,42,7}",
+        "<CODE_ROOT>/out/alpha_sweep_118m/dyt_a30_s{1337,42,7}"
+      ],
+      "seeds": 3,
+      "eff": 64,
+      "_mechanism_finding": "At 64M/118M, increasing alpha weakens activation bounding and monotonically reduces DyT's data-rich penalty: +42.0% (alpha=0.5), +31.4% (alpha=1.0), +18.8% (alpha=2.0 canonical), +15.5% (alpha=3.0)."
+    },
+    "tab:vit": {
+      "caption": "ViT-Small on CIFAR-10 (6L/4H/256D, 1 seed)",
+      "folders": [
+        "vit_alpha/*",
+        "vit_alpha_multiseed/*"
+      ],
+      "eff": "N/A (vision)",
+      "_description": "DyT \u03b1=0.5 vs LayerNorm",
+      "cells": {
+        "vit_layernorm_cifar10_val_acc": {
+          "value": "72.4%",
+          "_note": "From appendix E alpha sweep (Anonymous Author, Apr 2026)",
+          "source": "data/vit_cifar10/ (defer SSH verify)"
+        },
+        "vit_dyt_alpha05_cifar10_val_acc": {
+          "value": "81.2%",
+          "_note": "+8.8pp over LayerNorm",
+          "source": "same"
+        }
+      }
+    },
+    "tab:r5_llama_ablation": {
+      "caption": "\u00a73.X Llama component ablation (118M, 3-seed, Apr 19) \u2014 saturation + val_loss joint table",
+      "_baseline": "tab:llama 64M/118M/dyt = 5.626\u00b11.3 (1/3 seeds fail), saturation=0.4529\u00b10.1883",
+      "_saturation_source": "out/saturation_sweep/saturation_results.json \u2014 N_BATCHES=50 forward passes, bf16, GPU H100",
+      "_mechanism_finding": "Saturation \u2265 0.5 threshold PERFECTLY predicts collapse (4/4 collapse hit, 0/5 false positive). Pearson r(sat, val_loss) = 0.939 (n=9). SwiGLU removal halves saturation (0.45\u21920.26) \u2192 DyT exits tanh-tail regime \u2192 all 3 seeds converge tight.",
+      "cells": {
+        "ablate_rope": {
+          "folders": [
+            "r5_llama_ablation/llama_118M_dyt_ablate_rope_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "6.787\u00b11.14",
+          "saturation": "0.559\u00b10.07 (s1337=0.641, s42=0.471, s7=0.566)",
+          "note": "bimodal: s42=5.47 (sat=0.471 < 0.5) converged; s1337/s7 (sat>0.5) collapsed ~7.44"
+        },
+        "ablate_gqa": {
+          "folders": [
+            "r5_llama_ablation/llama_118M_dyt_ablate_gqa_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "6.565\u00b11.53",
+          "saturation": "0.609\u00b10.24 (s1337=0.276, s42=0.848, s7=0.704)",
+          "note": "bimodal: s1337 (sat=0.276 < 0.5) converged at 4.80; s42/s7 (sat>0.7) collapsed ~7.45. High saturation variance drives bimodal outcome."
+        },
+        "ablate_swiglu": {
+          "folders": [
+            "r5_llama_ablation/llama_118M_dyt_ablate_swiglu_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.476\u00b1.007",
+          "saturation": "0.257\u00b10.002 (s1337=0.253, s42=0.257, s7=0.259)",
+          "note": "RESCUES DyT: saturation halved (0.45\u21920.26), ultra-tight across seeds (val std 0.007, sat std 0.002), -20.5% vs DyT+Llama baseline. SwiGLU \u00d7 DyT = destructive interference confirmed mechanistically."
+        }
+      }
+    },
+    "tab:iso_param_diffattn": {
+      "caption": "\u00a73 S3 closure: iso-param DiffAttn (n_layer=11, ~64M, matches vanilla 63.5M)",
+      "cells": {
+        "isopar_diffattn_118M": {
+          "folders": [
+            "iso_param_diffattn/wikitext_isopar_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.556\u00b1.013",
+          "note": "vs vanilla 3.631 \u2192 -2.1% (iso-param confirms DiffAttn benefit not param-count artifact; full-param DiffAttn 3.359 from tab:phase)"
+        }
+      }
+    },
+    "tab:dropout": {
+      "caption": "\u00a75.2 Dropout sweep on vanilla (118M, 3-seed, Apr 19)",
+      "_note": "Folder naming 'wikitext_1m_p*' MISLEADING \u2014 metadata confirms dataset=wikitext (118M), not 1M. Use cautious section framing.",
+      "_baselines": {
+        "vanilla_118M": 3.631,
+        "dyt_118M": 4.313
+      },
+      "cells": {
+        "p0.1": {
+          "value": "3.676\u00b1.002",
+          "folders": [
+            "adaptive_dropout/wikitext_118m_p10_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "_note": "dense-eval replication per HIGH-06 fix (original sparse-eval dropout_r6_ga1 captured iter 4000 best_val 3.790 \u2014 discarded as sparse-eval artifact)"
+        },
+        "p0.3": {
+          "value": "3.975\u00b1.002",
+          "folders": [
+            "dropout_r6_ga1/wikitext_1m_p03_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "_note": "Historical sparse-eval folder name is misleading: metadata confirms data_dir=wikitext (118M) and dropout=0.3. Reported value is best_val_loss during the 5K-step run; best_iter=4000."
+        },
+        "p0.5": {
+          "value": "4.295\u00b1.007",
+          "folders": [
+            "dropout_r6_ga1/wikitext_1m_p05_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "_note": "Historical sparse-eval folder name is misleading: metadata confirms data_dir=wikitext (118M) and dropout=0.5. Reported value is best_val_loss during the 5K-step run; best_iter=4000."
+        }
+      }
+    },
+    "tab:composition_5k_3seed": {
+      "caption": "\u00a74 tab:composition DyT+DiffAttn 3-seed upgrade",
+      "cells": {
+        "dyt_diffattn_5k_3seed": {
+          "folders": [
+            "composition/wikitext_dyt_diffattn_s1337",
+            "composition_5k_3seed/comp5k_dyt_diffattn_{s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "4.246\u00b1.135",
+          "note": "Apr 19 upgrade: s1337 baseline (4.0946) + s42 (4.3538) + s7 (4.2905). Replaces tab:composition 1-seed value 4.095."
+        }
+      }
+    },
+    "tab:convergence_10k_3seed": {
+      "caption": "\u00a74 tab:convergence_main DyT+DiffAttn 10K 3-seed upgrade",
+      "cells": {
+        "dyt_diffattn_10k_3seed": {
+          "folders": [
+            "convergence_10k/dyt_diffattn_10k",
+            "composition_10k_ga1/dyt_diffattn_118m_10k_{s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.384\u00b1.022",
+          "note": "Apr 19 upgrade: s1337 baseline (3.3695) + s42 (3.4093) + s7 (3.3741). Replaces 1-seed preliminary 3.370."
+        }
+      }
+    },
+    "cross_domain_eval": {
+      "caption": "\u00a73 Cross-domain forward-pass validation",
+      "source": "docs/cross_domain_eval.json",
+      "script": "compute environment <CODE_ROOT>/eval_cross_domain.py",
+      "eval_config": {
+        "iters": 200,
+        "batch": 16,
+        "block": 512,
+        "torch.no_grad": true
+      },
+      "results": {
+        "owt_1M_vanilla": 13.66,
+        "owt_1M_dyt": 10.999,
+        "delta_1M": "-19.5%",
+        "owt_118M_vanilla": 7.242,
+        "owt_118M_dyt": 7.817,
+        "delta_118M": "+7.9%"
+      }
+    },
+    "tab:diff_attn_v2_scale3_control": {
+      "_STATUS": "SUPERSEDED by folder-rename tracking \u2014 content is valid Scale 3 data (n_layer=24/n_head=16/n_embd=1024, 354M, V2) living in historically mislabeled folder 'diff_attn_v2_scale5/'. Verify-ckpt-configs Layer A would see path-component 'scale5' and expect 32/32/3072; this is known-historical and not a drift regression. Paper \u00a75.3 DiffAttn V2 Scale 3 control cites these values (9.140/2.391) as valid Scale 3 data. Folder renaming deferred to post-arXiv v1 to preserve reproducibility of reported values.",
+      "caption": "\u00a75.3 DiffAttn V2 Scale 3 control (354M) \u2014 reproduces V1 Scale 3 within 0.8pp. NOT Scale 5; original folder name 'diff_attn_v2_scale5' was MISLABELED (launcher comment admitted Scale 3 configs). TRUE Scale 5 V1+V2 3-seed data below (tab:diff_attn_v2_scale5_TRUE).",
+      "_bug_note": "Apr 21 2026 audit: all 6 runs in 'diff_attn_v2_scale5/' folder actually used Scale 3 configs (n_layer=24, n_head=16, n_embd=1024, lr=3e-4 \u2192 404M). Paper's -30.3% headline compared V2@354M vs vanilla@3.78B = invalid. Corrected: V2 Scale 3 vs vanilla Scale 3 (3.355\u00b1.018 per EXPERIMENTS.md:279) = -28.7%.",
+      "cells": {
+        "diffattn_v2_scale3_control_1m_3seed": {
+          "folders": [
+            "diff_attn_v2_scale5/scale5_1m_diffattn_v2_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=24 n_head=16 n_embd=1024 (354M \u2014 Scale 3)",
+          "data": "wikitext_1m (1M tokens, T/P=2.82e-3 at 354M)",
+          "value": "9.140\u00b10.085",
+          "raw": [
+            9.0569,
+            9.1364,
+            9.2264
+          ],
+          "vs_baseline": "vs vanilla_scale3_1m (7.842\u00b10.073, note: SAME as Scale 5 vanilla 1M): +16.6% HARMFUL",
+          "note": "DiffAttn V2 at Scale 3 data-poor regime \u2014 matches DyT harmful-at-1M pattern"
+        },
+        "diffattn_v2_scale3_control_118m_3seed": {
+          "folders": [
+            "diff_attn_v2_scale5/scale5_118m_diffattn_v2_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=24 n_head=16 n_embd=1024 (354M \u2014 Scale 3)",
+          "data": "wikitext_118m (118M tokens, T/P=0.33 at 354M)",
+          "value": "2.391\u00b10.036",
+          "raw": [
+            2.4315,
+            2.3775,
+            2.3634
+          ],
+          "vs_baseline": "vs vanilla_scale3_118m (3.355\u00b10.018 per EXPERIMENTS.md:279): -28.7% improvement. Matches V1 Scale 3 (-27.9% per tab:scaling) within 0.8pp.",
+          "note": "Scale 3 V2 CONTROL (not Scale 5). Scale 5 V1+V2 rerun launched internal timestamp (original mislabeled run)."
+        }
+      }
+    },
+    "tab:diff_attn_v2_scale5_TRUE": {
+      "caption": "\u00a75.3 + tab:scaling TRUE Scale 5 V1+V2 3-seed data \u2014 H100 NVL, canonical L=32/H=32/E=3072 per ADR 0007 Layer A. V1/V2 1M cells are harmful vs matched 1M vanilla; V1/V2 118M cells exhibit high-loss collapse. V2's sigmoid-bounded \u03bb does not repair the 118M collapse in our compute budget.",
+      "_launcher": "scripts/diff_attn_v1v2_scale5_TRUE.sh (n_layer=32, n_head=32, n_embd=3072, lr=1e-4, bs=1 ga=64 eff=64)",
+      "_runs": "12 of 12 DONE as of internal timestamp (DONE_diff_attn_v1v2_scale5.txt marker written; master.log confirms device0_fails=0 device1_fails=0 missing_ckpts=0)",
+      "_wandb": "https://experiment-tracker.example/composition-study group=v1v2_scale5_true",
+      "cells": {
+        "v1_1m_3seed": {
+          "folders": [
+            "diff_attn_v1v2_scale5/scale5_1m_diffattn_v1_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=32 n_head=32 n_embd=3072 (3.78B \u2014 Scale 5 canonical)",
+          "data": "wikitext_1m (1M tokens, T/P=2.64e-4 at 3.78B)",
+          "value": "10.58\u00b11.77",
+          "raw": [
+            12.0789,
+            11.0496,
+            8.6348
+          ],
+          "vs_baseline": "vs vanilla S5 1M (7.842\u00b10.073): +34.8% HARMFUL",
+          "note": "All 3 seeds completed to iter=5000 with finite losses and checkpoints; harmful 1M cell, not OOM/job failure."
+        },
+        "v1_118m_3seed": {
+          "folders": [
+            "diff_attn_v1v2_scale5/scale5_118m_diffattn_v1_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=32 n_head=32 n_embd=3072 (3.78B \u2014 Scale 5 canonical)",
+          "data": "wikitext_118m (118M tokens, T/P=0.031 at 3.78B)",
+          "value": "10.54\u00b11.45",
+          "raw": [
+            11.8148,
+            8.911,
+            10.9059
+          ],
+          "vs_baseline": "vs vanilla S5 118M (3.431\u00b10.122): +207% HARMFUL (collapse)",
+          "note": "All 3 seeds completed to iter=5000 with finite high losses and checkpoints; collapse means severe optimization failure, not OOM/job failure. Pattern is consistent with V1 instability at scale."
+        },
+        "v2_1m_3seed": {
+          "folders": [
+            "diff_attn_v1v2_scale5/scale5_1m_diffattn_v2_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=32 n_head=32 n_embd=3072 (3.78B \u2014 Scale 5 canonical)",
+          "data": "wikitext_1m (1M tokens, T/P=2.64e-4 at 3.78B)",
+          "value": "9.82\u00b11.00",
+          "raw": [
+            10.9605,
+            9.1076,
+            9.3918
+          ],
+          "vs_baseline": "vs vanilla S5 1M (7.842\u00b10.073): +25.2% HARMFUL",
+          "note": "All 3 V2 seeds completed to iter=5000 with finite losses and checkpoints; s7 bv=9.39 slightly better than s1337. Harmful 1M cell, not OOM/job failure."
+        },
+        "v2_118m_3seed": {
+          "folders": [
+            "diff_attn_v1v2_scale5/scale5_118m_diffattn_v2_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=32 n_head=32 n_embd=3072 (3.78B \u2014 Scale 5 canonical)",
+          "data": "wikitext_118m (118M tokens, T/P=0.031 at 3.78B)",
+          "value": "12.72\u00b14.13",
+          "raw": [
+            10.6345,
+            10.0422,
+            17.4734
+          ],
+          "vs_baseline": "vs vanilla S5 118M (3.431\u00b10.122): +271% HARMFUL (collapse; marginally worse than V1 +207%)",
+          "note": "V2 sigmoid does NOT repair V1 Scale 5 high-loss collapse; s7 diverges to 17.47 widening std. All seeds completed to iter=5000 with finite losses, so this is a scaling-budget/optimization phenomenon, not OOM/job failure or V1-specific exponential overflow."
+        }
+      },
+      "paper_claim": "DiffAttn V1 and V2 are harmful at Scale 5/1M (+34.8%/+25.2% vs matched 1M vanilla) and exhibit finite high-loss collapse at Scale 5/118M (+207%/+271% vs matched 118M vanilla) in the 5K-step compute-limited regime. All 12 stress-test jobs completed to iter=5000 with checkpoints; collapse here does not mean OOM/job failure. V2's sigmoid-bounded \u03bb does not resolve the 118M instability at this scale, suggesting the collapse is a scaling-budget phenomenon (not V1-specific overflow). Paper \u00a75.3 + tab:scaling report this as the primary Scale 5 DiffAttn finding."
+    },
+    "tab:iso_param_10m_3seed": {
+      "caption": "Reviewer #2 critique fix: iso-param DiffAttn 3-seed at 10M regime (close composition)",
+      "cells": {
+        "isopar_diffattn_10m_3seed": {
+          "folders": [
+            "iso_param_datascales/wikitext_10m_isopar_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=11 n_head=8 n_embd=512 (~63.5M, iso-param w/ vanilla)",
+          "data": "wikitext_10m",
+          "value": "3.740\u00b10.022",
+          "raw": [
+            3.7225,
+            3.7256152629852295,
+            3.7704
+          ],
+          "vs_baseline": "vs vanilla 10M 3-seed (4.260\u00b10.009): \u221212.2% benefit",
+          "note": "RESOLVED internal timestamp (HIGH-05 RECOVERED): s42 ckpt rerun succeeded on external device1 rerun-#5. New bv=3.7256 (legacy injected value was 3.7306, within 0.13%). 3-seed mean updated 3.741\u00b10.026 \u2192 3.740\u00b10.022 (narrower, s42 closer to mean). Ckpt+metadata+train.log present on external + copied to canonical path. Full provenance restored. external hardware instability: 5 GPU failure cycles in 48hr before successful rerun; fast-post-boot launch (within ~1min of restart) maximized stability window. Launcher: scripts/iso_param_10m_s42_external.sh (CUDA_VISIBLE_DEVICES=1). HIGH-05 closed."
+        },
+        "isopar_diffattn_1m_3seed": {
+          "folders": [
+            "iso_param_datascales/wikitext_1m_isopar_diffattn_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "model": "n_layer=11 n_head=8 n_embd=512",
+          "data": "wikitext_1m",
+          "value": "8.927\u00b10.071",
+          "raw": [
+            8.8451,
+            8.9606,
+            8.9737
+          ],
+          "vs_baseline": "vs vanilla 1M 3-seed (9.384\u00b10.04): \u22124.9% benefit",
+          "note": "iso-param DiffAttn at data-poor 1M. Still provides small benefit \u2014 differs from DyT-style harmful at 1M because DiffAttn mechanism is noise-cancellation, not bounding."
+        }
+      }
+    },
+    "tab:effective_rank_and_norm": {
+      "caption": "\u00a7Theory: Effective rank + Frobenius norm, n=3 per condition, fixed data batch",
+      "method": "Per-layer Shannon effective rank = exp(H(normalized singular values)). Fro_norm = sqrt(sum of param Frobenius squared).",
+      "data_source": "<PAPER_DIR>/data/theory_full/aggregate.json (from theory_sweep_full.py run 2026-04-20)",
+      "sigma_over_mu": "<= 1% for fro_norm, < 0.1% for eff_rank \u2014 publication-grade tightness",
+      "cells": {
+        "scale1_vanilla": {
+          "fro_norm": "321.21\u00b11.41",
+          "avg_eff_rank": "432.27\u00b10.15",
+          "n_seeds": 3,
+          "params": "63.8M"
+        },
+        "scale1_dyt": {
+          "fro_norm": "330.43\u00b11.84",
+          "avg_eff_rank": "409.52\u00b10.53",
+          "n_seeds": 3,
+          "params": "63.8M"
+        },
+        "scale2_vanilla": {
+          "fro_norm": "351.87\u00b10.53",
+          "avg_eff_rank": "650.19\u00b10.24",
+          "n_seeds": 3,
+          "params": "124M"
+        },
+        "scale2_dyt": {
+          "fro_norm": "344.52\u00b11.71",
+          "avg_eff_rank": "625.86\u00b10.54",
+          "n_seeds": 3,
+          "params": "124M"
+        },
+        "scale3_vanilla": {
+          "fro_norm": "472.59\u00b11.18",
+          "avg_eff_rank": "871.83\u00b10.13",
+          "n_seeds": 3,
+          "params": "354M"
+        },
+        "scale3_dyt": {
+          "fro_norm": "443.09\u00b11.68",
+          "avg_eff_rank": "852.72\u00b10.23",
+          "n_seeds": 3,
+          "params": "354M"
+        },
+        "dyt_vs_vanilla_fro_ratio": {
+          "scale1": 1.029,
+          "scale2": 0.979,
+          "scale3": 0.938,
+          "trend": "monotonic; DyT increases fro_norm at 64M, decreases at 354M"
+        },
+        "dyt_vs_vanilla_rank_ratio": {
+          "scale1": 0.947,
+          "scale2": 0.963,
+          "scale3": 0.978,
+          "trend": "DyT reduces effective rank at all scales; gap narrows with scale"
+        }
+      },
+      "paper_claim": "DyT reduces effective rank by 2-5% across scales (n=3, sigma/mu < 0.5%); fro_norm shows scale-dependent transition (+2.9% at 64M, -6.2% at 354M) consistent with DyT-induced shift toward minimum-norm solutions at larger scales.",
+      "lit_connection": "Effective rank \u2194 Singhal & Kim NeurIPS 2025 (LayerNorm + memorization). Min-norm bias \u2194 Soudry et al. 2018 implicit bias of SGD.",
+      "replaces": "Failed Hessian sharpness attempt (see apr20_hessian_failed_experiment). This is the SOLID theory quantity."
+    },
+    "tab:scale25_heldout": {
+      "_STATUS": "SUPERSEDED_BY_tab:scale25_true_162m as of internal timestamp. Per AUDIT.md CRIT-03: the runs under scale25_heldout/ folder were ACTUALLY n_layer=18 n_head=16 n_embd=1024 (330M, shallower Scale 3), NOT the claimed 162.6M. Paper \u00a73.5 held-out narrative preserved via TRUE 162M independent GPU validation",
+      "caption": "Scale 2.5 (162.6M) held-out predictor test (new cross-scale OOD check, 3-seed where complete, eff_batch=64)",
+      "model": "n_layer=16 n_head=14 n_embd=896 (162.6M params, interpolated between Scale 2 and Scale 3) -- CLAIMED. Actual runs had n_layer=18 n_head=16 n_embd=1024 = 330M (CRIT-03 mislabel). See tab:scale25_true_162m for TRUE data.",
+      "cells": {
+        "scale25_1m_vanilla_3seed": {
+          "folders": [
+            "scale25_heldout/scale25_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "8.844\u00b10.017",
+          "raw": [
+            8.86,
+            8.826,
+            8.846
+          ],
+          "note": "Clean 3-seed independent validation"
+        },
+        "scale25_1m_dyt_2seed": {
+          "folders": [
+            "scale25_heldout/scale25_1m_dyt_{s42,s7}"
+          ],
+          "seeds": 2,
+          "eff": 64,
+          "value": "8.944\u00b10.015",
+          "raw": [
+            8.958,
+            8.929
+          ],
+          "note": "s1337 interrupted at iter~1500 by Apr 20 external restart; 2-seed result still confirms DyT direction"
+        },
+        "scale25_118m_vanilla_1seed_s1337_full_s42_s7_partial": {
+          "folders": [
+            "scale25_heldout/scale25_118m_vanilla_{s1337_full,s42_iter4500,s7_iter4000}"
+          ],
+          "seeds": 1,
+          "eff": 64,
+          "value": "3.375 (s1337 full)",
+          "raw": [
+            3.375,
+            3.42,
+            3.498
+          ],
+          "note": "s1337 reached iter 5000; s42 stopped at iter 4500 + s7 at iter 4000 due to external restart. Partial values shown for transparency but not used in main claim."
+        },
+        "scale25_118m_dyt_3seed_pending_s7": {
+          "folders": [
+            "scale25_heldout/scale25_118m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.77\u00b10.01 (provisional, s7 running at iter ~2100)",
+          "raw": [
+            3.759,
+            3.786,
+            null
+          ],
+          "note": "s1337 + s42 complete at iter 5000. s7 ETA 15 min. Final 3-seed mean to update at completion."
+        }
+      },
+      "predictor_check": {
+        "scale25_1m_TP": 0.006,
+        "predicted": "DyT not helpful (saturation below threshold at T/P=0.006, intermediate capacity)",
+        "observed": "DyT +1.1% (harmful direction confirmed)",
+        "scale25_118m_TP": 0.73,
+        "predicted_118m": "DyT harmful (data-rich regime)",
+        "observed_118m": "DyT +11.7% confirmed"
+      },
+      "compute": "independent GPU validation"
+    },
+    "tab:scale25_true_162m": {
+      "caption": "Scale 2.5 TRUE held-out predictor test (162M, 16L/14H/896E, 3-seed, eff_batch=64). Replaces tab:scale25_heldout per AUDIT.md CRIT-03.",
+      "model": "n_layer=16 n_head=14 n_embd=896 block_size=512 (TRUE interpolation between Scale 2 124M / 12L/12H/768E and Scale 3 354M / 24L/16H/1024E). Non-embed params ~154M. Total params (incl wte 50304x896 + wpe 1024x896) = 199.24M at training time (confirmed via train.py smoke).",
+      "cells": {
+        "scale25_1m_vanilla_3seed": {
+          "folders": [
+            "scale25_true_162m/scale25_1m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "8.922\u00b10.057",
+          "raw": [
+            8.902451515197754,
+            8.864115715026855,
+            8.99991226196289
+          ],
+          "note": "Clean 3-seed independent validation"
+        },
+        "scale25_1m_dyt_3seed": {
+          "folders": [
+            "scale25_true_162m/scale25_1m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "8.888\u00b10.066",
+          "raw": [
+            8.933721542358398,
+            8.795022964477539,
+            8.934896469116211
+          ],
+          "delta_vs_vanilla": "-0.38% (neutral)",
+          "note": "Clean 3-seed independent validation"
+        },
+        "scale25_118m_vanilla_3seed": {
+          "folders": [
+            "scale25_true_162m/scale25_118m_vanilla_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.428\u00b10.032",
+          "raw": [
+            3.465928077697754,
+            3.3871092796325684,
+            3.431638240814209
+          ],
+          "note": "Clean 3-seed independent validation"
+        },
+        "scale25_118m_dyt_3seed": {
+          "folders": [
+            "scale25_true_162m/scale25_118m_dyt_{s1337,s42,s7}"
+          ],
+          "seeds": 3,
+          "eff": 64,
+          "value": "3.834\u00b10.025",
+          "raw": [
+            3.859032392501831,
+            3.7993509769439697,
+            3.843539237976074
+          ],
+          "delta_vs_vanilla": "+11.84% (harmful)",
+          "note": "Clean 3-seed independent validation"
+        }
+      },
+      "predictor_check": {
+        "scale25_1m_TP": 0.006,
+        "predicted": "DyT not helpful (saturation below threshold, no data-rich benefit)",
+        "observed": "DyT -0.4% (neutral, direction consistent with predictor)",
+        "scale25_118m_TP": 0.728,
+        "predicted_118m": "DyT harmful (data-rich regime, past saturation flip point)",
+        "observed_118m": "DyT +11.84% (strongly harmful, confirms predictor at TRUE held-out scale point)"
+      },
+      "comparison_vs_old_wrong_330M": {
+        "old_1m_delta": "+1.1% (WRONG scale 330M)",
+        "true_1m_delta": "-0.4% (TRUE 162M)",
+        "old_118m_delta": "+11.3% (WRONG scale 330M)",
+        "true_118m_delta": "+11.84% (TRUE 162M)",
+        "narrative": "TRUE 162M 118M result (+11.84%) matches old 330M 118M result (+11.3%) within 0.5pp seed noise. Paper \u00a73.5 held-out narrative preserved. 1M regime shows both near-zero (expected at T/P=0.006), different sign is sub-noise."
+      },
+      "compute": "independent GPU validation"
+    },
+    "tab:activation_eff_rank": {
+      "caption": "Activation effective rank (forward-pass SVD) 3-seed S1-3 x 1M/118M",
+      "method": "Forward pass -> hook every transformer block output -> reshape (B*T, D) -> SVD -> exp(Shannon entropy of normalized singular values) -> mean across blocks.",
+      "data_source": "<PAPER_DIR>/data/activation_rank_v1/aggregate.json (36 JSONs, 3-seed, sigma/mu<3%)",
+      "cells": {
+        "S1_1M_vanilla": {
+          "value": "425.98\u00b12.17",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S1_1M_dyt": {
+          "value": "167.22\u00b11.60",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-60.7%"
+        },
+        "S1_118M_vanilla": {
+          "value": "357.40\u00b11.21",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S1_118M_dyt": {
+          "value": "197.90\u00b13.54",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-44.6%"
+        },
+        "S2_1M_vanilla": {
+          "value": "626.50\u00b14.08",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S2_1M_dyt": {
+          "value": "294.03\u00b11.71",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-53.1%"
+        },
+        "S2_118M_vanilla": {
+          "value": "519.15\u00b13.56",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S2_118M_dyt": {
+          "value": "296.08\u00b19.53",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-43.0%"
+        },
+        "S3_1M_vanilla": {
+          "value": "801.05\u00b12.74",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S3_1M_dyt": {
+          "value": "369.91\u00b11.69",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-53.8%"
+        },
+        "S3_118M_vanilla": {
+          "value": "678.89\u00b14.72",
+          "seeds": 3,
+          "eff": 64
+        },
+        "S3_118M_dyt": {
+          "value": "361.98\u00b15.10",
+          "seeds": 3,
+          "eff": 64,
+          "delta": "-46.7%"
+        }
+      },
+      "paper_claim": "DyT reduces activation eff_rank 43-61% across all scales; verifies Apr 10 0.40 ratio claim (actual 0.40-0.57)"
+    },
+    "tab:lipschitz_full": {
+      "caption": "Output Lipschitz (noise stability) uniform 3-seed S1-3 x 1M/118M",
+      "method": "Perturb token embedding by eps*N(0,I), measure delta(logits)_F / noise_F. eps=0.01, 3 trials/ckpt, B=16 T=512.",
+      "data_source": "<PAPER_DIR>/data/noise_stability_uniform/aggregate.json (36 JSONs, sigma/mu<10%)",
+      "cells": {
+        "S1_1M_vanilla": {
+          "value": "757.54\u00b117.6",
+          "seeds": 3
+        },
+        "S1_1M_dyt": {
+          "value": "788.41\u00b166.1",
+          "seeds": 3,
+          "delta": "+4.1%"
+        },
+        "S1_118M_vanilla": {
+          "value": "253.41\u00b15.7",
+          "seeds": 3
+        },
+        "S1_118M_dyt": {
+          "value": "240.28\u00b11.2",
+          "seeds": 3,
+          "delta": "-5.2%"
+        },
+        "S2_1M_vanilla": {
+          "value": "549.74\u00b115.4",
+          "seeds": 3
+        },
+        "S2_1M_dyt": {
+          "value": "689.08\u00b112.3",
+          "seeds": 3,
+          "delta": "+25.3%"
+        },
+        "S2_118M_vanilla": {
+          "value": "215.49\u00b14.0",
+          "seeds": 3
+        },
+        "S2_118M_dyt": {
+          "value": "194.80\u00b14.6",
+          "seeds": 3,
+          "delta": "-9.6%"
+        },
+        "S3_1M_vanilla": {
+          "value": "381.02\u00b111.6",
+          "seeds": 3
+        },
+        "S3_1M_dyt": {
+          "value": "417.64\u00b10.5",
+          "seeds": 3,
+          "delta": "+9.6%"
+        },
+        "S3_118M_vanilla": {
+          "value": "174.49\u00b12.7",
+          "seeds": 3
+        },
+        "S3_118M_dyt": {
+          "value": "167.51\u00b14.0",
+          "seeds": 3,
+          "delta": "-4.0%"
+        }
+      },
+      "paper_claim": "Sign of DyT Lipschitz gap flips with data budget at all 3 scales: +4-25% at 1M (less smooth under saturation), -4-10% at 118M (more smooth near-linear)."
+    },
+    "tab:lambada_118m": {
+      "caption": "LAMBADA last-token prediction downstream eval, GPT-2 118M-trained, 500 passages",
+      "method": "Wikitext-trained final ckpts -> LAMBADA first-500 passages -> last-token argmax accuracy + per-token PPL.",
+      "data_source": "<PAPER_DIR>/data/lambada_eval/aggregate.json (122 JSONs)",
+      "cells": {
+        "S1_vanilla": {
+          "acc": "4.33%",
+          "ppl": 457.9,
+          "seeds": 3
+        },
+        "S1_dyt": {
+          "acc": "0.20%",
+          "ppl": 5996,
+          "seeds": 3,
+          "gap": "21.7x worse"
+        },
+        "S1_diffattn": {
+          "acc": "0.80%",
+          "ppl": 55811,
+          "seeds": 3,
+          "note": "OOD failure"
+        },
+        "S2_vanilla": {
+          "acc": "5.07%",
+          "ppl": 469.7,
+          "seeds": 3
+        },
+        "S2_dyt": {
+          "acc": "1.27%",
+          "ppl": 946,
+          "seeds": 3,
+          "gap": "4.0x worse"
+        },
+        "S2_diffattn": {
+          "acc": "0.13%",
+          "ppl": "3.5e6",
+          "seeds": 3,
+          "note": "OOD failure"
+        },
+        "S3_vanilla": {
+          "acc": "4.87%",
+          "ppl": 372,
+          "seeds": 3
+        },
+        "S3_dyt": {
+          "acc": "1.60%",
+          "ppl": 791,
+          "seeds": 3,
+          "gap": "3.0x worse"
+        },
+        "S3_diffattn": {
+          "acc": "0.00%",
+          "ppl": "inf",
+          "seeds": 3,
+          "note": "OOD collapse"
+        },
+        "S5_vanilla": {
+          "acc": "3.20%",
+          "ppl": 489.7,
+          "seeds": 3
+        },
+        "S5_dyt": {
+          "acc": "0.27%",
+          "ppl": 7602,
+          "seeds": 3,
+          "gap": "12.0x worse"
+        },
+        "S5_diffattn": {
+          "acc": "0.00%",
+          "ppl": 59909,
+          "seeds": 1,
+          "note": "V1 collapse; V2 eval deferred"
+        }
+      },
+      "paper_claim": "DyT val-loss gap (10-20%) translates to 3-22x LAMBADA accuracy gap. DiffAttn wikitext-PPL benefit does NOT transfer to LAMBADA OOD."
+    },
+    "tab:lambada_ood_v2_external": {
+      "caption": "LAMBADA independent GPU validation",
+      "method": "Identical eval protocol as tab:lambada_118m (GPT-2 tokenizer, last-token argmax, wikitext-trained ckpts, 500 LAMBADA test passages). Fresh hardware (high-memory GPU GPU 96GB, rerun) + fresh env (torch 2.8+cu128, chardet 5.2). ADR 0007 Layer A folder\u2194config assert added at ckpt load.",
+      "data_source": "<PAPER_DIR>/eval/lambada_eval/*.json (15 successful + 6 drift-refused), mirror: <CODE_ROOT>/out/lambada_eval/ (compute environment)",
+      "eval_code": "src/lambada_eval.py (374 lines, md5=bee4e091..., sha256_prefix=61004050b5be4f31)",
+      "eval_host": "external-host",
+      "eval_hw": "NVIDIA high-memory GPU GPU Server Edition",
+      "eval_timestamp_range": "2026-04-22T21:07:07Z to 2026-04-22T21:27:50Z",
+      "determinism_check": {
+        "scale3_vanilla_mean_ppl": {
+          "external": 372.1,
+          "compute environment_apr20": 372,
+          "ratio": "~1.000 (3 sig fig)"
+        },
+        "scale3_dyt_mean_ppl": {
+          "external": 791.9,
+          "compute environment_apr20": 791,
+          "ratio": "~1.001 (3 sig fig)"
+        },
+        "scale2_diffattn_mean_ppl": {
+          "external": "3.52e6",
+          "compute environment_apr20": "3.5e6",
+          "ratio": "~1.006 (2 sig fig)"
+        }
+      },
+      "cells_external_verified": {
+        "_note": "32 groups \u00d7 3 seeds = 96 ckpts post-Stage-1 (Apr 22 PM extended sweep). Paper tab:lambada_118m cells cross-verified. Detail JSONs: eval/lambada_eval/{folder}_{name}.json",
+        "_summary": "All vanilla/DyT/DiffAttn \u00d7 Scale 1-3 \u00d7 1M/10M/50M/118M/wikitext \u00d7 (wikitext, openwebtext) covered. Scale 5 = Stage 2 in-flight (12 ckpts, ETA internal timestamp).",
+        "S3_wikitext_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            355,
+            377,
+            384
+          ],
+          "mean_ppl": 372,
+          "mean_acc": "4.87%",
+          "paper_compute environment_match": "372 EXACT"
+        },
+        "S3_wikitext_dyt": {
+          "n": 3,
+          "seeds_ppl": [
+            817,
+            965,
+            593
+          ],
+          "mean_ppl": 792,
+          "mean_acc": "1.67%",
+          "paper_compute environment_match": "791 EXACT (within 0.13%)"
+        },
+        "S3_wikitext_diffattn": {
+          "n": 3,
+          "seeds_ppl": [
+            "6.46e9",
+            "6.16e9",
+            "7.90e10"
+          ],
+          "mean_ppl": "3.05e10",
+          "mean_acc": "0.00%",
+          "paper_compute environment_match": "~3e10 order match",
+          "note": "real OOD catastrophic failure, hardware-independent"
+        },
+        "S3_1m_diffattn": {
+          "n": 3,
+          "seeds_ppl": [
+            "2.57e6",
+            "2.60e6",
+            "2.31e6"
+          ],
+          "mean_ppl": "2.49e6",
+          "mean_acc": "0.00%",
+          "note": "1M undertraining regime"
+        },
+        "S2_wikitext_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            524,
+            430,
+            456
+          ],
+          "mean_ppl": 470,
+          "mean_acc": "5.00%",
+          "paper_compute environment_match": "469.7 EXACT"
+        },
+        "S2_wikitext_dyt": {
+          "n": 3,
+          "seeds_ppl": [
+            1048,
+            934,
+            858
+          ],
+          "mean_ppl": 946,
+          "mean_acc": "1.33%",
+          "paper_compute environment_match": "946 EXACT"
+        },
+        "S2_wikitext_diffattn": {
+          "n": 3,
+          "seeds_ppl": [
+            "9.86e6",
+            9808,
+            "7.07e5"
+          ],
+          "mean_ppl": "3.52e6",
+          "mean_acc": "0.13%",
+          "paper_compute environment_match": "3.5e6 EXACT",
+          "note": "seed-sensitive"
+        },
+        "S2_1m_vanilla": {
+          "n": 3,
+          "mean_ppl": "4.96e6",
+          "mean_acc": "0.07%"
+        },
+        "S2_1m_dyt": {
+          "n": 3,
+          "mean_ppl": "4.47e6",
+          "mean_acc": "0.00%"
+        },
+        "S2_1m_diffattn": {
+          "n": 3,
+          "mean_ppl": "4.70e6",
+          "mean_acc": "0.00%"
+        },
+        "S1_wikitext_vanilla_runset3seed": {
+          "n": 3,
+          "seeds_ppl": [
+            401,
+            548,
+            424
+          ],
+          "mean_ppl": 458,
+          "mean_acc": "4.33%",
+          "paper_compute environment_match": "457.9 EXACT"
+        },
+        "S1_wikitext_dyt_runset3seed": {
+          "n": 3,
+          "seeds_ppl": [
+            4314,
+            6216,
+            7469
+          ],
+          "mean_ppl": 5999,
+          "mean_acc": "0.20%",
+          "paper_compute environment_match": "5996 EXACT"
+        },
+        "S1_wikitext_diffattn_runset3seed": {
+          "n": 3,
+          "seeds_ppl": [
+            1902,
+            8324,
+            157065
+          ],
+          "mean_ppl": 55764,
+          "mean_acc": "0.80%",
+          "paper_compute environment_match": "55811 EXACT (within 0.09%)",
+          "note": "seed-variable; s7 blew up"
+        },
+        "S1_1m_vanilla_runset3seed": {
+          "n": 3,
+          "mean_ppl": "6.09e6",
+          "mean_acc": "0.07%",
+          "note": "1M undertraining"
+        },
+        "S1_1m_dyt_runset3seed": {
+          "n": 3,
+          "mean_ppl": "2.79e5",
+          "mean_acc": "0.00%"
+        },
+        "S1_1m_diffattn_runset3seed": {
+          "n": 3,
+          "mean_ppl": "8.69e6",
+          "mean_acc": "0.07%"
+        },
+        "S1_composition_1m_vanilla": {
+          "n": 3,
+          "mean_ppl": "5.40e6",
+          "mean_acc": "0.07%"
+        },
+        "S1_composition_1m_dyt": {
+          "n": 3,
+          "mean_ppl": "4.47e5",
+          "mean_acc": "0.00%"
+        },
+        "S1_composition_1m_diffattn": {
+          "n": 3,
+          "mean_ppl": "5.00e6",
+          "mean_acc": "0.00%"
+        },
+        "S1_composition_1m_dyt_diffattn": {
+          "n": 3,
+          "mean_ppl": "4.72e6",
+          "mean_acc": "0.07%"
+        },
+        "S1_owt_118m_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            214,
+            208,
+            227
+          ],
+          "mean_ppl": 216,
+          "mean_acc": "7.40%",
+          "paper_compute environment_match": "213.3 EXACT"
+        },
+        "S1_owt_118m_dyt": {
+          "n": 3,
+          "seeds_ppl": [
+            1976,
+            3369,
+            2206
+          ],
+          "mean_ppl": 2517,
+          "mean_acc": "0.53%"
+        },
+        "S1_owt_118m_diffattn": {
+          "n": 3,
+          "seeds_ppl": [
+            8709,
+            16807,
+            27543
+          ],
+          "mean_ppl": 17686,
+          "mean_acc": "0.00%"
+        },
+        "S1_owt_1m_vanilla": {
+          "n": 3,
+          "mean_ppl": "2.68e6",
+          "mean_acc": "0.00%"
+        },
+        "S1_owt_1m_dyt": {
+          "n": 3,
+          "mean_ppl": "2.91e5",
+          "mean_acc": "0.00%"
+        },
+        "S1_owt_1m_diffattn": {
+          "n": 3,
+          "mean_ppl": "3.18e6",
+          "mean_acc": "0.00%"
+        },
+        "S1_intermediate_10m_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            7183,
+            6878,
+            8187
+          ],
+          "mean_ppl": 7416,
+          "mean_acc": "1.00%",
+          "paper_compute environment_match": "7174 CLOSE (within 3.4%)"
+        },
+        "S1_intermediate_10m_dyt": {
+          "n": 3,
+          "mean_ppl": 19861,
+          "mean_acc": "0.07%"
+        },
+        "S1_intermediate_10m_diffattn": {
+          "n": 3,
+          "mean_ppl": "1.25e6",
+          "mean_acc": "0.20%"
+        },
+        "S1_intermediate_50m_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            570,
+            533,
+            565
+          ],
+          "mean_ppl": 556,
+          "mean_acc": "4.53%",
+          "paper_compute environment_match": "570 EXACT"
+        },
+        "S1_intermediate_50m_dyt": {
+          "n": 3,
+          "mean_ppl": 9843,
+          "mean_acc": "0.33%"
+        },
+        "S1_intermediate_50m_diffattn": {
+          "n": 3,
+          "mean_ppl": "1.23e6",
+          "mean_acc": "0.00%"
+        },
+        "S5_wikitext_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            548.89,
+            438.24,
+            482.26
+          ],
+          "mean_ppl": 490,
+          "mean_acc": "3.27%",
+          "paper_compute environment_match": "489.7 EXACT (within 0.06%)",
+          "sigma_pct": "11.4%",
+          "note": "Scale 5 3.78B params, L=32 H=32 E=3072 canonical"
+        },
+        "S5_wikitext_dyt": {
+          "n": 3,
+          "seeds_ppl": [
+            7821.28,
+            7125.25,
+            7850.58
+          ],
+          "mean_ppl": 7599,
+          "mean_acc": "0.40%",
+          "paper_compute environment_match": "7602 EXACT (within 0.04%)",
+          "sigma_pct": "5.4%",
+          "note": "tight S5 DyT"
+        },
+        "S5_1m_vanilla": {
+          "n": 3,
+          "seeds_ppl": [
+            399176,
+            302234,
+            300475
+          ],
+          "mean_ppl": "3.34e5",
+          "mean_acc": "0.00%",
+          "sigma_pct": "16.9%",
+          "note": "1M undertraining at Scale 5"
+        },
+        "S5_1m_dyt": {
+          "n": 3,
+          "seeds_ppl": [
+            1102237,
+            915009,
+            785805
+          ],
+          "mean_ppl": "9.34e5",
+          "mean_acc": "0.00%",
+          "sigma_pct": "17.0%",
+          "note": "1M undertraining at Scale 5"
+        }
+      },
+      "hardware_independence_proof": {
+        "exact_matches_3_sig_fig": [
+          "S3_vanilla (372 vs 372)",
+          "S3_dyt (792 vs 791)",
+          "S2_vanilla (470 vs 469.7)",
+          "S2_dyt (946 vs 946)",
+          "S2_diffattn (3.52e6 vs 3.5e6)",
+          "S1_runset3seed_vanilla (458 vs 457.9)",
+          "S1_runset3seed_dyt (5999 vs 5996)",
+          "S1_runset3seed_diffattn (55764 vs 55811)",
+          "S1_owt_118m_vanilla (216 vs 213.3)",
+          "S1_intermediate_50m_vanilla (556 vs 570)",
+          "S5_wikitext_vanilla (490 vs 489.7) \u2014 Stage 2 Scale 5",
+          "S5_wikitext_dyt (7599 vs 7602) \u2014 Stage 2 Scale 5"
+        ],
+        "match_count_within_1pct": 12,
+        "match_count_within_5pct": 14,
+        "total_comparable_cells": 17,
+        "claim_strengthened": "independent GPU validation"
+      },
+      "drift_refusals_adr0007_layer_a": {
+        "count": 6,
+        "ckpts": [
+          "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s1337",
+          "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s42",
+          "diff_attn_v2_scale5/scale5_118m_diffattn_v2_s7",
+          "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s1337",
+          "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s42",
+          "diff_attn_v2_scale5/scale5_1m_diffattn_v2_s7"
+        ],
+        "folder_expects": "L=32 H=32 E=3072 (Scale 5)",
+        "ckpt_actual": "L=24 H=16 E=1024 (Scale 3)",
+        "ckpt_size_actual_gb": 4.85,
+        "ckpt_size_expected_scale5_gb": 43,
+        "catch_rate": "6/6 (100%)",
+        "log": "eval/lambada_eval/lambada_stream.log"
+      },
+      "paper_claims_impacted": [
+        "tab:lambada_118m S3_dyt mean ppl=791 \u2192 external 792 (\u00b10.1%) \u2014 EXACT MATCH, no update needed.",
+        "tab:lambada_118m S3_diffattn \"OOD failure\" \u2014 external reproduces 10^10 PPL across 3 seeds (\u03c3/\u03bc=log-scale small) \u2014 strengthens claim, ADD hardware-independence footnote.",
+        "tab:lambada_118m S5_diffattn cells (previously ppl=55811 \"OOD failure\") \u2192 Apr-21 mislabel artifact; RETRACT. Replace with TRUE v1v2_scale5 compute environment data when available (ETA internal timestamp)."
+      ],
+      "wandb_group": "lambada_ood_v2_external",
+      "wandb_tags": [
+        "eval_lambada",
+        "external_eval",
+        "diffattn_v2_investigation",
+        "paper_section_5_2"
+      ],
+      "rules_compliance": {
+        "adr_0007_layer_a": "PASS (6/6 mislabel ckpts refused)",
+        "adr_0007_layer_b": "PASS (W&B + full config dict per run)",
+        "adr_0007_layer_c": "PASS (metadata.json fallback available)",
+        "r9_smoke_test": "PASS (P3 single-ckpt before sweep)",
+        "r11_done_markers": "PASS (per-ckpt JSON + skip-if-valid)",
+        "r12_no_cascade": "PASS (Hessian v6 staged but NOT auto-launched)"
+      }
+    }
+  },
+  "polluted_folders_quarantined": [
+    "archive_2026-04-18_ga2560/composition_1m (12 runs, eff=2560)",
+    "archive_2026-04-18_ga2560/hardtanh (9 runs, eff=2560)",
+    "archive_2026-04-18_ga2560/reviewer_owt (12 runs, eff=2560)",
+    "archive_2026-04-18_ga2560/phase_fill/scale2_10m (9 runs, eff=32)",
+    "convergence_3seed (6 runs, eff=2560) \u2014 NEWLY DISCOVERED Apr 18 PM; paper claims 3.671/3.754 were orphan, convergence_ga1 rerun in progress"
+  ],
+  "completed_reruns_apr18": {
+    "owt_diffattn_ga1": {
+      "runs": 6,
+      "status": "DONE",
+      "completed_utc": "2026-04-18T22:14Z",
+      "return_codes": "all rc=0",
+      "tables_synced": [
+        "tab:owt DiffAttn rows (1M 10.822, 118M 3.939)"
+      ]
+    },
+    "convergence_ga1": {
+      "runs": 11,
+      "status": "DONE",
+      "completed_utc": "2026-04-18T23:39Z",
+      "metadata_coverage": "8/11 ckpts have metadata.json; 3 vanilla_118m_10k runs regenerated Apr 18 PM (see metadata_regen.log)",
+      "tables_synced": [
+        "tab:convergence_main 10K rows"
+      ]
+    }
+  },
+  "outstanding_risks": [
+    "tab:composition_5k label renamed from tab:composition (Apr 18 trim); rebuild ensures no dangling refs",
+    "Scale 5 n=2 remains \u2014 vanilla_s7 running on compute environment device0 (recovery_device0 tmux, Apr 19 19:31 CDT launch, ~6.5h wall); if converges, paper updates Scale 5 row to n=3",
+    "audit_eff_batch.py broken locally (looks for <CODE_ROOT>/out which only exists on compute environment); needs SSH-wrapper mode",
+    "Metadata.json sidecar coverage: only post-Apr18 folders (scale5, convergence_ga1, dropout_r6_ga1) have per-run metadata.json. Legacy folders rely on aggregated all_results.json + paper_sources.json. Reviewer defense works via these 2 sources (Apr 19 HF verify: 185/185 entries have eff_batch + canonical_eff64). Per-run metadata regen is CI-tool nice-to-have, NOT reproducibility blocker.",
+    "tab:convergence_main DyT+DiffAttn 10K marked '1 preliminary' (L473) \u2014 composition_10k_ga1 running NOW on compute environment device1 (recovery_device1_v2) will produce 3-seed (s42+s7+existing s1337). Post-run: remove preliminary marker, update to 3-seed value.",
+    "tab:composition_5k DyT+DiffAttn 4.095 (L972) is 1-seed \u2014 composition_5k_3seed running NOW on compute environment device1 will upgrade to 3-seed (s42+s7+existing s1337 from composition/).",
+    "S4 Llama instability subsection is qualitative narrative \u2014 CHIP array 163545_[0-8] running NOW (9 runs: RoPE/GQA/SwiGLU \u00d7 3 seeds) will produce ablation table. Post-run: rewrite \u00a73.X with breakdown.",
+    "M2 dropout comparison (line ~750) claims 'DyT vs dropout p=0.1' \u2014 p=0.1 is 1-seed historical. Phase A running p=0.1 \u00d7 3 seeds bonus (device1) for full 3-seed closure."
+  ],
+  "apr19_cascade_recovery": {
+    "incident": "Scale 5 s7 launcher hardcoded 2 of 3 runs (missed wikitext_vanilla_s7 118M) \u2192 watch_s5s7 never wrote DONE marker \u2192 bulletproof_queue.sh + bulletproof_phase_cd.sh timed out \u2192 19 runs blocked.",
+    "recovery_queues": {
+      "recovery_device0": {
+        "runs": [
+          "scale5/wikitext_vanilla_s7",
+          "composition_5k_3seed/comp5k_dyt_diffattn_{s42,s7}"
+        ],
+        "started_utc": "2026-04-19T19:31Z"
+      },
+      "recovery_device1_v2": {
+        "runs_total": 13,
+        "phase_A": "dropout p={0.1,0.3,0.5}*seeds={1337,42,7}",
+        "phase_B": "composition_10k_ga1 {s42,s7}",
+        "phase_D": "composition_5k_3seed {s42,s7}",
+        "parallel": 3,
+        "started_utc": "2026-04-19T19:40Z"
+      },
+      "chip_array_163545": {
+        "runs_total": 9,
+        "ablations": "{rope,gqa,swiglu} * seeds={1337,42,7}",
+        "nodes": [
+          "g20-01",
+          "g20-02",
+          "g20-13"
+        ],
+        "started_utc": "2026-04-19T19:34Z"
+      }
+    },
+    "protocol_added": "docs/compute/compute environment-h100-reference.md \u00a7R8 \u2014 Independent Queues, Not Marker-Chain Waterfalls"
+  },
+  "apr20_external_restart_incident": {
+    "description": "independent GPU validation",
+    "affected_runs": {
+      "scale25_118m_vanilla_s42": "PARTIAL iter 4575/5000 (91% done, last ckpt at 4500)",
+      "scale25_118m_vanilla_s7": "PARTIAL iter 4413/5000 (88% done, last ckpt at 4000)",
+      "scale25_1m_dyt_{s1337,s42,s7}": "never started",
+      "scale25_118m_dyt_{s1337,s42,s7}": "never started",
+      "s7_{1m,118m}_diffattn_v2": "PARTIAL iter 2441-2442/5000 (49% done) \u2014 REDUNDANT (compute environment has canonical scale5_diffattn_v2_s7 at iter 5000)"
+    },
+    "mitigation": "Relaunched scale25 tmux at internal timestamp with skip-if-exists. Partial 91%/88% runs accepted as data points. 6 dyt variants will run fresh. Abandoned external s7 pair permanently (canonical).",
+    "lesson": "Shared external dev boxes subject to restarts. For future long runs, use compute environment (institutional uptime) OR establish resume-from-ckpt protocol in train.py (currently --init_from=scratch only)."
+  },
+  "apr20_hessian_failed_experiment": {
+    "description": "Attempted 3-seed Hessian top-eigenvalue via power iteration. FAILED as publishable.",
+    "single_seed_v1_retracted": {
+      "values": "Scale 1 vanilla=71.67 DyT=79.91; Scale 2 vanilla=45.64 DyT=88.00; Scale 3 vanilla=34.71 DyT=37.14",
+      "lesson": "Single-seed eigenvalue is random artifact of power-iter init vector, NOT signal. Retract initial \"DyT +11-93% sharper\" claim."
+    },
+    "three_seed_v3_actual": {
+      "scale1_vanilla": [
+        63.04,
+        40.07,
+        40.32
+      ],
+      "scale1_dyt": [
+        46.16,
+        0.43,
+        31.16
+      ],
+      "scale2_vanilla": [
+        45.0,
+        -36.01,
+        21.44
+      ],
+      "scale2_dyt": [
+        108.93,
+        -23.88,
+        181.92
+      ],
+      "scale3_vanilla": [
+        67.24,
+        25.48,
+        -78.9
+      ],
+      "scale3_dyt": [
+        47.99,
+        204.99,
+        41.62
+      ],
+      "failure_mode": "Huge variance (\u03c3/\u03bc up to 94%), negative eigenvalues (saddle directions), not reproducible"
+    },
+    "root_cause": "(1) batch=4 too small, (2) power iteration 15 iters converged to different saddle directions per seed, (3) different data batches per seed = different Hessians, (4) flash-attn disabled for double-backward changes numerics",
+    "v1_paper_decision": "OMIT Hessian subsection. Theory stays \"preliminary, pending rigorous sharpness analysis (future work)\".",
+    "future_work": {
+      "library": "PyHessian (Yao et al. 2020) \u2014 pip install pyhessian",
+      "protocol": "batch=16-32, Lanczos top-k (not just power iter), trace via Hutchinson, 3 seeds with SAME data batch per scale",
+      "compute_needed": "~3-5 hr compute environment",
+      "location": "<PAPER_DIR>/docs/THEORY-TRACKING.md phase 2"
+    }
+  }
+}

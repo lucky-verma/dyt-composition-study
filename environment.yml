@@ -1,0 +1,18 @@
+name: dyt-composition-study
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - scipy
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+  - pip:
+      - tiktoken
+      - datasets
+      - tqdm
+

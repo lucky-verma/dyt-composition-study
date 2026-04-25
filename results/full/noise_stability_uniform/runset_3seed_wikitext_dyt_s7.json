@@ -1,0 +1,14 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_dyt_s7",
+  "cfg": "dyt",
+  "seed": 7,
+  "tokens": "118m",
+  "lip_eps0.01": 238.6140179705,
+  "lip_eps0.01_std": 0.9946090719918466,
+  "lip_eps0.1": 204.7009148020808,
+  "lip_eps0.1_std": 1.5687741921684888,
+  "logit_variance": 9.226747512817383,
+  "n_params_M": 63.779353,
+  "elapsed_s": 1.2053875923156738
+}

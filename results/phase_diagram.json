@@ -1,0 +1,70 @@
+{
+  "_description": "Phase diagram data: 64M-param GPT, 3 seeds per condition, 5K training steps on WikiText-103 subsets. Val loss (perplexity) at step 5000.",
+  "_model": {"n_layer": 12, "n_head": 8, "n_embd": 512, "block_size": 512, "params_M": 63.52},
+  "_training": {"batch_size": 64, "grad_accum": 1, "lr": 3e-4, "max_iters": 5000, "dtype": "bfloat16"},
+  "_hardware": "H100 NVL 96GB",
+
+  "wikitext_1m": {
+    "_regime": "overfitting (1M tokens, T/P = 16)",
+    "vanilla": {
+      "seeds": {"1337": 9.3397, "42": 9.4316, "7": 9.3803},
+      "mean": 9.3839, "std": 0.0376
+    },
+    "dyt": {
+      "seeds": {"1337": 6.7841, "42": 7.0431, "7": 6.6283},
+      "mean": 6.8185, "std": 0.1714
+    },
+    "diffattn": {
+      "seeds": {"1337": 9.6263, "42": 9.4142, "7": 9.4297},
+      "mean": 9.4901, "std": 0.0967
+    }
+  },
+
+  "wikitext_10m": {
+    "_regime": "transitional (10M tokens, T/P = 157)",
+    "vanilla": {
+      "seeds": {"1337": 4.2729, "42": 4.2555, "7": 4.2525},
+      "mean": 4.2603, "std": 0.0089
+    },
+    "dyt": {
+      "seeds": {"1337": 4.5177, "42": 4.5127, "7": 4.5000},
+      "mean": 4.5101, "std": 0.0074
+    },
+    "diffattn": {
+      "seeds": {"1337": 3.6894, "42": 3.6865, "7": 3.7413},
+      "mean": 3.7057, "std": 0.0252
+    }
+  },
+
+  "wikitext_50m": {
+    "_regime": "moderate (50M tokens, T/P = 787)",
+    "vanilla": {
+      "seeds": {"1337": 3.6734, "42": 3.6671, "7": 3.6565},
+      "mean": 3.6657, "std": 0.0069
+    },
+    "dyt": {
+      "seeds": {"1337": 4.4048, "42": 4.3598, "7": 4.3944},
+      "mean": 4.3863, "std": 0.0191
+    },
+    "diffattn": {
+      "seeds": {"1337": 3.3764, "42": 3.3743, "7": 3.3881},
+      "mean": 3.3796, "std": 0.0060
+    }
+  },
+
+  "wikitext": {
+    "_regime": "underfitting (118M tokens, T/P = 1858)",
+    "vanilla": {
+      "seeds": {"1337": 3.6398, "42": 3.6315, "7": 3.6215},
+      "mean": 3.6309, "std": 0.0075
+    },
+    "dyt": {
+      "seeds": {"1337": 4.2895, "42": 4.3025, "7": 4.3464},
+      "mean": 4.3128, "std": 0.0242
+    },
+    "diffattn": {
+      "seeds": {"1337": 3.3429, "42": 3.3643, "7": 3.3684},
+      "mean": 3.3585, "std": 0.0112
+    }
+  }
+}

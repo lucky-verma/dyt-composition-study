@@ -1,0 +1,217 @@
+{
+  "paper": "<PAPER_DIR>",
+  "bib_entries": 46,
+  "summary": {
+    "P01": 21,
+    "P13": 2
+  },
+  "hits": [
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 166,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Guillesanbri~\\cite{guillesanbri2025dyt}",
+      "context": "ifying} propose alternatives; Guillesanbri~\\cite{guillesanbri2025dyt} independently replicated DyT'",
+      "fix": "Replace with \\citet{guillesanbri2025dyt}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 166,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Karagodin et al.~\\cite{karagodin2025normattndyn}",
+      "context": "ments. \\emph{Why} it matters: Karagodin et al.~\\cite{karagodin2025normattndyn} model normalization as speed",
+      "fix": "Replace with \\citet{karagodin2025normattndyn}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 166,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Qiu et al.~\\cite{qiu2026attnsinks}",
+      "context": "tion dynamics (NeurIPS 2025); Qiu et al.~\\cite{qiu2026attnsinks} unify attention and residual",
+      "fix": "Replace with \\citet{qiu2026attnsinks}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 166,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Heimersheim~\\cite{heimersheim2024removeln}",
+      "context": "mplementary to all four axes, Heimersheim~\\cite{heimersheim2024removeln} shows GPT-2's LayerNorm can b",
+      "fix": "Replace with \\citet{heimersheim2024removeln}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 166,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Sun et al.~\\cite{sun2024massiveact}",
+      "context": "entirely via fine-tuning, and Sun et al.~\\cite{sun2024massiveact} identify massive activations",
+      "fix": "Replace with \\citet{sun2024massiveact}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 170,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Kaplan et al.~\\cite{kaplan2020scaling}",
+      "context": "chilla~\\cite{chinchilla2022}, Kaplan et al.~\\cite{kaplan2020scaling}); our contribution is not the",
+      "fix": "Replace with \\citet{kaplan2020scaling}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Zhu et al.~\\cite{zhu2025dyt}",
+      "context": "ormalization-free landscape.} Zhu et al.~\\cite{zhu2025dyt} proposed DyT ($\\text{DyT}(x)",
+      "fix": "Replace with \\citet{zhu2025dyt}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Stollenwerk~\\cite{stollenwerk2025}",
+      "context": "apidly (BHyT~\\cite{bhyt2025}, Stollenwerk~\\cite{stollenwerk2025}, TaperNorm~\\cite{tapernorm202",
+      "fix": "Replace with \\citet{stollenwerk2025}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Abouzeid~\\cite{abouzeid2026optimizer}",
+      "context": "perNorm~\\cite{tapernorm2026}, Abouzeid~\\cite{abouzeid2026optimizer}); none study regime dependenc",
+      "fix": "Replace with \\citet{abouzeid2026optimizer}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Alekseev~\\cite{alekseev2026subcritical}",
+      "context": "oncurrent theoretical work by Alekseev~\\cite{alekseev2026subcritical} (Apr 2026) analyzes DyT via a",
+      "fix": "Replace with \\citet{alekseev2026subcritical}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Karagodin et al.~\\cite{karagodin2025normattndyn}",
+      "context": "} (ICML 2025, up to 3.2B) and Karagodin et al.~\\cite{karagodin2025normattndyn} (NeurIPS 2025, theoretical).",
+      "fix": "Replace with \\citet{karagodin2025normattndyn}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Ziomek et al.~\\cite{ziomek2025onelayernorm}",
+      "context": "(NeurIPS 2025, theoretical). Ziomek et al.~\\cite{ziomek2025onelayernorm} and Singhal and Kim~\\cite{sin",
+      "fix": "Replace with \\citet{ziomek2025onelayernorm}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 188,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Singhal and Kim~\\cite{singhal2025lnmem}",
+      "context": "e{ziomek2025onelayernorm} and Singhal and Kim~\\cite{singhal2025lnmem} provide theoretical and exper",
+      "fix": "Replace with \\citet{singhal2025lnmem}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 190,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Ye et al.~\\cite{ye2025diffattn}",
+      "context": "raph{Differential Attention.} Ye et al.~\\cite{ye2025diffattn} introduced attention score co",
+      "fix": "Replace with \\citet{ye2025diffattn}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 196,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Narang et al.~\\cite{narang2021transfer}",
+      "context": "ph{Prior systematic studies.} Narang et al.~\\cite{narang2021transfer} tested 23 modifications in a",
+      "fix": "Replace with \\citet{narang2021transfer}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 196,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Qiu et al.~\\cite{qiu2025gatedattn}",
+      "context": ", without varying data scale. Qiu et al.~\\cite{qiu2025gatedattn} systematically explored 30+ g",
+      "fix": "Replace with \\citet{qiu2025gatedattn}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 198,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Abouzeid~\\cite{abouzeid2026optimizer}",
+      "context": "licit learning-rate schedule. Abouzeid~\\cite{abouzeid2026optimizer} argues activation saturation",
+      "fix": "Replace with \\citet{abouzeid2026optimizer}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 216,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Kaplan et al.~\\cite{kaplan2020scaling}",
+      "context": "rts non-embedding parameters (Kaplan et al.~\\cite{kaplan2020scaling} convention). Total with embed",
+      "fix": "Replace with \\citet{kaplan2020scaling}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 828,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Abouzeid~\\cite{abouzeid2026optimizer}",
+      "context": "turation.} Concurrent work by Abouzeid~\\cite{abouzeid2026optimizer} independently identifies acti",
+      "fix": "Replace with \\citet{abouzeid2026optimizer}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 832,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Abouzeid~\\cite{abouzeid2026optimizer}",
+      "context": "ay + bfloat16 training setup; Abouzeid~\\cite{abouzeid2026optimizer} shows that optimizer choice s",
+      "fix": "Replace with \\citet{abouzeid2026optimizer}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 1221,
+      "category": "P01",
+      "severity": "crit",
+      "phrase": "Singhal and Kim~\\cite{singhal2025lnmem}",
+      "context": "f the learned representation (Singhal and Kim~\\cite{singhal2025lnmem} establish rank~$\\leftrightarr",
+      "fix": "Replace with \\citet{singhal2025lnmem}"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 323,
+      "category": "P13",
+      "severity": "major",
+      "phrase": "Ye et al.~\\cite{diffattnv2}",
+      "context": "1-specific overflow artifact (Ye et al.~\\cite{diffattnv2} fix hypothesis) but a general",
+      "fix": "prose='Ye' vs bib-first-author='Microsoft Research' \u2014 verify key or rewrite prose"
+    },
+    {
+      "file": "<PAPER_DIR>/main.tex",
+      "line": 325,
+      "category": "P13",
+      "severity": "major",
+      "phrase": "Ye et al.~\\cite{diffattnv2}",
+      "context": "$\\lambda$ variant proposed by Ye et al.~\\cite{diffattnv2} that replaces V1's $\\lambda =",
+      "fix": "prose='Ye' vs bib-first-author='Microsoft Research' \u2014 verify key or rewrite prose"
+    }
+  ]
+}

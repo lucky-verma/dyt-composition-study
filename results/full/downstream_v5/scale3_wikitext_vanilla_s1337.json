@@ -1,0 +1,11 @@
+{
+  "sub": "scale3",
+  "name": "wikitext_vanilla_s1337",
+  "cfg": "vanilla",
+  "seed": 1337,
+  "hellaswag_acc": 0.27,
+  "hellaswag_n": 300,
+  "winogrande_acc": 0.5,
+  "winogrande_n": 300,
+  "elapsed_s": 14.046142339706421
+}

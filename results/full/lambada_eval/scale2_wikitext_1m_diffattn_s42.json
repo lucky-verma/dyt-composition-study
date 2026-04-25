@@ -1,0 +1,8 @@
+{
+  "folder": "scale2",
+  "name": "wikitext_1m_diffattn_s42",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 3982157.5,
+  "n_params": 55296
+}

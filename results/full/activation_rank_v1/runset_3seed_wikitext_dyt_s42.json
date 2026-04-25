@@ -1,0 +1,74 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_dyt_s42",
+  "cfg": "dyt",
+  "seed": 42,
+  "tokens": "118m",
+  "n_layers": 12,
+  "per_layer_eff_rank": [
+    {
+      "layer": 0,
+      "eff_rank": 309.06597900390625,
+      "d_model": 512
+    },
+    {
+      "layer": 1,
+      "eff_rank": 229.26409912109375,
+      "d_model": 512
+    },
+    {
+      "layer": 2,
+      "eff_rank": 149.55120849609375,
+      "d_model": 512
+    },
+    {
+      "layer": 3,
+      "eff_rank": 82.66870880126953,
+      "d_model": 512
+    },
+    {
+      "layer": 4,
+      "eff_rank": 110.90199279785156,
+      "d_model": 512
+    },
+    {
+      "layer": 5,
+      "eff_rank": 137.1682586669922,
+      "d_model": 512
+    },
+    {
+      "layer": 6,
+      "eff_rank": 144.5266571044922,
+      "d_model": 512
+    },
+    {
+      "layer": 7,
+      "eff_rank": 184.18585205078125,
+      "d_model": 512
+    },
+    {
+      "layer": 8,
+      "eff_rank": 203.8170166015625,
+      "d_model": 512
+    },
+    {
+      "layer": 9,
+      "eff_rank": 233.47421264648438,
+      "d_model": 512
+    },
+    {
+      "layer": 10,
+      "eff_rank": 274.89422607421875,
+      "d_model": 512
+    },
+    {
+      "layer": 11,
+      "eff_rank": 285.3057861328125,
+      "d_model": 512
+    }
+  ],
+  "mean_eff_rank": 195.40199979146323,
+  "max_eff_rank": 309.06597900390625,
+  "d_model": 512,
+  "elapsed_s": 1.3733837604522705
+}

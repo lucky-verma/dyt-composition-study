@@ -1,0 +1,20 @@
+{
+  "sub": "scale2",
+  "name": "wikitext_dyt_s1337",
+  "cfg": "dyt",
+  "seed": 1337,
+  "tokens": "118m",
+  "top5_eigenvalues": [
+    27.824909210205078,
+    -25.436901092529297,
+    21.860122680664062,
+    17.380552291870117,
+    17.780731201171875
+  ],
+  "top1_eigenvalue": 27.824909210205078,
+  "trace_hutchinson_mean": 5260.996651785715,
+  "trace_hutchinson_std": 169.45222063558595,
+  "trace_per_Mparam": 42.43404183590829,
+  "n_params_M": 123.980569,
+  "elapsed_s": 67.84846925735474
+}

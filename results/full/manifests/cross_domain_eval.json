@@ -1,0 +1,47 @@
+{
+  "eval_config": {
+    "eval_iters": 200,
+    "batch": 16,
+    "block": 512
+  },
+  "runs": {
+    "vanilla_1M": {
+      "owt_val_loss": 13.6604,
+      "owt_std": 0.1721,
+      "owt_perplexity": 856346.922,
+      "wiki_val_loss": 9.7025,
+      "wiki_std": 0.246,
+      "wiki_perplexity": 16358.172,
+      "eval_time_sec": 5.2
+    },
+    "vanilla_118M": {
+      "owt_val_loss": 7.2421,
+      "owt_std": 0.1827,
+      "owt_perplexity": 1397.001,
+      "wiki_val_loss": 3.6176,
+      "wiki_std": 0.115,
+      "wiki_perplexity": 37.25,
+      "eval_time_sec": 5.2
+    },
+    "dyt_1M": {
+      "owt_val_loss": 10.9985,
+      "owt_std": 0.2808,
+      "owt_perplexity": 59784.801,
+      "wiki_val_loss": 6.7873,
+      "wiki_std": 0.1956,
+      "wiki_perplexity": 886.493,
+      "eval_time_sec": 5.4
+    },
+    "dyt_118M": {
+      "owt_val_loss": 7.8171,
+      "owt_std": 0.174,
+      "owt_perplexity": 2482.699,
+      "wiki_val_loss": 4.2663,
+      "wiki_std": 0.1154,
+      "wiki_perplexity": 71.256,
+      "eval_time_sec": 5.4
+    }
+  },
+  "delta_dyt_owt_1M_pct": -19.49,
+  "delta_dyt_owt_118M_pct": 7.94
+}

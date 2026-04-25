@@ -1,0 +1,20 @@
+{
+  "sub": "scale2",
+  "name": "wikitext_dyt_s7",
+  "cfg": "dyt",
+  "seed": 7,
+  "tokens": "118m",
+  "top5_eigenvalues": [
+    45.60879898071289,
+    16.327545166015625,
+    13.917710304260254,
+    14.046029090881348,
+    12.366066932678223
+  ],
+  "top1_eigenvalue": 45.60879898071289,
+  "trace_hutchinson_mean": 5065.2259765625,
+  "trace_hutchinson_std": 194.06074438534247,
+  "trace_per_Mparam": 40.85499862936183,
+  "n_params_M": 123.980569,
+  "elapsed_s": 52.48031783103943
+}

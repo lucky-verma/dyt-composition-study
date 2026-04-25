@@ -1,0 +1,11 @@
+{
+  "sub": "runset_3seed",
+  "name": "wikitext_dyt_s7",
+  "cfg": "dyt",
+  "seed": 7,
+  "hellaswag_acc": 0.27,
+  "hellaswag_n": 300,
+  "winogrande_acc": 0.5,
+  "winogrande_n": 300,
+  "elapsed_s": 5.918865203857422
+}

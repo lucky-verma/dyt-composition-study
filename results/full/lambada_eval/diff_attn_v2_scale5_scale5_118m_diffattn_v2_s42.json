@@ -1,0 +1,8 @@
+{
+  "folder": "diff_attn_v2_scale5",
+  "name": "scale5_118m_diffattn_v2_s42",
+  "n_eval": 500,
+  "last_token_accuracy": 0.0,
+  "per_token_perplexity": 525260259328.0,
+  "n_params": 147456
+}
