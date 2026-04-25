@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import os
 import py_compile
 import re
 import subprocess
@@ -13,22 +14,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INTERNAL_PATTERNS = [
-    r"/mnt/data",
-    r"/home/lucky",
-    r"Nextcloud",
-    r"\bCREM\b",
-    r"\bcrem\b",
-    r"\bcluster\b",
-    r"\bAWS\b",
-    r"\baws\b",
-    r"Blackwell",
-    r"Tailscale",
-    r"\bRTX\b",
-    r"thinkersloop",
-    r"wandb\.ai/thinkersloop",
-    r"scripts_crem",
-    r"publications/composition",
+    r"/mnt/",
+    r"/home/",
+    r"wandb\.ai/",
 ]
+INTERNAL_PATTERNS.extend(
+    p for p in os.environ.get("DYT_EXTRA_INTERNAL_PATTERNS", "").splitlines() if p.strip()
+)
 
 
 def iter_files(suffix: str):

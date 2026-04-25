@@ -730,8 +730,8 @@
       "cells": {
         "vit_layernorm_cifar10_val_acc": {
           "value": "72.4%",
-          "_note": "From appendix E alpha sweep (Anonymous Author, Apr 2026)",
-          "source": "data/vit_cifar10/ (defer SSH verify)"
+          "_note": "From appendix E alpha sweep",
+          "source": "data/vit_cifar10/"
         },
         "vit_dyt_alpha05_cifar10_val_acc": {
           "value": "81.2%",
@@ -1877,7 +1877,7 @@
   "outstanding_risks": [
     "tab:composition_5k label renamed from tab:composition (Apr 18 trim); rebuild ensures no dangling refs",
     "Scale 5 n=2 remains \u2014 vanilla_s7 running on compute environment device0 (recovery_device0 tmux, Apr 19 19:31 CDT launch, ~6.5h wall); if converges, paper updates Scale 5 row to n=3",
-    "audit_eff_batch.py broken locally (looks for <CODE_ROOT>/out which only exists on compute environment); needs SSH-wrapper mode",
+    "audit_eff_batch.py expects local result manifests when run outside the original training environment",
     "Metadata.json sidecar coverage: only post-Apr18 folders (scale5, convergence_ga1, dropout_r6_ga1) have per-run metadata.json. Legacy folders rely on aggregated all_results.json + paper_sources.json. Reviewer defense works via these 2 sources (Apr 19 HF verify: 185/185 entries have eff_batch + canonical_eff64). Per-run metadata regen is CI-tool nice-to-have, NOT reproducibility blocker.",
     "tab:convergence_main DyT+DiffAttn 10K marked '1 preliminary' (L473) \u2014 composition_10k_ga1 running NOW on compute environment device1 (recovery_device1_v2) will produce 3-seed (s42+s7+existing s1337). Post-run: remove preliminary marker, update to 3-seed value.",
     "tab:composition_5k DyT+DiffAttn 4.095 (L972) is 1-seed \u2014 composition_5k_3seed running NOW on compute environment device1 will upgrade to 3-seed (s42+s7+existing s1337 from composition/).",

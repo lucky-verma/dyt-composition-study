@@ -2,12 +2,12 @@
 """
 Paired t-tests + Bonferroni correction for DyT composition paper (tab:phase + tab:scaling).
 
-Input: per-seed best_val_loss from metadata files files.
+Input: per-seed best_val_loss from the cached all_results.json manifest.
 Output: JSON with raw p-values, Bonferroni-corrected, significance stars.
 
 Usage:
-    python analysis/sig_tests.py                         # run all cells from metadata files
-    python analysis/sig_tests.py --local all_results.json  # use cached all_results
+    python analysis/sig_tests.py
+    python analysis/sig_tests.py --local results/full/all_results.json
 
 Design:
 - Paired t-test (scipy.stats.ttest_rel): per-seed pair (mod_seed_k vs vanilla_seed_k)
@@ -22,13 +22,11 @@ Covers:
 - tab:scaling: 7 scale-DyT cells (1M+118M cross S1-S5, plus 10M S1-S4) + 4 scale-DiffAttn cells
 - Total N≈18-20 comparisons
 
-ADR 0007 Layer B: emits W&B run with full config dict.
+This public artifact version uses the bundled aggregate result manifest.
 """
 
 import json
-import os
 import sys
-import subprocess
 import argparse
 from pathlib import Path
 from typing import Optional
@@ -41,7 +39,7 @@ except ImportError:
     sys.exit(1)
 
 
-RESULTS_OUT = "<CODE_ROOT>/out"
+DEFAULT_RESULTS = Path(__file__).resolve().parents[1] / "results" / "full" / "all_results.json"
 SEEDS = [1337, 42, 7]
 
 
@@ -75,28 +73,6 @@ CELLS = [
 ]
 
 
-def fetch_val_loss_ssh(folder_pattern: str) -> list[Optional[float]]:
-    """Fetch best_val_loss from metadata files for 3 seeds."""
-    vals = []
-    for seed in SEEDS:
-        folder = folder_pattern.format(seed=seed)
-        path = f"{RESULTS_OUT}/{folder}/metadata.json"
-        try:
-            r = subprocess.run(
-                ["ssh", "compute environment", f"cat {path} 2>/dev/null"],
-                capture_output=True, text=True, timeout=10,
-            )
-            if r.returncode != 0 or not r.stdout:
-                vals.append(None)
-                continue
-            data = json.loads(r.stdout)
-            vals.append(data.get("best_val_loss"))
-        except (json.JSONDecodeError, subprocess.TimeoutExpired) as e:
-            print(f"  [fetch fail] {folder}: {e}", file=sys.stderr)
-            vals.append(None)
-    return vals
-
-
 def fetch_val_loss_local(all_results: dict, folder_pattern: str) -> list[Optional[float]]:
     """Fetch from cached all_results.json if present."""
     vals = []
@@ -116,17 +92,14 @@ def stars(p: float) -> str:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--local", type=str, default=None,
-                    help="Use local all_results.json instead of SSH")
+    ap.add_argument("--local", type=str, default=str(DEFAULT_RESULTS),
+                    help="Path to local all_results.json")
     ap.add_argument("--out", type=str,
                     default="<PAPER_DIR>/docs/sig_tests.json")
     args = ap.parse_args()
 
-    if args.local:
-        all_results = json.load(open(args.local))
-        fetch = lambda p: fetch_val_loss_local(all_results, p)
-    else:
-        fetch = fetch_val_loss_ssh
+    all_results = json.load(open(args.local))
+    fetch = lambda p: fetch_val_loss_local(all_results, p)
 
     results = []
     skipped = []

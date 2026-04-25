@@ -127,7 +127,7 @@ def check_sig_tests_table(paper_dir: Path, tex: str) -> list[str]:
 def main() -> int:
     paper_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else None
     if paper_dir is None or not (paper_dir / "main.tex").exists():
-        print("usage: check-table-placeholders.py publications/<paper>", file=sys.stderr)
+        print("usage: check-table-placeholders.py <paper-dir>", file=sys.stderr)
         return 2
 
     tex = uncommented_text((paper_dir / "main.tex").read_text(encoding="utf-8"))

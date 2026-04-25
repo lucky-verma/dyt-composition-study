@@ -1,5 +1,7 @@
 __pycache__/
 *.py[cod]
+*.pyc
+.DS_Store
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -21,4 +23,3 @@ data/
 *.bbl
 *.out
 *.synctex.gz
-
