@@ -1,4 +1,4 @@
-# Scale 1: 64M parameters (composition study default)
+# Scale 1: 64M parameters
 n_layer = 12
 n_head = 8
 n_embd = 512

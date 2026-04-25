@@ -1,6 +1,6 @@
-# Do Architectural Modifications Compose? A Systematic Study of Normalization, Attention, and Residual Connections
+# When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer
 
-Training code and experiment scripts for the composition study. Built on [nanoGPT](https://github.com/karpathy/nanoGPT) with toggle flags for architectural modifications.
+Training code and experiment scripts for the normalization-removal study. Built on [nanoGPT](https://github.com/karpathy/nanoGPT) with toggle flags for the mechanisms evaluated in the paper.
 
 ## Setup
 
@@ -37,7 +37,6 @@ The key file is `model.py`, which implements a unified GPT with toggle flags:
 | `--use_diff_attn=True` | Differential Attention | Ye et al., ICLR 2025 |
 | `--diff_attn_v2=True` | Sigmoid-bounded DiffAttn lambda | DiffAttn V2 control |
 | `--use_hardtanh=True` | Hard clipping control for activation bounding | This paper |
-| `--use_attn_res=True` | Block Attention Residuals | Moonshot AI, 2026 |
 | `--dyt_alpha_init=X` | DyT alpha initialization | Default: 2.0 |
 
 Flags are independent and composable. Any combination can be enabled.
@@ -71,7 +70,7 @@ python train.py --dataset=wikitext_1m \
   --use_dyt=False --use_diff_attn=True \
   --seed=1337 --out_dir=out/diffattn_1m
 
-# DyT + DiffAttn (composition)
+# DyT + DiffAttn
 python train.py --dataset=wikitext \
   --n_layer=12 --n_head=8 --n_embd=512 --block_size=512 \
   --batch_size=64 --max_iters=10000 --eval_interval=500 \
@@ -123,7 +122,7 @@ python activation_analysis.py
 
 ## Hardware Requirements
 
-- **Scale 1-2**: Any GPU with 8+ GB (T4, consumer GPU, etc.)
+- **Scale 1-2**: Any GPU with 8+ GB (T4, RTX 3090, etc.)
 - **Scale 3**: GPU with 24+ GB (A100 40GB, L4, etc.)
 - **Scale 4**: GPU with 80+ GB (H100, A100 80GB)
 - **Scale 5**: GPU with 80+ GB; use `batch_size=1` and `gradient_accumulation_steps=64`
@@ -141,7 +140,7 @@ python activation_analysis.py
 | `vit_experiment.py` | ViT experiments on CIFAR-10/100 |
 | `vit_alpha_sweep.py` | DyT alpha sensitivity on ViT |
 | `activation_analysis.py` | Tanh saturation measurement |
-| `analyze_results.py` | Results analysis and composition metrics |
+| `analyze_results.py` | Results analysis utilities |
 | `extract_train_val_gap.py` | Train/val gap extraction from logs |
 | `run_3seed.sh` | 3-seed phase diagram experiments |
 | `run_alpha_sweep.sh` | Alpha initialization sweep |
@@ -160,4 +159,4 @@ python activation_analysis.py
 6. Run ViT experiments (Table 4): `python vit_experiment.py && python vit_alpha_sweep.py`
 7. Run activation analysis (Figure 4): `python activation_analysis.py` (requires step 2-3 checkpoints)
 
-Total compute for all experiments: approximately 120 GPU-hours on H100.
+Total compute for all experiments: approximately 300 GPU-hours.

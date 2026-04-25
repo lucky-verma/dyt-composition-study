@@ -13,7 +13,7 @@ To run with DDP on 4 gpus across 2 nodes, example:
 $ torchrun --nproc_per_node=8 --nnodes=2 --node_rank=0 --master_addr=123.456.123.456 --master_port=1234 train.py
 - Run on the worker node:
 $ torchrun --nproc_per_node=8 --nnodes=2 --node_rank=1 --master_addr=123.456.123.456 --master_port=1234 train.py
-(If your compute environment does not have Infiniband interconnect prepend NCCL_IB_DISABLE=1)
+(If your multi-node environment does not have Infiniband interconnect, prepend NCCL_IB_DISABLE=1)
 """
 
 import os
@@ -41,7 +41,7 @@ always_save_checkpoint = True # if True, always save a checkpoint after each eva
 init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
 # wandb logging
 wandb_log = False # disabled by default for anonymous supplementary reproduction
-wandb_project = 'dyt-composition-study'
+wandb_project = 'transformer-normalization-study'
 wandb_run_name = 'gpt2' # 'run' + str(time.time())
 # data
 dataset = 'openwebtext'
@@ -62,7 +62,7 @@ n_kv_heads = None   # llama GQA kv heads (None = MHA)
 hidden_dim = None   # llama SwiGLU hidden dim (None = auto)
 multiple_of = 256   # llama SwiGLU alignment
 norm_eps = 1e-5     # llama RMSNorm epsilon
-# composition study modification toggles
+# normalization-removal study modification toggles
 use_dyt = False        # DyT: replace LayerNorm with Dynamic Tanh
 use_hardtanh = False   # HardTanh: hard clipping [-1,1] (tests bounding principle)
 convert_to_dyt = False    # convert LN->DyT after loading pretrained (fine-tuning exp)
@@ -76,8 +76,6 @@ ablate_rope = False    # R5: skip RoPE rotation (isolate positional encoding rol
 ablate_swiglu = False  # R5: FFN becomes non-gated GELU (GPT-2 style) not SwiGLU
 ablate_gqa = False     # R5: force n_kv_heads = n_heads (MHA not GQA)
 use_gated_attn = False # GatedAttn: learnable per-head gate on attention
-use_attn_res = False   # BlockAttnRes: attention-based residual connections
-attnres_block_size = 4 # layers per block for AttnRes
 seed = 1337 # random seed (vary for confidence intervals)
 # adamw optimizer
 learning_rate = 6e-4 # max learning rate
@@ -230,7 +228,7 @@ else:
                       bias=bias, vocab_size=None, dropout=dropout,
                       use_dyt=use_dyt, use_hardtanh=use_hardtanh, dyt_alpha_init=dyt_alpha_init, use_rmsnorm=use_rmsnorm,
                       use_diff_attn=use_diff_attn, diff_attn_v2=diff_attn_v2,
-                      use_gated_attn=use_gated_attn, use_attn_res=use_attn_res, attnres_block_size=attnres_block_size)
+                      use_gated_attn=use_gated_attn)
     if init_from == 'scratch':
         # init a new model from scratch
         print("Initializing a new model from scratch")

@@ -1,5 +1,5 @@
 """
-Analyze composition study results and generate figures.
+Analyze normalization-removal study results and generate figures.
 
 Usage:
     python analyze_results.py --dataset shakespeare_char --scale small
@@ -51,23 +51,23 @@ def print_summary_table(results):
 
     print(f"{'='*80}")
 
-    # Composition analysis
+    # Interaction analysis for mechanisms reported in the paper.
     if len(results) >= 4:
-        print("\n=== COMPOSITION ANALYSIS ===")
+        print("\n=== INTERACTION ANALYSIS ===")
         by_config = {r['config']: r.get('final_val_loss', 999) for r in results}
 
         vanilla = by_config.get('vanilla', None)
         if vanilla:
             print(f"\nVanilla baseline: {vanilla:.4f}")
             print(f"\nIndividual improvements over vanilla:")
-            for config in ['dyt', 'diffattn', 'attnres']:
+            for config in ['dyt', 'diffattn', 'hardtanh', 'rmsnorm']:
                 if config in by_config:
                     delta = by_config[config] - vanilla
                     direction = "better" if delta < 0 else "worse"
                     print(f"  {config:<20} {by_config[config]:.4f} ({delta:+.4f}, {direction})")
 
-            print(f"\nCross-category pairs:")
-            pairs = ['dyt+diffattn', 'dyt+attnres', 'diffattn+attnres']
+            print(f"\nReported mechanism pairs:")
+            pairs = ['dyt+diffattn']
             for pair in pairs:
                 if pair in by_config:
                     parts = pair.split('+')
@@ -76,14 +76,6 @@ def print_summary_table(results):
                     interaction = actual - expected
                     comp_type = "super-additive" if interaction < -0.01 else "sub-additive" if interaction > 0.01 else "additive"
                     print(f"  {pair:<25} actual={actual:.4f} expected={expected:.4f} interaction={interaction:+.4f} ({comp_type})")
-
-            if 'dyt+diffattn+attnres' in by_config:
-                print(f"\nTriple combination:")
-                triple = by_config['dyt+diffattn+attnres']
-                expected = sum(by_config.get(p, 0) - vanilla for p in ['dyt', 'diffattn', 'attnres']) + vanilla
-                interaction = triple - expected
-                comp_type = "super-additive" if interaction < -0.01 else "sub-additive" if interaction > 0.01 else "additive"
-                print(f"  all_three              actual={triple:.4f} expected={expected:.4f} interaction={interaction:+.4f} ({comp_type})")
 
 
 def main():

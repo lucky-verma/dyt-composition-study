@@ -8,14 +8,12 @@ Modifications implemented:
   - DiffAttn (Differential Attention): dual-softmax attention that cancels noise
   - DiffAttn V2: sigmoid-bounded lambda variant
   - GatedAttn: learnable per-head scalar gate on attention output
-  - BlockAttnRes (Block Attention Residuals): depth-wise attention for residuals
 
 References:
   - nanoGPT: https://github.com/karpathy/nanoGPT
   - DyT: Zhu et al., "Transformers without Normalization" (CVPR 2025)
   - DiffAttn: Ye et al., "Differential Transformer" (ICLR 2025)
   - GatedAttn: Qiu et al., "Unlocking the Potential of Dense Attention" (NeurIPS 2026)
-  - AttnRes: Moonshot AI, "Attention Residuals" (arXiv 2026)
 """
 
 import math
@@ -306,50 +304,6 @@ class Block(nn.Module):
         return x
 
 
-class BlockAttnResAggregator(nn.Module):
-    """Block Attention Residuals: replaces standard residual connections
-    with learned depth-wise attention over previous layer outputs.
-    From Moonshot AI, "Attention Residuals" (arXiv 2026).
-
-    Groups layers into blocks. Within each block, layers use standard residuals.
-    At block boundaries, the model attends over all previous block outputs
-    to compute a weighted aggregation (replacing the simple additive residual).
-    """
-
-    def __init__(self, config):
-        super().__init__()
-        self.block_size_layers = config.attnres_block_size  # layers per block
-        # +1 because block_outputs starts with the embedding (index 0)
-        n_boundaries = config.n_layer // self.block_size_layers
-        # Learnable query for each block boundary to attend over previous blocks
-        self.block_queries = nn.ParameterList([
-            nn.Parameter(torch.randn(1, 1, config.n_embd) * 0.02)
-            for _ in range(n_boundaries + 1)  # +1 for safety
-        ])
-        self.scale = 1.0 / math.sqrt(config.n_embd)
-
-    def aggregate(self, block_outputs, boundary_idx):
-        """Attend over all previous block outputs + current to produce aggregated input."""
-        if boundary_idx <= 1 or len(block_outputs) <= 1:
-            return block_outputs[-1]
-
-        # Stack previous block outputs: (B, num_blocks, T, C)
-        stacked = torch.stack(block_outputs, dim=1)
-        B, N, T, C = stacked.size()
-
-        # Query from learnable parameter (clamp index for safety)
-        q_idx = min(boundary_idx, len(self.block_queries) - 1)
-        query = self.block_queries[q_idx].expand(B, T, C)  # (B, T, C)
-
-        # Attention scores: (B, T, N) -- each token attends over N block outputs
-        scores = torch.einsum('btc,bntc->btn', query, stacked) * self.scale
-        weights = F.softmax(scores, dim=-1)  # (B, T, N)
-
-        # Weighted sum: (B, T, C)
-        aggregated = torch.einsum('btn,bntc->btc', weights, stacked)
-        return aggregated
-
-
 @dataclass
 class GPTConfig:
     block_size: int = 1024
@@ -367,8 +321,6 @@ class GPTConfig:
     use_diff_attn: bool = False     # DiffAttn: differential attention
     diff_attn_v2: bool = False      # DiffAttn V2: sigmoid-bounded lambda
     use_gated_attn: bool = False    # GatedAttn: learnable per-head gate
-    use_attn_res: bool = False      # BlockAttnRes: attention-based residuals
-    attnres_block_size: int = 4     # layers per block for AttnRes
 
 
 class GPT(nn.Module):
@@ -390,11 +342,6 @@ class GPT(nn.Module):
         # Weight tying
         self.transformer.wte.weight = self.lm_head.weight
 
-        # Block Attention Residuals aggregator
-        self.attn_res = None
-        if config.use_attn_res:
-            self.attn_res = BlockAttnResAggregator(config)
-
         # Init weights
         self.apply(self._init_weights)
         for pn, p in self.named_parameters():
@@ -408,9 +355,8 @@ class GPT(nn.Module):
         if config.use_rmsnorm: mods.append("RMSNorm")
         if config.use_diff_attn: mods.append("DiffAttnV2" if config.diff_attn_v2 else "DiffAttn")
         if config.use_gated_attn: mods.append("GatedAttn")
-        if config.use_attn_res: mods.append(f"BlockAttnRes(bs={config.attnres_block_size})")
         mod_str = " + ".join(mods) if mods else "Vanilla"
-        print(f"[CompositionStudy] Config: {mod_str}")
+        print(f"[TransformerStudy] Config: {mod_str}")
         print(f"number of parameters: %.2fM" % (self.get_num_params() / 1e6,))
 
     def get_num_params(self, non_embedding=True):
@@ -437,20 +383,8 @@ class GPT(nn.Module):
         pos_emb = self.transformer.wpe(pos)
         x = self.transformer.drop(tok_emb + pos_emb)
 
-        if self.attn_res is not None:
-            # Block Attention Residuals: aggregate across block boundaries
-            block_outputs = [x]  # initial embedding is first "block output"
-            bs = self.config.attnres_block_size
-            for i, block in enumerate(self.transformer.h):
-                x = block(x)
-                if (i + 1) % bs == 0:  # block boundary
-                    block_outputs.append(x)
-                    block_idx = (i + 1) // bs
-                    x = self.attn_res.aggregate(block_outputs, block_idx)
-        else:
-            # Standard: sequential layer application
-            for block in self.transformer.h:
-                x = block(x)
+        for block in self.transformer.h:
+            x = block(x)
 
         x = self.transformer.ln_f(x)
 

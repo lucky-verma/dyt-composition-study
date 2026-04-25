@@ -1,4 +1,4 @@
-# DyT Composition Study
+# When Does Removing LayerNorm Help?
 
 Code and artifacts for the empirical study:
 

@@ -1,7 +1,7 @@
 """
-Llama-style Transformer with toggle flags for compositional modifications.
-Based on karpathy/llama2.c (MIT license), adapted to match our composition
-study interface (same forward signature, configure_optimizers, etc.).
+Llama-style Transformer with toggle flags for normalization-removal experiments.
+Based on karpathy/llama2.c (MIT license), adapted to match the GPT-2-family
+interface used by the paper.
 
 Architecture: RoPE, SwiGLU FFN, RMSNorm (default), GQA, bias=False throughout.
 Modifications ported from model.py:
@@ -371,7 +371,7 @@ class LlamaConfig:
 
 
 class Llama(nn.Module):
-    """Llama-style Transformer for the composition study.
+    """Llama-style Transformer for the normalization-removal study.
 
     Interface-compatible with GPT class in model.py:
       - forward(idx, targets=None) -> (logits, loss)

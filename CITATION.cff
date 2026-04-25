@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or artifact bundle, please cite the associated paper. Replace the provisional citation with the arXiv entry once assigned."
-title: "DyT Composition Study"
+title: "When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer"
 authors:
   - family-names: "Verma"
     given-names: "Lucky"
