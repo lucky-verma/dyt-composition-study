@@ -105,9 +105,20 @@ python scripts/smoke_model.py
 
 ## Citation
 
-The BibTeX entry will be added after the arXiv record is live. Until then, use `CITATION.cff`.
+If you use this code, result manifest, or experiment setup, please cite the associated paper. This provisional entry should be replaced with the arXiv entry once the identifier is assigned.
+
+```bibtex
+@misc{verma2026dytcomposition,
+  title        = {When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer},
+  author       = {Verma, Lucky},
+  year         = {2026},
+  note         = {Preprint. arXiv identifier to be added.},
+  url          = {https://github.com/lucky-verma/dyt-composition-study}
+}
+```
+
+GitHub also reads the repository-level `CITATION.cff` file.
 
 ## License
 
 Code is released under the MIT License. Public datasets used by the experiments retain their original licenses. Large checkpoints, if mirrored separately, may include additional metadata and terms.
-
