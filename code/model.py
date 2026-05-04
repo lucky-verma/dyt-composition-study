@@ -13,7 +13,7 @@ References:
   - nanoGPT: https://github.com/karpathy/nanoGPT
   - DyT: Zhu et al., "Transformers without Normalization" (CVPR 2025)
   - DiffAttn: Ye et al., "Differential Transformer" (ICLR 2025)
-  - GatedAttn: Qiu et al., "Unlocking the Potential of Dense Attention" (NeurIPS 2026)
+  - GatedAttn: Qiu et al., "Unlocking the Potential of Dense Attention"
 """
 
 import math

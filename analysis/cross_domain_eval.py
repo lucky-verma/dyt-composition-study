@@ -2,7 +2,7 @@
 Wave 3 T4 — Cross-Domain Evaluation
 
 Load wikitext-trained Scale 1 (64M) checkpoints and compute OWT val perplexity.
-Addresses reviewer R1 objection #5: no downstream eval. Provides cross-distribution
+Provides cross-distribution
 perplexity evidence (wikitext → OpenWebText) without additional training.
 
 Audit A3: NO gradient updates. torch.no_grad() enforced. eval_iters=100.
@@ -12,18 +12,21 @@ import torch
 import json
 import numpy as np
 from pathlib import Path
+import os
 import sys
 
-sys.path.insert(0, "<CODE_ROOT>")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CODE_ROOT = Path(os.environ.get("DYT_CODE_ROOT", REPO_ROOT / "code")).expanduser().resolve()
+sys.path.insert(0, str(CODE_ROOT))
 from model import GPT, GPTConfig  # noqa
 
-DEVICE = "cuda"
+DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 DTYPE = torch.bfloat16
 EVAL_ITERS = 100
 BATCH_SIZE = 64
 BLOCK_SIZE = 512
-OWT_VAL = "<CODE_ROOT>/data/openwebtext/val.bin"
-OUT_JSON = "<CODE_ROOT>/out/cross_domain_eval.json"
+OWT_VAL = CODE_ROOT / "data" / "openwebtext" / "val.bin"
+OUT_JSON = CODE_ROOT / "out" / "cross_domain_eval.json"
 
 # Ckpts to evaluate (canonical eff=64 from runset_3seed)
 CKPTS = {
@@ -55,19 +58,29 @@ def estimate_loss(model, data, n_batches):
     losses = torch.zeros(n_batches)
     for k in range(n_batches):
         X, Y = get_batch(data, BATCH_SIZE, BLOCK_SIZE)
-        with torch.amp.autocast(device_type="cuda", dtype=DTYPE):
+        if DEVICE == "cuda":
+            with torch.amp.autocast(device_type="cuda", dtype=DTYPE):
+                _, loss = model(X, Y)
+        else:
             _, loss = model(X, Y)
         losses[k] = loss.item()
     return losses.mean().item()
 
 def main():
+    if not OWT_VAL.exists():
+        raise SystemExit(
+            f"Missing OpenWebText validation data: {OWT_VAL}. "
+            "Prepare data/openwebtext/val.bin or set DYT_CODE_ROOT to the code/data root."
+        )
+    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
+
     # Load OWT val.bin
     owt_val = np.memmap(OWT_VAL, dtype=np.uint16, mode="r")
     print(f"Loaded OWT val: {len(owt_val):,} tokens ({len(owt_val)/1e6:.1f}M)")
 
     results = {}
     for name, ckpt_path in CKPTS.items():
-        full = f"<CODE_ROOT>/{ckpt_path}" if not ckpt_path.startswith("/") else ckpt_path
+        full = Path(ckpt_path) if ckpt_path.startswith("/") else CODE_ROOT / ckpt_path
         if not Path(full).exists():
             print(f"SKIP missing: {full}")
             continue
@@ -109,7 +122,8 @@ def main():
         }
         print(f"  OWT val_loss={owt_val_loss:.4f} ppl={np.exp(owt_val_loss):.2f}")
         del model, ck
-        torch.cuda.empty_cache()
+        if DEVICE == "cuda":
+            torch.cuda.empty_cache()
     
     with open(OUT_JSON, "w") as f:
         json.dump(results, f, indent=2)

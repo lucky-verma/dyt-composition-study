@@ -1,16 +1,43 @@
 cff-version: 1.2.0
-message: "If you use this code or artifact bundle, please cite the associated paper. Replace the provisional citation with the arXiv entry once assigned."
-title: "When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer"
+type: software
+message: "If you use this code or artifact bundle, please cite the associated arXiv preprint listed in preferred-citation."
+title: "DyT Composition Study Code and Artifacts"
 authors:
   - family-names: "Verma"
     given-names: "Lucky"
-year: 2026
+    affiliation: "Independent Researcher"
+date-released: "2026-04-25"
 repository-code: "https://github.com/lucky-verma/dyt-composition-study"
+url: "https://github.com/lucky-verma/dyt-composition-study"
+license: MIT
+abstract: "Code, configurations, analysis utilities, and machine-readable result manifests for the Dynamic Tanh composition study in Transformer training."
+keywords:
+  - "Dynamic Tanh"
+  - "LayerNorm"
+  - "activation bounding"
+  - "implicit regularization"
+  - "Transformer training"
 preferred-citation:
   type: generic
   title: "When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer"
   authors:
     - family-names: "Verma"
       given-names: "Lucky"
+      affiliation: "Independent Researcher"
   year: 2026
-  notes: "Preprint. arXiv identifier to be added."
+  date-released: "2026-04-25"
+  publisher:
+    name: "arXiv"
+  doi: "10.48550/arXiv.2604.23434"
+  url: "https://arxiv.org/abs/2604.23434"
+  license: CC-BY-4.0
+  identifiers:
+    - type: other
+      value: "arXiv:2604.23434"
+      description: "arXiv identifier"
+  keywords:
+    - "Machine Learning"
+    - "Computation and Language"
+    - "Dynamic Tanh"
+    - "LayerNorm"
+  notes: "arXiv preprint, arXiv:2604.23434 [cs.LG]."

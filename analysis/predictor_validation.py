@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """predictor_validation — leave-one-scale-out CV + AUC for the saturation heuristic.
 
-Per Codex review (NeurIPS rigor): replace in-sample 75% claim with proper
+Replace the in-sample 75% claim with proper
 held-out validation. Outputs:
   * Per-cell predictions (n=12 pre-Scale-5 calibration cells, plus 2 Scale-5 stress cells)
   * Leave-one-scale-out (LOSO) CV pooled accuracy + balanced accuracy + AUC

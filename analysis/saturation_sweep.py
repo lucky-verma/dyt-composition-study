@@ -4,13 +4,13 @@ Comprehensive Activation Saturation Sweep — DyT Crossover Predictor
 =====================================================================
 Auto-discovers ALL DyT checkpoints (GPT-2 + Llama), measures activation
 saturation, fits a semi-empirical crossover predictor, and saves results
-for direct inclusion in the NeurIPS paper.
+for direct inclusion in the paper.
 
 Safety:
   - Checks free GPU memory before loading each model
   - Loads ONE model at a time per GPU, fully unloads before next
   - Falls back to CPU if GPU memory insufficient
-  - Saves results incompute environmententally (crash-safe)
+  - Saves results incrementally (crash-safe)
   - Does NOT interfere with running training jobs
 
 Usage:
@@ -42,7 +42,8 @@ from collections import defaultdict
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # ─── Setup ────────────────────────────────────────────────────────────────
-BASE = Path('<CODE_ROOT>')
+REPO_ROOT = Path(__file__).resolve().parents[1]
+BASE = Path(os.environ.get("DYT_CODE_ROOT", REPO_ROOT / "code")).expanduser().resolve()
 OUT_DIR = BASE / 'out' / 'saturation_sweep'
 RESULTS_FILE = OUT_DIR / 'saturation_results.json'
 PREDICTOR_FILE = OUT_DIR / 'crossover_predictor.json'

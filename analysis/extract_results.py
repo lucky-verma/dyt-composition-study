@@ -1,6 +1,8 @@
 import torch, json, os, glob, sys
+from pathlib import Path
 
-base = "<CODE_ROOT>/out"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+base = str(Path(os.environ.get("DYT_OUT_ROOT", REPO_ROOT / "code" / "out")).expanduser().resolve())
 results = {}
 
 # Walk all subdirs looking for ckpt.pt

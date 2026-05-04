@@ -16,12 +16,13 @@ import torch
 import numpy as np
 from pathlib import Path
 
-CODE_ROOT = '<CODE_ROOT>'
-sys.path.insert(0, CODE_ROOT)
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CODE_ROOT = Path(os.environ.get("DYT_CODE_ROOT", REPO_ROOT / "code")).expanduser().resolve()
+sys.path.insert(0, str(CODE_ROOT))
 from model import GPT, GPTConfig
 import tiktoken
 
-OUT = Path(f'{CODE_ROOT}/out/blimp_eval')
+OUT = CODE_ROOT / 'out' / 'blimp_eval'
 OUT.mkdir(exist_ok=True, parents=True)
 
 # 3 representative phenomena (syntactic phenomena where wikitext models can differentiate)
@@ -130,7 +131,7 @@ def main():
 
     all_results = []
     for folder in args.folders:
-        base = Path(f'{CODE_ROOT}/out/{folder}')
+        base = CODE_ROOT / 'out' / folder
         if not base.exists():
             print(f'[blimp] skip {folder}: not present', flush=True)
             continue

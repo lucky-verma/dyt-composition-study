@@ -13,7 +13,7 @@ Patches from compute environment original (lambada_eval.py @ md5 e61e08ad):
 
 Launch (stream-eval one ckpt):
   python lambada_eval.py --ckpt_path /tmp/eval_ckpts/<folder>/<run>/ckpt.pt \
-      --results_dir <CODE_ROOT>/out/lambada_eval --wandb_log
+      --results_dir code/out/lambada_eval --wandb_log
 
 Launch (smoke test):
   python lambada_eval.py --ckpt_path <path> --n_eval 50 --wandb_log --smoke
@@ -23,8 +23,9 @@ import os, json, time, torch, argparse, hashlib, subprocess, socket
 from pathlib import Path
 import sys
 
-CODE_ROOT = os.path.expanduser('<CODE_ROOT>')
-sys.path.insert(0, CODE_ROOT)
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CODE_ROOT = Path(os.environ.get("DYT_CODE_ROOT", REPO_ROOT / "code")).expanduser().resolve()
+sys.path.insert(0, str(CODE_ROOT))
 from model import GPT, GPTConfig
 import tiktoken
 
@@ -61,7 +62,7 @@ def assert_folder_config_match(ckpt_path: Path, model_args: dict) -> None:
     # No tag matched — log but don't fail (e.g. intermediate/, composition_1m_ga1/ use Scale 1)
 
 
-def get_git_sha(path: str = CODE_ROOT) -> str:
+def get_git_sha(path: str | Path = CODE_ROOT) -> str:
     try:
         r = subprocess.run(['git', '-C', path, 'rev-parse', '--short', 'HEAD'],
                            capture_output=True, text=True, timeout=5)
@@ -252,10 +253,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--ckpt_path', type=str, default=None,
                     help='single ckpt to eval (stream-eval mode)')
-    ap.add_argument('--out_root', type=str, default=os.path.expanduser('<CODE_ROOT>/out'),
+    ap.add_argument('--out_root', type=str, default=str(CODE_ROOT / 'out'),
                     help='root to scan for ckpts (dir-walk mode)')
     ap.add_argument('--results_dir', type=str,
-                    default=os.path.expanduser('<CODE_ROOT>/out/lambada_eval'),
+                    default=str(CODE_ROOT / 'out' / 'lambada_eval'),
                     help='where to save JSON results')
     ap.add_argument('--folder_filter', type=str, default=None,
                     help='regex to filter folder names (e.g. "diffattn")')

@@ -1,12 +1,12 @@
 # When Does Removing LayerNorm Help?
 
+[arXiv:2604.23434](https://arxiv.org/abs/2604.23434) | [Citation](#citation) | [MIT License](LICENSE)
+
 Code and artifacts for the empirical study:
 
 **When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer**
 
 This repository studies when Dynamic Tanh (DyT) helps or hurts Transformer training, with controlled GPT-2-family scaling experiments, Llama-style checks, ViT checks, ablations, downstream evaluations, and machine-readable result manifests.
-
-Paper link: arXiv link will be added when the preprint is live.
 
 ## What Is Included
 
@@ -17,7 +17,7 @@ Paper link: arXiv link will be added when the preprint is live.
 - `docs/`: artifact notes, reproducibility instructions, and release checklist.
 - `.github/workflows/validate.yml`: lightweight validation for Python syntax, JSON validity, shell launchers, and model smoke tests.
 
-Large raw datasets and model checkpoints are not stored directly in Git. The code uses public datasets, and checkpoint/data mirrors will be linked after the arXiv record is live.
+Large raw datasets and model checkpoints are not stored directly in Git. The code uses public datasets, and checkpoint/data mirrors may be linked separately when available.
 
 ## Headline Scope
 
@@ -105,19 +105,23 @@ python scripts/smoke_model.py
 
 ## Citation
 
-If you use this code, result manifest, or experiment setup, please cite the associated paper. This provisional entry should be replaced with the arXiv entry once the identifier is assigned.
+If you use this code, result manifest, or experiment setup, please cite the associated arXiv preprint:
 
 ```bibtex
 @misc{verma2026dytcomposition,
   title        = {When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer},
   author       = {Verma, Lucky},
   year         = {2026},
-  note         = {Preprint. arXiv identifier to be added.},
-  url          = {https://github.com/lucky-verma/dyt-composition-study}
+  publisher    = {arXiv},
+  doi          = {10.48550/arXiv.2604.23434},
+  url          = {https://arxiv.org/abs/2604.23434},
+  eprint       = {2604.23434},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.LG}
 }
 ```
 
-GitHub also reads the repository-level `CITATION.cff` file.
+GitHub also reads the repository-level `CITATION.cff` file. A plain BibTeX copy is available in `CITATION.bib` for citation managers that prefer `.bib` files.
 
 ## License
 
