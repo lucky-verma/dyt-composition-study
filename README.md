@@ -1,6 +1,13 @@
 # When Does Removing LayerNorm Help?
 
-[arXiv:2604.23434](https://arxiv.org/abs/2604.23434) | [Citation](#citation) | [MIT License](LICENSE)
+<p>
+  <a href="https://arxiv.org/abs/2604.23434"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2604.23434-b31b1b.svg"></a>
+  <a href="https://github.com/lucky-verma/dyt-composition-study/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/lucky-verma/dyt-composition-study/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="requirements.txt"><img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776ab.svg"></a>
+  <a href="requirements.txt"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg"></a>
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="CITATION.cff"><img alt="Citation" src="https://img.shields.io/badge/Citation-CFF%201.2.0-green.svg"></a>
+</p>
 
 Code and artifacts for the empirical study:
 
