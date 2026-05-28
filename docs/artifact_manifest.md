@@ -2,6 +2,8 @@
 
 ## Source Code
 
+- `Makefile`: stable public entry points for install, validation, model smoke,
+  tiny CPU training smoke, and data preparation.
 - `code/model.py`: GPT-2-family model with DyT, RMSNorm, HardTanh, DiffAttn V1, the V2-inspired sigmoid-lambda ablation, and gated-attention toggles.
 - `code/model_llama.py`: Llama-style architecture checks.
 - `code/train.py`: training loop and metadata writer.

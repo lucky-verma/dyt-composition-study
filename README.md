@@ -15,6 +15,24 @@ Code and artifacts for the empirical study:
 
 This repository studies when Dynamic Tanh (DyT) helps or hurts Transformer training, with controlled GPT-2-family scaling experiments, Llama-style checks, ViT checks, ablations, downstream evaluations, and machine-readable result manifests.
 
+## Artifact Contract
+
+Use this repository to inspect and reproduce the paper's compute-limited regime
+map for replacing LayerNorm with activation bounding. The reusable object is
+not a new model checkpoint; it is a controlled artifact bundle:
+
+- training code and scale-specific configs for LayerNorm, DyT, RMSNorm,
+  HardTanh, DiffAttn V1, a V2-inspired sigmoid-lambda ablation, and
+  gated-attention controls;
+- aggregate result JSONs and provenance manifests for paper tables/figures;
+- validation scripts that check syntax, JSON artifacts, shell launchers,
+  internal-path scrubbing, and model construction;
+- lightweight smoke commands that run on CPU before any expensive GPU launch.
+
+This repository does not claim Chinchilla-optimal scaling, a universal DyT
+replacement rule, or bundled large checkpoints. Large raw datasets and
+checkpoints are intentionally outside Git.
+
 ## What Is Included
 
 - `code/`: GPT-2-family, Llama-style, and ViT experiment code.
@@ -47,10 +65,10 @@ cd dyt-composition-study
 
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
-python scripts/validate_repo.py
-python scripts/smoke_model.py
+make validate
+make smoke-model
 ```
 
 Prepare WikiText-103 data:
@@ -60,7 +78,7 @@ cd code
 python prepare_wikitext.py
 ```
 
-Run a small single-GPU smoke experiment:
+Run a small CPU smoke experiment:
 
 ```bash
 cd code
@@ -72,6 +90,12 @@ python train.py --dataset=wikitext_1m \
   --wandb_log=False --out_dir=out/smoke
 ```
 
+Equivalent shortcut:
+
+```bash
+make smoke-train-cpu
+```
+
 Run the full experiment launchers only on appropriate GPU hardware:
 
 ```bash
@@ -80,6 +104,10 @@ bash run_3seed.sh
 bash run_scaling.sh
 bash run_scale5.sh   # 3.78B Scale 5; requires high-memory GPU hardware
 ```
+
+Do not run the full launchers as smoke tests. They are included so reviewers can
+inspect the exact experiment surface and rerun selected cells on suitable
+hardware.
 
 ## Result Files
 
@@ -108,6 +136,17 @@ The repo-level validator checks:
 ```bash
 python scripts/validate_repo.py
 python scripts/smoke_model.py
+```
+
+The validator is intentionally lightweight. It is a public artifact integrity
+check, not a substitute for rerunning the training campaign.
+
+The same checks are exposed as stable make targets:
+
+```bash
+make validate       # dependency-light artifact checks
+make smoke-model    # CPU forward pass for architecture variants; needs torch
+make data           # prepare WikiText data
 ```
 
 ## Citation
