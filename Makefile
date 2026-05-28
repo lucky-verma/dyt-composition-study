@@ -1,12 +1,13 @@
 PYTHON ?= python3
 PIP ?= $(PYTHON) -m pip
 
-.PHONY: help install validate smoke-model smoke-train-cpu data
+.PHONY: help install validate hf-validate smoke-model smoke-train-cpu data
 
 help:
 	@echo "Targets:"
 	@echo "  make install          Install Python dependencies"
 	@echo "  make validate         Run dependency-light artifact checks"
+	@echo "  make hf-validate      Check live Hugging Face dataset metadata"
 	@echo "  make smoke-model      Instantiate all model variants on CPU"
 	@echo "  make smoke-train-cpu  Run a tiny CPU training smoke"
 	@echo "  make data             Prepare WikiText data"
@@ -16,6 +17,9 @@ install:
 
 validate:
 	$(PYTHON) scripts/validate_repo.py
+
+hf-validate:
+	$(PYTHON) scripts/validate_hf_dataset.py
 
 smoke-model:
 	$(PYTHON) scripts/smoke_model.py

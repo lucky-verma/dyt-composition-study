@@ -8,6 +8,7 @@ authors:
     affiliation: "Independent Researcher"
 date-released: "2026-04-25"
 repository-code: "https://github.com/lucky-verma/dyt-composition-study"
+repository-artifact: "https://huggingface.co/datasets/lucky-verma/dyt-composition-artifacts"
 url: "https://github.com/lucky-verma/dyt-composition-study"
 license: MIT
 abstract: "Code, configurations, analysis utilities, and machine-readable result manifests for the Dynamic Tanh composition study in Transformer training."

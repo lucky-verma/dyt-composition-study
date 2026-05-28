@@ -2,6 +2,7 @@
 
 <p>
   <a href="https://arxiv.org/abs/2604.23434"><img alt="arXiv" src="https://img.shields.io/badge/arXiv-2604.23434-b31b1b.svg"></a>
+  <a href="https://huggingface.co/datasets/lucky-verma/dyt-composition-artifacts"><img alt="Dataset on HF" src="https://img.shields.io/badge/HF-Dataset-yellow.svg"></a>
   <a href="https://github.com/lucky-verma/dyt-composition-study/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/lucky-verma/dyt-composition-study/actions/workflows/validate.yml/badge.svg"></a>
   <a href="requirements.txt"><img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776ab.svg"></a>
   <a href="requirements.txt"><img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.0%2B-ee4c2c.svg"></a>
@@ -13,7 +14,7 @@ Code and artifacts for the empirical study:
 
 **When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer**
 
-[Paper](https://arxiv.org/abs/2604.23434) · [DOI](https://doi.org/10.48550/arXiv.2604.23434) · [PDF](https://arxiv.org/pdf/2604.23434)
+[Paper](https://arxiv.org/abs/2604.23434) · [DOI](https://doi.org/10.48550/arXiv.2604.23434) · [PDF](https://arxiv.org/pdf/2604.23434) · [Artifact dataset](https://huggingface.co/datasets/lucky-verma/dyt-composition-artifacts)
 
 This repository studies when Dynamic Tanh (DyT) helps or hurts Transformer training, with controlled GPT-2-family scaling experiments, Llama-style checks, ViT checks, ablations, downstream evaluations, and machine-readable result manifests.
 
@@ -27,6 +28,8 @@ not a new model checkpoint; it is a controlled artifact bundle:
   HardTanh, DiffAttn V1, a V2-inspired sigmoid-lambda ablation, and
   gated-attention controls;
 - aggregate result JSONs and provenance manifests for paper tables/figures;
+- a clean Hugging Face artifact dataset with `PROVENANCE.json`,
+  `SHA256SUMS.txt`, `VALIDATION_REPORT.md`, and `data/artifact_index.jsonl`;
 - validation scripts that check syntax, JSON artifacts, shell launchers,
   internal-path scrubbing, and model construction;
 - lightweight smoke commands that run on CPU before any expensive GPU launch.
@@ -124,6 +127,8 @@ The main machine-readable artifacts are under `results/full/`:
 - `manifests/predictor_validation.json`: calibration-heuristic validation results.
 
 See `docs/reproducibility.md` and `docs/artifact_manifest.md` for details.
+The Hugging Face mirror is intentionally an aggregate artifact bundle, not a
+raw checkpoint or training-log dump.
 
 ## Validation
 
@@ -147,6 +152,7 @@ The same checks are exposed as stable make targets:
 
 ```bash
 make validate       # dependency-light artifact checks
+make hf-validate    # live Hugging Face dataset metadata/provenance check
 make smoke-model    # CPU forward pass for architecture variants; needs torch
 make data           # prepare WikiText data
 ```
