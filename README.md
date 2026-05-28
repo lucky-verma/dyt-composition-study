@@ -13,6 +13,8 @@ Code and artifacts for the empirical study:
 
 **When Does Removing LayerNorm Help? Activation Bounding as a Regime-Dependent Implicit Regularizer**
 
+[Paper](https://arxiv.org/abs/2604.23434) · [DOI](https://doi.org/10.48550/arXiv.2604.23434) · [PDF](https://arxiv.org/pdf/2604.23434)
+
 This repository studies when Dynamic Tanh (DyT) helps or hurts Transformer training, with controlled GPT-2-family scaling experiments, Llama-style checks, ViT checks, ablations, downstream evaluations, and machine-readable result manifests.
 
 ## Artifact Contract
