@@ -29,7 +29,8 @@ not a new model checkpoint; it is a controlled artifact bundle:
   gated-attention controls;
 - aggregate result JSONs and provenance manifests for paper tables/figures;
 - a clean Hugging Face artifact dataset with `PROVENANCE.json`,
-  `SHA256SUMS.txt`, `VALIDATION_REPORT.md`, and `data/artifact_index.jsonl`;
+  `SHA256SUMS.txt`, `data/artifact_index.jsonl`, and
+  `metadata/validation_report.md`;
 - validation scripts that check syntax, JSON artifacts, shell launchers,
   internal-path scrubbing, and model construction;
 - lightweight smoke commands that run on CPU before any expensive GPU launch.

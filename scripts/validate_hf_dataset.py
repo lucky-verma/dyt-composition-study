@@ -24,9 +24,10 @@ REQUIRED_REMOTE_FILES = {
     "CITATION.bib",
     "PROVENANCE.json",
     "SHA256SUMS.txt",
-    "VALIDATION_REPORT.md",
+    "metadata/validation_report.md",
     "data/artifact_index.jsonl",
 }
+FORBIDDEN_REMOTE_FILES = {"VALIDATION_REPORT.md"}
 
 FORBIDDEN_PATH_RE = re.compile(
     r"(DONE\.txt$|partial_killed|\.pt$|\.pth$|\.ckpt$|\.safetensors$|"
@@ -76,12 +77,14 @@ def main() -> int:
 
     missing = sorted(REQUIRED_REMOTE_FILES - siblings)
     require(not missing, f"missing HF metadata files: {missing}", failures)
+    stale = sorted(FORBIDDEN_REMOTE_FILES & siblings)
+    require(not stale, f"stale root-level HF metadata files remain: {stale}", failures)
 
     bad = sorted(path for path in siblings if FORBIDDEN_PATH_RE.search(path))
     require(not bad, f"forbidden HF paths remain: {bad[:12]}", failures)
 
     validation = fetch_text(
-        f"https://huggingface.co/datasets/{DATASET_ID}/raw/main/VALIDATION_REPORT.md"
+        f"https://huggingface.co/datasets/{DATASET_ID}/raw/main/metadata/validation_report.md"
     )
     require("- Status: PASS" in validation, "HF validation report is not PASS", failures)
     require(f"- arXiv: {ARXIV_ID}" in validation, "HF validation report arXiv mismatch", failures)
@@ -103,6 +106,7 @@ def main() -> int:
 
     local_contains("README.md", f"https://huggingface.co/datasets/{DATASET_ID}", failures)
     local_contains("README.md", f"https://arxiv.org/abs/{ARXIV_ID}", failures)
+    local_contains("README.md", "metadata/validation_report.md", failures)
     local_contains("CITATION.cff", f"https://huggingface.co/datasets/{DATASET_ID}", failures)
     local_contains("CITATION.cff", DOI, failures)
 
