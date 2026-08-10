@@ -16,13 +16,17 @@ Code and artifacts for the empirical study:
 
 [Paper](https://arxiv.org/abs/2604.23434) · [DOI](https://doi.org/10.48550/arXiv.2604.23434) · [PDF](https://arxiv.org/pdf/2604.23434) · [Artifact dataset](https://huggingface.co/datasets/lucky-verma/dyt-composition-artifacts)
 
-This repository studies when Dynamic Tanh (DyT) helps or hurts Transformer training, with controlled GPT-2-family scaling experiments, Llama-style checks, ViT checks, ablations, downstream evaluations, and machine-readable result manifests.
+This repository preserves the code and artifacts for the public v1 study and
+the later trajectory audit. It includes GPT-2-family scaling experiments,
+Llama-style and ViT checks, ablations, downstream evaluations, and
+machine-readable result manifests.
 
 ## Artifact Contract
 
-Use this repository to inspect and reproduce the paper's compute-limited regime
-map for replacing LayerNorm with activation bounding. The reusable object is
-not a new model checkpoint; it is a controlled artifact bundle:
+Use this repository to inspect the paper's compute-limited fixed-endpoint
+measurements and audit whether their interpretation survives checkpoint
+selection. The reusable object is not a new model checkpoint or a deployment
+rule; it is a controlled artifact bundle:
 
 - training code and scale-specific configs for LayerNorm, DyT, RMSNorm,
   HardTanh, DiffAttn V1, a V2-inspired sigmoid-lambda ablation, and
@@ -50,9 +54,18 @@ checkpoints are intentionally outside Git.
 
 Large raw datasets and model checkpoints are not stored directly in Git. The code uses public datasets, and checkpoint/data mirrors may be linked separately when available.
 
-## Headline Scope
+## Version status
 
-The paper is an empirical regime study, not a theory paper. It asks whether replacing LayerNorm with activation bounding behaves like an implicit regularizer whose sign depends on the token-to-parameter regime.
+Follow-up trajectory analysis evaluates each method at its own selected
+validation checkpoint. Under that comparison, the reported low-data
+fixed-step advantages do not establish a selected-checkpoint DyT benefit. The
+repository remains useful for reproducing the fixed-endpoint measurements and
+checkpoint-selection analysis; saturation outputs are measurements, not a
+model-selection rule.
+
+Some machine-readable descriptions in `results/` preserve historical v1
+terminology for provenance and should not be treated as current selection
+guidance.
 
 The artifact supports:
 
@@ -60,7 +73,7 @@ The artifact supports:
 - 1M and 118M token regimes, with intermediate-data experiments where used in the paper;
 - DyT, LayerNorm, RMSNorm, HardTanh, DiffAttn V1, the V2-inspired sigmoid-lambda ablation, and gated-attention controls;
 - activation saturation measurements;
-- statistical tests and calibration-heuristic validation;
+- statistical tests and the historical calibration-heuristic evaluation;
 - LAMBADA, BLIMP, OpenWebText, Llama-style, and ViT checks.
 
 ## Quick Start
